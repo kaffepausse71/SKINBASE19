@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.skinbase"
+        name="[COLOR skyblue]MODULE SKINBASE[/COLOR]"
+        version="1.0.0"
+        provider-name="SKINBASE,Litti19928">
+  <requires>
+	<!--py3 compliant-->
+	<!--<import addon="xbmc.python" version="3.0.0" targetversion="3.0.0"/>-->
+	<import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <minversion></minversion>
+    <summary></summary>
+    <description></description>
+	<license></license>
+	<forum></forum>
+	<website></website>
+	<email></email>
+	<source></source>
+	<news></news>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<banner></banner>
+		<clearlogo></clearlogo>
+		<screenshot></screenshot>
+	</assets>
+  </extension>
+</addon>

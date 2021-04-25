@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <addon id="repository.mraap" name="mraap Repository" version="1.0.3" provider-name="[COLOR lime]TjOsT[/COLOR]">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="[COLOR blue]Aeon[/COLOR] [COLOR white]NOX[/COLOR][COLOR blue] Glass[/COLOR]">
+            <info compressed="false">http://www.mraap.de/kodi/.repo/skin/_skin/addons.xml</info>
+            <checksum>http://www.mraap.de/kodi/.repo/skin/_skin/addons.xml.md5</checksum>
+            <datadir zip="true">http://www.mraap.de/kodi/.repo/skin/_skin/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <description>Add-Ons for Kodi by TjOsT</description>
+            <platform>all</platform>
+    </extension>
+</addon>
