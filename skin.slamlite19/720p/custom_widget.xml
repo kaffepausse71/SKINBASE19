@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1122">
+	<defaultcontrol always="true">80000</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<include>CommonBackground</include>
+		<include>SlamWidget</include>
+	</controls>
+</window>

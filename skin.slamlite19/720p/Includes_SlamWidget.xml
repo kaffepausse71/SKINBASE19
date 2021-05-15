@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	
+    <include name="SlamWidget">
+            <control type="list" id="80000">
+                <animation effect="slide" start="0,0" end="135,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">conditional</animation>
+                <animation effect="slide" start="0,0" end="270,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
+                <animation effect="slide" start="0,0" end="405,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
+                <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+                <left>100</left>
+                <top>350r</top>
+                <width>1080</width>
+                <height>330</height>
+                <onleft></onleft>
+                <onright></onright>
+                <onup></onup>
+                <ondown></ondown>
+                <scrolltime>200</scrolltime>
+                <orientation>Horizontal</orientation>
+                <itemlayout height="330" width="270">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>270</width>
+                        <height>330</height>
+                        <texture border="15">recentaddedback.png.bak</texture>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>240</width>
+                        <height>255</height>
+                        <texture background="true">$INFO[ListItem.icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                    </control>
+                    <control type="label">
+                        <left>22</left>
+                        <top>278</top>
+                        <width>225</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>grey1</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="330" width="270">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>270</width>
+                        <height>330</height>
+                        <texture border="15" colordiffuse="blue">recentaddedback.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>240</width>
+                        <height>255</height>
+                        <texture background="true">Info</texture>
+                        <aspectratio>keep</aspectratio>
+                        <bordertexture border="5" colordiffuse="red">folder-focus.png</bordertexture>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>240</width>
+                        <height>255</height>
+                        <texture>$INFO[ListItem.icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <bordertexture border="5">button-nofocus.png</bordertexture>
+                    </control>
+                    <control type="label">
+                        <left>22</left>
+                        <top>278</top>
+                        <width>225</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>22</left>
+                        <top>278</top>
+                        <width>225</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>plugin://plugin.video.thelight/?all_w=%7b%7d&amp;data=%20&amp;dates=%20&amp;description=Tmdb&amp;eng_name=%20&amp;episode=%20&amp;fanart=https%3a%2f%2fwww.newszii.com%2fwp-content%2fuploads%2f2018%2f08%2fMost-Popular-Action-Movies.png&amp;fav_status=false&amp;heb_name=%20&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2forg.xbmc.kody193%2ffiles%2f.kodi%2faddons%2fplugin.video.thelight%2fresources%2fartwork%2fpopular.png&amp;id=%20&amp;image_master&amp;isr=0&amp;last_id&amp;mode=14&amp;name=Popular%20Movies&amp;original_title=%20&amp;season=%20&amp;show_original_year=%20&amp;tmdbid=%20&amp;url=http%3a%2f%2fapi.themoviedb.org%2f3%2fmovie%2fpopular%3fapi_key%3d34142515d9d23817496eeb4ff1d223d0%26language%3den%26page%3d1&amp;video_data=%7b%22title%22%3a%20%22Popular%20Movies%22%2c%20%22mediatype%22%3a%20%22movie%22%2c%20%22TVshowtitle%22%3a%20%22%22%2c%20%22season%22%3a%200%2c%20%22episode%22%3a%200%2c%20%22OriginalTitle%22%3a%20%22%20%22%2c%20%22rating%22%3a%20%220%22%2c%20%22plot%22%3a%20%22Tmdb%22%2c%20%22Tag%22%3a%20%222%22%7d&quot;,return</content>
+            </control>
+                     <control type="image">
+                         <left>170</left>
+                         <top>50</top>
+                         <width>970</width>
+                         <height>300</height>
+                         <texture>recentaddedback.png</texture>
+                         <visible>Container(80000).HasFocus() </visible>
+                     </control>
+                     <control type="label" id="80001">
+                        <left>200</left>
+                        <top>50</top>
+                        <width>900</width>
+                        <height>300</height>
+                        <font>font_plot</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <wrapmultiline>true</wrapmultiline>
+                        <label>$INFO[ListItem.Plot]</label>
+                    </control>
+    </include>
+</includes>

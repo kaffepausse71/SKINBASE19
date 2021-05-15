@@ -1,0 +1,277 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+  <includes>
+  	<include name="topsubcommon">
+  	  <left>33</left>
+		<top>160</top>
+		<width>1200</width>
+		<height>40</height>
+		<align>center</align>
+		<onup></onup>
+		<ondown>17</ondown>
+		<onright>100000</onright>
+		<itemgap>30</itemgap>
+		<orientation>Horizontal</orientation>
+		<animation effect="slide" start="0,40" end="0,0" delay="300" time="150" tween="quadratic" easing="out">Visible</animation>
+		<animation effect="slide" start="0,0" end="0,40" time="150" tween="quadratic" easing="in">Hidden</animation>
+  	</include>
+  
+      <include name="topsubbutton">
+      	<height>39</height>
+		    <width>200</width>
+		    <textwidth>195</textwidth>
+		    <align>center</align>
+		    <aligny>center</aligny>
+		    <font>font_topsubmenu</font>
+		    <textcolor>grey2</textcolor>
+		    <focusedcolor>white</focusedcolor>
+		    <scroll>true</scroll>
+		    <texturefocus border="5">menubar1fo.png</texturefocus>
+		    <texturenofocus border="5">menubar1.png</texturenofocus>
+		    <pulseonselect>false</pulseonselect>
+		</include>
+  
+  	<include name="topsubmenu">
+  	<control type="group" id="100000">
+  	<include>crewsub</include>
+      <include>gotosub</include>
+      <include>mdragonsub</include>
+      <include>serensub</include>
+      <include>odinsub</include>
+      <include>nixtoonssub</include>
+      <include>shadowsub</include>
+      </control>
+  	</include>
+  
+      <include name="crewsub">
+      	<control type="grouplist" id="100001">
+  	    <visible>ControlGroup(17).HasFocus(701) + Container(9000).HasFocus(1)</visible>
+  	    <include>topsubcommon</include>
+		
+		<control type="button" id="903010">
+			<include>topsubbutton</include>
+		    <label>Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=movieNavigator&quot;,return)</onclick>
+		</control>
+		<control type="button" id="903020">
+			<include>topsubbutton</include>
+			<label>TV Shows</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=tvNavigator&quot;,return)</onclick>
+		</control>
+		<control type="button" id="903030">
+			<include>topsubbutton</include>
+			<label>Live TV</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=whitehat&quot;,return)</onclick>
+		</control>
+		<control type="button" id="903040">
+			<include>topsubbutton</include>
+			<label>Sports</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=bluehat&quot;,return)</onclick>
+		</control>
+		<control type="button" id="903050">
+			<include>topsubbutton</include>
+			<label>Kids</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=greyhat&quot;,return)</onclick>
+		</control>
+      </control>
+      </include>
+  
+      <include name="gotosub">
+      	<control type="grouplist" id="100002">
+  	    <visible>ControlGroup(17).HasFocus(702) + Container(9000).HasFocus(1)</visible>
+  	    <include>topsubcommon</include>
+		
+		<control type="button" id="904020">
+			<include>topsubbutton</include>
+		    <label>2020 Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.goto/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5d%5bCOLORwhite%5d2020%20MOVIES%5b%2fCOLOR%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fmygoto.uk%2f1Xmls%2f1ListersXmls%2f1tam%2fMoviesXmls%2ftam2020movies.xml&quot;,return)</onclick>
+		</control>
+		<control type="button" id="904030">
+			<include>topsubbutton</include>
+			<label>TV Rewind</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.goto/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5d%5bCOLORwhite%5dTV%20REWIND%5b%2fCOLOR%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fmygoto.uk%2f1Xmls%2f1ListersXmls%2f1tam%2fTvshowsXmls%2ftvcatchup.xml&quot;,return)</onclick>
+		</control>
+		<control type="button" id="904040">
+			<include>topsubbutton</include>
+			<label>Live TV</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.goto/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5d%5bCOLORwhite%5dLIVE%20TV%5b%2fCOLOR%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fmygoto.uk%2f1Xmls%2f1MainMenuXmls%2f1LiveTvXmls%2flivetv.xml&quot;,return)</onclick>
+		</control>
+		<control type="button" id="904050">
+			<include>topsubbutton</include>
+			<label>Sports</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.goto/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5d%5bCOLORwhite%5dSPORTS%20STREAMS%5b%2fCOLOR%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fmygoto.uk%2f1Xmls%2f1MainMenuXmls%2f1SportXmls%2fmainsport.xml&quot;,return)</onclick>
+		</control>
+		<control type="button" id="904060">
+			<include>topsubbutton</include>
+			<label>M.M.A.</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.goto/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.goto%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5d%5bCOLORwhite%5dM.M.A%5b%2fCOLOR%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fmygoto.uk%2f1Xmls%2f1MainMenuXmls%2f1SportXmls%2f1MmaXmls%2fMmaMainXml%2fmmamain.xml&quot;,return)</onclick>
+		</control>
+      </control>
+      </include>
+      
+      <include name="mdragonsub">
+      	<control type="grouplist" id="100003">
+  	    <visible>ControlGroup(17).HasFocus(703)  + Container(9000).HasFocus(1)</visible>
+  	    <include>topsubcommon</include>
+		
+		<control type="button" id="905020">
+			<include>topsubbutton</include>
+		    <label>People Watching</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.themagicdragon/?fanart=https%3a%2f%2fi.imgur.com%2fU5nKN8r.jpg&amp;mode=1&amp;name=%5bB%5d%5bI%5d%5bCOLORmagenta%5dPeople%20Watching%5b%2fB%5d%5b%2fI%5d%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fraw.githubusercontent.com%2ftombebbs1%2fmagicdragon%2fmaster%2fpopular.txt&quot;,return)</onclick>
+		</control>
+		<control type="button" id="905030">
+			<include>topsubbutton</include>
+			<label>New Releases</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.themagicdragon/?fanart=https%3a%2f%2fi.imgur.com%2fU5nKN8r.jpg&amp;mode=1&amp;name=%5bB%5d%5bI%5d%5bCOLORlime%5dNew%20Movie%20Releases%5b%2fB%5d%5b%2fI%5d%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fraw.githubusercontent.com%2ftombebbs1%2fmagicdragon%2fmaster%2fnewreleases.txt&quot;,return)</onclick>
+		</control>
+		<control type="button" id="905040">
+			<include>topsubbutton</include>
+			<label>Requested Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.themagicdragon/?fanart=https%3a%2f%2fi.imgur.com%2fU5nKN8r.jpg&amp;mode=1&amp;name=%5bB%5d%5bI%5d%5bCOLORwhite%5dRequested%20Movies%5b%2fB%5d%5b%2fI%5d%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fraw.githubusercontent.com%2ftombebbs1%2fmagicdragon%2fmaster%2frequestedmovies.txt&quot;,return)</onclick>
+		</control>
+		<control type="button" id="905050">
+			<include>topsubbutton</include>
+			<label>Catchup TV</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.themagicdragon/?fanart=https%3a%2f%2fkodiapps.com%2fhow-to-install-the-magic-dragon-on-kodi&amp;mode=1&amp;name=%5bB%5d%5bI%5d%5bCOLORorange%5dCatch%20Up%20TV%20VPN%20ADVISED%5b%2fB%5d%5b%2fI%5d%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fraw.githubusercontent.com%2ftombebbs1%2fmagicdragon%2fmaster%2flatesttv.txt&quot;,return)</onclick>
+		</control>
+		<control type="button" id="905060">
+			<include>topsubbutton</include>
+			<label>Documentaries</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.themagicdragon/?fanart=https%3a%2f%2fi.imgur.com%2fU5nKN8r.jpg&amp;mode=1&amp;name=%5bB%5d%5bI%5d%5bCOLORgreenyellow%5dDocumentary%27s%5b%2fB%5d%5b%2fI%5d%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fraw.githubusercontent.com%2ftombebbs1%2fmagicdragon%2fmaster%2fdocumentaries.txt&quot;,return)</onclick>
+		</control>
+      </control>
+      </include>
+      
+      <include name="serensub">
+      	<control type="grouplist" id="100004">
+  	    <visible>ControlGroup(17).HasFocus(704)  + Container(9000).HasFocus(1)</visible>
+  	    <include>topsubcommon</include>
+		
+		<control type="button" id="906020">
+			<include>topsubbutton</include>
+		    <label>Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.seren/?action=moviesHome&quot;,return)</onclick>
+		</control>
+		<control type="button" id="906030">
+			<include>topsubbutton</include>
+			<label>TV Shows</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.seren/?action=showsHome&quot;,return)</onclick>
+		</control>
+		<control type="button" id="906040">
+			<include>topsubbutton</include>
+			<label>Trending Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.seren/?action=moviesTrending&amp;page=1&quot;,return)</onclick>
+		</control>
+		<control type="button" id="906050">
+			<include>topsubbutton</include>
+			<label>Trending Shows</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.seren/?action=showsTrending&amp;page=1&quot;,return)</onclick>
+		</control>
+		<control type="button" id="906060">
+			<include>topsubbutton</include>
+			<label>Settings</label>
+			<onclick>PlayMedia(&quot;plugin://plugin.video.seren/?action=openSettings&quot;)</onclick>
+		</control>
+      </control>
+      </include>
+      
+      <include name="odinsub">
+      	<control type="grouplist" id="100005">
+  	    <visible>ControlGroup(17).HasFocus(705)  + Container(9000).HasFocus(1)</visible>
+  	    <include>topsubcommon</include>
+		
+		<control type="button" id="907020">
+			<include>topsubbutton</include>
+		    <label>Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.asgard/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5dMovies%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fnarcacist.com%2fAddon%2ftext%2fmovies.xml&quot;,return)</onclick>
+		</control>
+		<control type="button" id="907030">
+			<include>topsubbutton</include>
+			<label>TV Shows</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.asgard/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5dTV%20Shows%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fnarcacist.com%2fAddon%2ftext%2ftv.xml&quot;,return)</onclick>
+		</control>
+		
+		<control type="button" id="907040">
+			<include>topsubbutton</include>
+			<label>Non Debrid</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.asgard/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5dNon%20Debrid%20Secton%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fnarcacist.com%2fAddon%2ftext%2frd%2ffree.xml&quot;,return)</onclick>
+		</control>
+		<control type="button" id="907050">
+			<include>topsubbutton</include>
+			<label>Kids</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.asgard/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5dKids%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fnarcacist.com%2fAddon%2ftext%2fkids.xml&quot;,return)</onclick>
+		</control>
+		<control type="button" id="907060">
+			<include>topsubbutton</include>
+			<label>Documentaries</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.asgard/?description=No%20information%20available&amp;fanart=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ffanart.jpg&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.xbmc.kodi%2ffiles%2f.kodi%2faddons%2fplugin.video.asgard%2ficon.png&amp;mode=get_list&amp;name=%5bCOLOR%20FFffffffff%5dDocumentaries%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fnarcacist.com%2fAddon%2ftext%2fdocs.xml&quot;,return)</onclick>
+		</control>
+      </control>
+      </include>
+      
+      <include name="nixtoonssub">
+      	<control type="grouplist" id="100006">
+  	    <visible>ControlGroup(17).HasFocus(706)  + Container(9000).HasFocus(1)</visible>
+  	    <include>topsubcommon</include>
+		
+		<control type="button" id="908020">
+			<include>topsubbutton</include>
+		    <label>Cartoons</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.watchnixtoons2/?action=actionCatalogMenu&amp;path=%2fcartoon-list&quot;,return)</onclick>
+		</control>
+		<control type="button" id="908030">
+			<include>topsubbutton</include>
+			<label>Subbed Anime</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.watchnixtoons2/?action=actionCatalogMenu&amp;path=%2fsubbed-anime-list&quot;,return)</onclick>
+		</control>
+		<control type="button" id="908040">
+			<include>topsubbutton</include>
+			<label>Dubbed Anime</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.watchnixtoons2/?action=actionCatalogMenu&amp;path=%2fdubbed-anime-list&quot;,return)</onclick>
+		</control>
+		<control type="button" id="908050">
+			<include>topsubbutton</include>
+			<label>Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.watchnixtoons2/?action=actionCatalogMenu&amp;path=%2fmovie-list&quot;,return)</onclick>
+		</control>
+		<control type="button" id="908060">
+			<include>topsubbutton</include>
+			<label>Popular Series</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.watchnixtoons2/?action=actionCatalogMenu&amp;path=popular&quot;,return)</onclick>
+		</control>
+      </control>
+      </include>
+      
+      <include name="shadowsub">
+      	<control type="grouplist" id="100007">
+  	    <visible>ControlGroup(17).HasFocus(707)  + Container(9000).HasFocus(1)</visible>
+  	    <include>topsubcommon</include>
+		
+		<control type="button" id="909020">
+			<include>topsubbutton</include>
+		    <label>Movie World</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.shadow/?all_w=%7b%7d&amp;data=%20&amp;dates=%20&amp;description=Movies&amp;eng_name=%20&amp;episode=%20&amp;fanart=https%3a%2f%2ftownsquare.media%2fsite%2f295%2ffiles%2f2019%2f12%2f2020-movies-collage.jpg%3fw%3d980%26q%3d75&amp;fav_status=false&amp;heb_name=%20&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.slamious.slamlite%2ffiles%2f.kodi%2faddons%2fplugin.video.shadow%2fresources%2fartwork%2fmovies.png&amp;id=%20&amp;image_master&amp;isr=0&amp;last_id&amp;mode=2&amp;name=Movie%20World&amp;original_title=%20&amp;season=%20&amp;show_original_year=%20&amp;tmdbid=%20&amp;url=www&amp;video_data=%7b%22rating%22%3a%20%220%22%2c%20%22episode%22%3a%200%2c%20%22title%22%3a%20%22Movie%20World%22%2c%20%22season%22%3a%200%2c%20%22TVshowtitle%22%3a%20%22%22%2c%20%22mediatype%22%3a%20%22movie%22%2c%20%22plot%22%3a%20%22Movies%22%2c%20%22OriginalTitle%22%3a%20%22%20%22%2c%20%22Tag%22%3a%20%22None%22%7d&quot;,return)</onclick>
+		</control>
+		<control type="button" id="909030">
+			<include>topsubbutton</include>
+			<label>TV World</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.shadow/?all_w=%7b%7d&amp;data=%20&amp;dates=%20&amp;description=TV&amp;eng_name=%20&amp;episode=%20&amp;fanart=https%3a%2f%2fcdn.mos.cms.futurecdn.net%2fqCD39X4DjbpgxD7ZFW63eG.jpg&amp;fav_status=false&amp;heb_name=%20&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.slamious.slamlite%2ffiles%2f.kodi%2faddons%2fplugin.video.shadow%2fresources%2fartwork%2ftv.png&amp;id=%20&amp;image_master&amp;isr=0&amp;last_id&amp;mode=3&amp;name=TV%20World&amp;original_title=%20&amp;season=%20&amp;show_original_year=%20&amp;tmdbid=%20&amp;url=www&amp;video_data=%7b%22rating%22%3a%20%220%22%2c%20%22episode%22%3a%200%2c%20%22title%22%3a%20%22TV%20World%22%2c%20%22season%22%3a%200%2c%20%22TVshowtitle%22%3a%20%22%22%2c%20%22mediatype%22%3a%20%22movie%22%2c%20%22plot%22%3a%20%22TV%22%2c%20%22OriginalTitle%22%3a%20%22%20%22%2c%20%22Tag%22%3a%20%22None%22%7d&quot;,return)</onclick>
+		</control>
+		<control type="button" id="909040">
+			<include>topsubbutton</include>
+			<label>Search</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.shadow/?all_w=%7b%7d&amp;data=%20&amp;dates=%20&amp;description=Search&amp;eng_name=%20&amp;episode=%20&amp;fanart=https%3a%2f%2fsearchengineland.com%2ffigz%2fwp-content%2fseloads%2f2017%2f12%2fcompare-seo-ss-1920-800x450.jpg&amp;fav_status=false&amp;heb_name=%20&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.slamious.slamlite%2ffiles%2f.kodi%2faddons%2fplugin.video.shadow%2fresources%2fartwork%2fsearch.png&amp;id=%20&amp;image_master&amp;isr=0&amp;last_id&amp;mode=5&amp;name=Search&amp;original_title=%20&amp;season=%20&amp;show_original_year=%20&amp;tmdbid=%20&amp;url=www&amp;video_data=%7b%22rating%22%3a%20%220%22%2c%20%22episode%22%3a%200%2c%20%22title%22%3a%20%22Search%22%2c%20%22season%22%3a%200%2c%20%22TVshowtitle%22%3a%20%22%22%2c%20%22mediatype%22%3a%20%22movie%22%2c%20%22plot%22%3a%20%22Search%22%2c%20%22OriginalTitle%22%3a%20%22%20%22%2c%20%22Tag%22%3a%20%22None%22%7d&quot;,return)</onclick>
+		</control>
+		<control type="button" id="909050">
+			<include>topsubbutton</include>
+			<label>Trakt World</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.shadow/?all_w=%7b%7d&amp;data=%20&amp;dates=%20&amp;description=No%20account%20needed)&amp;eng_name=%20&amp;episode=%20&amp;fanart=https%3a%2f%2fcdn.mos.cms.futurecdn.net%2fqCD39X4DjbpgxD7ZFW63eG.jpg&amp;fav_status=false&amp;heb_name=%20&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.slamious.slamlite%2ffiles%2f.kodi%2faddons%2fplugin.video.shadow%2fresources%2fartwork%2ftrakt.png&amp;id=%20&amp;image_master&amp;isr=0&amp;last_id&amp;mode=21&amp;name=Trakt%20World&amp;original_title=%20&amp;season=%20&amp;show_original_year=%20&amp;tmdbid=%20&amp;url=www&amp;video_data=%7b%22rating%22%3a%20%220%22%2c%20%22episode%22%3a%200%2c%20%22title%22%3a%20%22Trakt%20World%22%2c%20%22season%22%3a%200%2c%20%22TVshowtitle%22%3a%20%22%22%2c%20%22mediatype%22%3a%20%22movie%22%2c%20%22plot%22%3a%20%22No%20account%20needed)%22%2c%20%22OriginalTitle%22%3a%20%22%20%22%2c%20%22Tag%22%3a%20%22None%22%7d&quot;,return)</onclick>
+		</control>
+		<control type="button" id="909060">
+			<include>topsubbutton</include>
+			<label>RD Torrents</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.shadow/?all_w=%7b%7d&amp;data=%20&amp;dates=%20&amp;description=TMDB&amp;eng_name=%20&amp;episode=%20&amp;fanart=https%3a%2f%2fwww.york.ac.uk%2fmedia%2fstudy%2fcourses%2fpostgraduate%2fcentreforlifelonglearning%2fEnglish-Building-History-banner-bought.jpg&amp;fav_status=false&amp;heb_name=%20&amp;iconimage=%2fstorage%2femulated%2f0%2fAndroid%2fdata%2fxyz.slamious.slamlite%2ffiles%2f.kodi%2faddons%2fplugin.video.shadow%2fresources%2fartwork%2frd.png&amp;id=%20&amp;image_master&amp;isr=0&amp;last_id&amp;mode=169&amp;name=RD%20Torrents&amp;original_title=%20&amp;season=%20&amp;show_original_year=%20&amp;tmdbid=%20&amp;url=1&amp;video_data=%7b%22rating%22%3a%20%220%22%2c%20%22episode%22%3a%200%2c%20%22title%22%3a%20%22RD%20Torrents%22%2c%20%22season%22%3a%200%2c%20%22TVshowtitle%22%3a%20%22%22%2c%20%22mediatype%22%3a%20%22movie%22%2c%20%22plot%22%3a%20%22TMDB%22%2c%20%22OriginalTitle%22%3a%20%22%20%22%2c%20%22Tag%22%3a%20%22None%22%7d&quot;,return)</onclick>
+		</control>
+      </control>
+      </include>
+      
+  </includes>

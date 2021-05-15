@@ -1,0 +1,148 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+  <includes>
+  	<include name="crewsubmenu">
+  	<control type="grouplist" id=100000>
+  	  <left>-7</left>
+		<top>121</top>
+		<width>1280</width>
+		<height>40</height>
+		<align>center</align>
+		<onup></onup>
+		<ondown></ondown>
+		<itemgap>30</itemgap>
+		<orientation>Horizontal</orientation>
+		<animation effect="slide" start="0,40" end="0,0" delay="150" time="300" tween="quadratic" easing="out">Visible</animation>
+		<animation effect="slide" start="0,0" end="0,40" time="150" tween="quadratic" easing="out">Hidden</animation>
+		<control type="button" id="90302">
+		    <height>39</height>
+		    <width>200</width>
+		    <textwidth>195</textwidth>
+		    <align>center</align>
+		    <aligny>center</aligny>
+		    <font>font_topsubmenu</font>
+		    <textcolor>grey2</textcolor>
+		    <focusedcolor>white</focusedcolor>
+		    <scroll>true</scroll>
+		    <texturefocus border="5">menubar1fo.png</texturefocus>
+		    <texturenofocus border="5">menubar1.png</texturenofocus>
+		    <pulseonselect>false</pulseonselect>
+		    <label>Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=movieNavigator&quot;,return)</onclick>
+		</control>
+      </control>
+  	</include>
+  
+  	<include name="topsubmenu">
+  	
+			<control type="group" id="90010">
+				<depth>DepthMenu-</depth>
+				<left>0</left>
+				<top>70</top>
+				<onup>9000</onup>
+				<ondown>9002</ondown>
+				
+				<control type="grouplist" id="9010">
+					<include>HomeSubMenuCommonValues2</include>
+					<onleft>9010</onleft>
+					<onright>9010</onright>
+					<visible>ControlGroup(17).HasFocus(701) </visible>
+					<include>crewcontent</include>
+				<control type="grouplist" id="9011">
+					<include>HomeSubMenuCommonValues2</include>
+					<onleft>9011</onleft>
+					<onright>9011</onright>
+					<visible>ControlGroup(17).HasFocus(702) </visible>
+					<include>gotocontent</include>
+					
+		</control>
+  	</include>
+  
+      <include name="HomeSubMenuCommonValues2">
+		<left>-7</left>
+		<top>121</top>
+		<width>1280</width>
+		<height>40</height>
+		<align>center</align>
+		<onup></onup>
+		<ondown></ondown>
+		<itemgap>30</itemgap>
+		<orientation>Horizontal</orientation>
+		<animation effect="slide" start="0,40" end="0,0" delay="150" time="300" tween="quadratic" easing="out">Visible</animation>
+		<animation effect="slide" start="0,0" end="0,40" time="150" tween="quadratic" easing="out">Hidden</animation>
+	</include>
+	
+	<include name="ButtonHomeSubCommonValues2">
+		<height>39</height>
+		<width>200</width>
+		<textwidth>195</textwidth>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font_topsubmenu</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<scroll>true</scroll>
+		<texturefocus border="5">menubar1fo.png</texturefocus>
+		<texturenofocus border="5">menubar1.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+  	
+  	<include name="crewcontent">
+     	
+		<control type="button" id="90302">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=movieNavigator&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90303">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>TV Shows</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=tvNavigator&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90304">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Live TV</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=whitehat&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90305">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Sports</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=bluehat&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90306">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Kids</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=greyhat&quot;,return)</onclick>
+		</control>
+	</include>
+	
+	<include name="gotocontent">
+     	<visible>ControlGroup(17).HasFocus(702) </visible>
+		<control type="button" id="90302">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Movies</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=movieNavigator&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90303">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>TV Shows</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=tvNavigator&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90304">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Live TV</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=whitehat&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90305">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Sports</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=bluehat&quot;,return)</onclick>
+		</control>
+		<control type="button" id="90306">
+			<include>ButtonHomeSubCommonValues2</include>
+			<label>Kids</label>
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=greyhat&quot;,return)</onclick>
+		</control>
+	</include>
+
+</includes>
+	

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="crewcontent2">
+		<control type="list" id="18">
+				<left>10</left>
+				<top>182</top>
+				<width>1260</width>
+				<height>65</height>
+				<onleft>18</onleft>
+				<onright>18</onright>
+				<onup></onup>
+				<ondown>17</ondown>
+				<pagecontrol/>
+				<scrolltime>300</scrolltime>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<visible>ControlGroup(17).HasFocus(701) </visible>
+				<itemlayout height="65" width="260">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>260</width>
+						<height>55</height>
+						<texture border="5">menubar1.png</texture>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>240</width>
+						<height>55</height>
+						<font>font_settingslist</font>
+						<textcolor>grey3</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<itemgap>20</itemgap>
+					</control>
+				</itemlayout>
+				<focusedlayout height="65" width="260">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>260</width>
+						<height>55</height>
+						<texture border="5">menubar1fo.png</texture>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>240</width>
+						<height>55</height>
+						<font>font_settingslist</font>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<itemgap>20</itemgap>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>Movies</label>
+	                 <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=movieNavigator&quot;,return)</onclick>
+						<icon/>
+					</item>
+					<item id="2">
+						<label>TV Shows</label>
+	                 <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=tvNavigator&quot;,return)</onclick>
+						<icon/>
+					</item>
+					<item id="3">
+						<label>Live TV</label>
+	                 <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=whitehat&quot;,return)</onclick>
+						<icon/>
+					</item>
+					<item id="4">
+						<label>Sports</label>
+	                 <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=bluehat&quot;,return)</onclick>
+						<icon/>
+					</item>
+					<item id="5">
+						<label>Kids</label>
+	                 <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thecrew/?action=greyhat&quot;,return)</onclick>
+						<icon/>
+					</item>
+				</content>
+			</control>
+	</include>
+</includes>

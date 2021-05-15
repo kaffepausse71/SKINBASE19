@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1120">
+  <onload></onload>
+  <onunload></onunload>
+  <defaultcontrol>4500</defaultcontrol>
+  <menucontrol></menucontrol>
+  <backgroundcolor></backgroundcolor>
+  <views></views>
+  <visible></visible>
+  <animation effect="slide" start="0,720" time="900">WindowOpen</animation>
+  <animation effect="slide" end="0,720" time="300">WindowClose</animation>
+  <zorder></zorder>
+  <coordinates>
+    <left>0</left>
+    <top>0</top>
+    <origin></origin>
+  </coordinates>
+  <previouswindow>Home</previouswindow>
+  <controls>
+  	<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>red.png</texture>
+		</control>
+		<control type="wraplist" id="4500">
+				<left>360</left>
+				<top>150r</top>
+				<width>600</width>
+				<height>100</height>
+				<onup></onup>
+				<onleft></onleft>
+				<onright></onright>
+				<focusposition>0</focusposition>
+				<ondown></ondown>
+				<orientation>horizontal</orientation>
+				<pagecontrol/>
+				<scrolltime>600</scrolltime>
+				<itemlayout height="100" width="600">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>595</width>
+						<height>95</height>
+						<font>font_slamwindow</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>0</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="47" width="600">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>595</width>
+						<height>95</height>
+						<font>font_slamwindow</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<color>white</color>
+						<shadowcolor>black</shadowcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>The Light</label>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.thelight/&quot;,return)</onclick>
+					</item>
+					<item id="2">
+						<label>The Oath</label>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.theoath/&quot;,return)</onclick>
+					</item>
+					<item id="3">
+						<label>Slam Tunes</label>
+						<onclick>ActivateWindow(10502,&quot;plugin://plugin.audio.slamtunes/&quot;,return)</onclick>
+					</item>
+					<item id="4">
+						<label>CBC</label>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.cbc/&quot;,return)</onclick>
+					</item>
+					<item id="5">
+						<label>CBC News</label>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.cbcnews/&quot;,return)</onclick>
+					</item>
+					<item id="6">
+						<label>Kung Fu</label>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.kungfu/&quot;,return)</onclick>
+					</item>
+					<item id="7">
+						<label>Slam19 Wizard</label>
+						<onclick>ActivateWindow(10001,&quot;plugin://plugin.program.slam19guiwiz/&quot;,return)</onclick>
+					</item>
+			   </content>
+			</control>
+			<control type="group">
+				<top>100</top>
+				<left>460</left>
+				<control type="image">
+					<height>450</height>
+					<width>450</width>
+					<top>-30</top>
+				    <left>-20</left>
+					<animation effect="slide" start="0,40" end="0,0" delay="150" time="600" reversible="false" tween="quadratic" easing="out">Visible</animation>
+					<texture>thelight.png</texture>
+					<visible>Container(4500).HasFocus(1)</visible>
+				</control>
+				<control type="image">
+					<height>400</height>
+					<width>400</width>
+					<animation effect="slide" start="0,40" end="0,0" delay="150" time="600" reversible="false" tween="quadratic" easing="out">Visible</animation>
+					<texture>theoath.png</texture>
+					<visible>Container(4500).HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<height>400</height>
+					<width>400</width>
+					<left>-10</left>
+					<animation effect="slide" start="0,40" end="0,0" delay="150" time="600" reversible="false" tween="quadratic" easing="out">Visible</animation>
+					<texture>slamtunes.png</texture>
+					<visible>Container(4500).HasFocus(3)</visible>
+				</control>
+				<control type="image">
+					<height>400</height>
+					<width>400</width>
+					<left>10</left>
+					<animation effect="slide" start="0,40" end="0,0" delay="150" time="600" reversible="false" tween="quadratic" easing="out">Visible</animation>
+					<texture>cbc.png</texture>
+					<visible>Container(4500).HasFocus(4)</visible>
+				</control>
+				<control type="image">
+					<height>400</height>
+					<width>400</width>
+					<left>-10</left>
+					<animation effect="slide" start="0,40" end="0,0" delay="150" time="600" reversible="false" tween="quadratic" easing="out">Visible</animation>
+					<texture>cbc.png</texture>
+					<visible>Container(4500).HasFocus(5)</visible>
+				</control>
+				<control type="image">
+					<height>400</height>
+					<width>400</width>
+					<animation effect="slide" start="0,40" end="0,0" delay="150" time="600" reversible="false" tween="quadratic" easing="out">Visible</animation>
+					<texture>kungfu.png</texture>
+					<visible>Container(4500).HasFocus(6)</visible>
+				</control>
+				<control type="image">
+					<height>400</height>
+					<width>400</width>
+					<animation effect="slide" start="0,40" end="0,0" delay="150" time="600" reversible="false" tween="quadratic" easing="out">Visible</animation>
+					<texture>slamwiz.png</texture>
+					<visible>Container(4500).HasFocus(7)</visible>
+				</control>
+			</control>
+  
+  </controls>
+</window>
