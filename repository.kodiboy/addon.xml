@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.kodiboy" name="KODIBOY REPOSITORY" version="2.0.6" provider-name="KODIBOY|KODIMAN">
+    <extension point="xbmc.addon.repository" name="KODIBOY REPOSITORY">
+		<info compressed="false">https://repo.kodiland.de/repo/new_repo/addons.xml</info>
+		<checksum>https://repo.kodiland.de/repo/new_repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://repo.kodiland.de/repo/new_repo/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>KODIBOY</summary>
+        <description>KODIBOY</description>
+        <platform>all</platform>
+    </extension>
+</addon>

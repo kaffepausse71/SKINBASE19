@@ -1,3 +1,37 @@
+1.4.10
+updates to image reduction algorithm to better deal with shows with lots of seasons
+
+1.4.9
+fix to fallback to English trailer if no trailer found in selected language
+
+1.4.8
+changed IMDB parsing to use JSON from application/ld+json section instead of HTML
+updated language files
+
+1.4.7
+fix for shows with large number of images causing SQL error when using mySQL/MariaDB
+
+1.4.6
+fix IMDB HTML scrape to work with new IMDB site
+language updates
+
+1.4.5
+fix settings file to show correct default for studio and country storage
+
+1.4.4
+fix so studios get added even if there is no country
+change the default setting so that studio and country are stored separately
+
+1.4.3
+fix for crash if episode group has a season with no episodes
+
+1.4.2
+fix for crash if Kodi calls the scraper without passing the source settings
+change so that old TVDB XML scraper episodeguide URL will work to get new episodeguide from TMDb
+
+1.4.1
+fix for crash if TMDb returns no TV show results when using external ID in parsing nfo file
+
 1.4.0
 TV show trailers from YouTube now included in metadata (with option to turn it off)
 option to select which YouTube addon is used to play trailers
