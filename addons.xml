@@ -5704,43 +5704,6 @@ I had this disabled because i want to be able to jump to the most right object b
 	</extension>
 </addon>
 
-	<addon
-	id="skin.aeonmq.6"
-	version="6.15.19"
-	name="[COLOR fffff600]Aeon MQ6 Mega[/COLOR]"
-	provider-name="SKINBASE,MarcosQui">
-	<requires>
-	<import addon="xbmc.gui" version="5.15.0"/>
-	</requires>
-	<extension
-	  point="xbmc.gui.skin"
-	  debugging="false"
-	  effectslowdown="0.75">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-	<summary lang="en">Aeon MQ 6, improved, more light and more powerful than ever.With Full support "Skin Helper Script"</summary>
-	<summary lang="pt_br">Aeon MQ 6, melhorada, mais leve e mais poderosa do que nunca.</summary>
-	<description lang="en">The traditional Aeon MQ reaches its sixth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 6 incorporates new features such as REPLACE which takes the main menu's level of customization to something never seen before.[CR]Aeon MQ 6, you've never seen a skin like this.</description>
-	<description lang="pt_br">A tradicional Aeon MQ chega a sua sexta edição.[CR]Aeon MQ 6 conta com todos os recursos presentes na versão anterior, no entanto, esses recursos foram otimizados afim de proporcionar uma experiência ainda melhor ao usuário.[CR]Aeon MQ 6, você nunca viu uma skin assim.</description>
-	<disclaimer lang="en">Compatible with Kodi 17.3 Helix , Kodi 18.0. Krypton and Kodi 18.5. Leia</disclaimer>
-	<platform>all</platform>
-               <assets>
-                       <icon>resources/icon.png</icon>
-                       <fanart>resources/fanart.jpg</fanart>
-                       <screenshot>resources/screenshot-01.jpg</screenshot>
-                       <screenshot>resources/screenshot-02.jpg</screenshot>
-                       <screenshot>resources/screenshot-03.jpg</screenshot>
-                       <screenshot>resources/screenshot-04.jpg</screenshot>
-                       <screenshot>resources/screenshot-05.jpg</screenshot>
-                       <screenshot>resources/screenshot-06.jpg</screenshot>
-                       <screenshot>resources/screenshot-07.jpg</screenshot>
-                       <screenshot>resources/screenshot-08.jpg</screenshot>
-               </assets>
-			   <size>221991247</size>
-	</extension>
-</addon>
-
 <addon id="skin.aeonmq5.matrixmod" name="[COLOR fffff600]Aeon MQ 5[/COLOR] Matrixmod" provider-name="MarcosQui / scott967" version="11.1.0">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
@@ -6839,6 +6802,304 @@ This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Matrix officia
 	</extension>
 </addon>
 
+<addon id="skin.confluence.1080" version="3.1.4" name="[COLOR fffff600]Confluence 1080[/COLOR]" provider-name="SKINBASE,OpenELEQ, original work by Jezz_X &amp; Team Kodi">
+  <requires>
+    <import addon="xbmc.gui" version="5.15.0"/>
+  </requires>
+  <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1.0">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="af_ZA">Confluence 1080 oortreksel deur [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ar_SA">جلد "كونفليونس" من صنع [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="be_BY">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="bg_BG">Confluence 1080 облик от [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ca_ES">Aparença Confluence 1080 per [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="cs_CZ">Vzhled Confluence 1080 od [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="cy_GB">Croen Confluence 1080 gan [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="da_DK">Confluence 1080-tema af [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="de_DE">Confluence 1080 Skin von [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="el_GR">Το κέλυφος Confluence 1080 από τον [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_AU">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_GB">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_NZ">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_US">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="es_AR">Skin Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="es_ES">Skin Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="es_MX">Skin confluende por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="et_EE">Confluence 1080 rüü autorilt [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="eu_ES">Confluence 1080 azala [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]-ek egina.</summary>
+    <summary lang="fa_IR">پوسته Confluence 1080 تهیه شده بوسیله [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]. </summary>
+    <summary lang="fi_FI">Confluence 1080-ulkoasu. Tekijä [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="fo_FO">Confluence 1080 útsjónd av [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="fr_CA">Habillage Confluence 1080 par [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="fr_FR">Confluence 1080 par [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="gl_ES">Pel Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="he_IL">המעטפת Confluence 1080 של [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="hr_HR">Confluence 1080 presvlaka autora [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="hu_HU">Confluence 1080 felszín. Készítő: [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="hy_AM">''Confluence 1080'' - տեսք՝ [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]. կողմից</summary>
+    <summary lang="id_ID">Skin Confluence 1080 oleh [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="is_IS">Confluence 1080 eftir [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="it_IT">Skin Confluence 1080 da [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ja_JP">Confluence 1080 スキン by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ko_KR">Confluence 1080 스킨 [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR] 만듦</summary>
+    <summary lang="lt_LT">Confluence 1080 teminė išvaizda, kurią sukūrė [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="lv_LV">Confluence 1080 apvalks no Jeez_X.</summary>
+    <summary lang="mk_MK">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ms_MY">Penyatuan, kulit daripada [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="mt_MT">Dehra Confluence 1080 magħmula minn [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="nb_NO">Confluence 1080-drakt av [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="nl_NL">Confluence 1080 skin door [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="pl_PL">Skóra Confluence 1080 autorstwa [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="pt_BR">Skin Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="pt_PT">Tema Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="ro_RO">Costum Confluence 1080 de [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ru_RU">Обложка Confluence 1080. Автор: [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sk_SK">Confluence 1080 skin od [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sl_SI">Preobleka Confluence 1080 avtorja [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sq_AL">Maska Confluence 1080 nga Jazz_X</summary>
+    <summary lang="sr_RS">Confluence 1080 маска аутора [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sr_RS@latin">Confluence 1080 maska autora [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sv_SE">Confluence 1080, ett skal av [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="szl">Skōra Confluence 1080 zrychtowanŏ ôd Jeez_X.</summary>
+    <summary lang="tg_TJ">Пӯсти ҳамҷараёнӣ аз ҷониби [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="th_TH">ชุดตกแต่ง Confluence 1080 โดย  [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="tr_TR">Confluence 1080 dış görünümü. [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="uk_UA">Обкладинка Confluence 1080. Автор: [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="vi_VN">Giao diện Confluence 1080 bởi [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="zh_CN">[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR] 开发的 Confluence 1080 皮肤。</summary>
+    <summary lang="zh_TW">[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR] 製作的佈景主題（Kodi的預設佈景主題）</summary>
+    <description lang="af_ZA">Dit is 'n kombinasie van konsepte van 'n klomp gewilde oortreksels, en 'n poging om hulle goeie idees te omvat en te integreer in 'n oortreksel wat maklik behoort te wees vir eerste keer Kodi gebruikers om te verstaan en te gebruik.</description>
+    <description lang="ar_SA">هو خلط بين اشهر اﻷجلده الاخرى معاً ومحاوله لتبنى ودمج افكارهم للخروج بِنِتَاج يُفترض به ان يكون سهل اﻹستيعاب بمجرد النظر لمستخدمى إكس بى إم سى المبتدئين.</description>
+    <description lang="be_BY">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="bg_BG">Целта е да се интегрират тези добри идеи в подходящ и удобен вид за хора, които се сблъскват за първи път с Kodi.</description>
+    <description lang="ca_ES">Confluence 1080 és una combinació de conceptes de moltes aparences populars i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per als nous usuaris de Kodi.</description>
+    <description lang="cs_CZ">Confluence 1080 je kombinací konceptů z mnoha oblíbených vzhledů a pokouší se pojmout a integrovat jejich dobré nápady do vzhledu, který by měl být pro nové uživatele Kodi jednoduchý na pochopení a používání.</description>
+    <description lang="cy_GB">Mae'n gyfuniad o gysyniadau o nifer o grwyn poblogaidd ac mae'n ymdrechu i gyfuno eu syniadau da hwy i groen ddylai fod yn hawdd i ddefnyddiwr cyntaf Kodi ei deall a'i ddefnyddio.</description>
+    <description lang="da_DK">Det er en kombination af koncepter fra mange populære skins, og det forsøger at omfavne og integrere de gode ideer i et skin, der er let for førstegangsbrugere af Kodi at forstå og bruge.</description>
+    <description lang="de_DE">Er ist eine Kombination mehrerer unterschiedlicher Skin-Konzepte und versucht dabei, die besten Ideen zu kombinieren, um einen einfachen Einstieg für neue Kodi-Nutzer zu ermöglichen.</description>
+    <description lang="el_GR">Είναι ένας συνδυασμός από πολλές δημοφιλής αμφιέσεις, και επιχειρεί να παρέχει τις καλύτερες ιδέες τους σε μία αμφίεση, το οποίο είναι εύκολο για τους αρχάριους χρήστες του Kodi να κατανοήσουν και να χρησιμοποιήσουν.</description>
+    <description lang="en_AU">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="en_GB">Confluence 1080 is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="en_NZ">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="en_US">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="es_AR">Confluence 1080 es una combinación de conceptos de muchos skins populares, e intenta abarcar e integrar lo mejor de ellos en un skin que sea sencillo de entender y utilizar para los nuevos usuarios de Kodi.</description>
+    <description lang="es_ES">Es una combinación de conceptos de muchas skins populares, e intenta abarcar e integrar lo mejor de ellas en una skin que sea sencilla de entender y utilizar para los nuevos usuarios de Kodi.</description>
+    <description lang="es_MX">Es una combinación de conceptos de varias skins populares, e intenta adoptar e integrar sus buenas ideas en un skin que debería ser fá de entender y usar para quienes usen Kodi por primera vez.</description>
+    <description lang="et_EE">Confluence 1080 on paljude populaarsete rüüde kombinatsioon, üritades omavahel siduda nende parimaid lahendusi, et saavutada esmakasutajale selget ja kergelt kasutatavat tulemust.</description>
+    <description lang="eu_ES">Horietatik ideia onak hartu eta integratzen saiatzen da, Kodi lehen aldiz erabiltzen dutenentzat ulertzeko eta erabiltzeko erraza izango den azal batean.</description>
+    <description lang="fa_IR">این پوسته ترکیبی از چند پوسته محبوب دیگر است و تلاش دارد بهترین ایده ها را با هم ترکیب کند، تا شروعی ساده و آسان را برای کاربران جدید Kodi امکان پذیر سازد.</description>
+    <description lang="fi_FI">Confluence 1080 on yhdistelmä useiden suosittujen ulkoasujen konsepteista, ja yritys omaksua ja integroida heidän hyvät ideat ulkoasuun, jonka pitäisi olla helppokäyttöinen ja -tajuinen kaikille Kodin käyttäjille.</description>
+    <description lang="fo_FO">Ætlanin er at útsjóndin skal lætta um móttøku og nýtslu av Kodi fyri nýggjar brúkarar.</description>
+    <description lang="fr_CA">Il tente d'inclure et d'intégrer leurs bonnes idées en un habillage qui devrait être facile à comprendre et à utiliser pour les utilisateurs débutants de Kodi.</description>
+    <description lang="fr_FR">Reprenant les concepts issus de plusieurs habillages populaires, il est une tentative d'inclusion et d'intégration des meilleures idées afin de créer un habillage d'interface qui soit facile à comprendre et à utiliser pour les personnes découvrant Kodi.</description>
+    <description lang="gl_ES">É unha combinación de conceptos de algunhas peles populares, e tenta abranguer e integrar  as súas mellores ideas nunha pel que sexa fácil de entender e utilizar para as usuarias que utilizan por primeira vez Kodi.</description>
+    <description lang="he_IL">המעטפת הינה תוצר של אימוץ מאפיינים ממעטפות פופולריות רבות תוך רצון לשלב מאפיינים אלה למעטפת פשוטה לשימוש ולהכרה ראשונית ע"י משתמשי Kodi חדשים.</description>
+    <description lang="hr_HR">To je mješavina koncepta iz mnogih drugih popularnih presvlaka, pokušaj da se objedine njihove dobre osobine u presvlaku i da budu lagane za upotrebu i razumljive novim Kodi korisnicima.</description>
+    <description lang="hu_HU">Merít sok sok népszerű felszín elképzeléséből, megpróbálva vegyíteni a jó ötleteket úgy, hogy az könnyen kezelhető legyen a Kodival először találkozóknak is.</description>
+    <description lang="id_ID">Merupakan kombinasi konsep dari beberapa skin populer, dan berusaha untuk merangkul dan menyatukan ide bagus mereka ke sebuah skin yang mudah dipakai dan dipahami oleh pengguna Kodi pertama kali.</description>
+    <description lang="is_IS">Það er samsetning hugmynda frá mörgum vinsælum útlitum og er tilraun til að fanga og innlima þær góðu hugmyndir í útlit sem sé einfalt fyrir fyrir nýja Kodi notendur að skilja og nota</description>
+    <description lang="it_IT">È una combinazione di elementi provenienti da altre skin popolari e cerca di integrare e coinvolgere tutte le loro grandi idee in una skin facile da usare e comprendere per l'utente inesperto di Kodi.</description>
+    <description lang="ja_JP">Confluence 1080 は Kodi 9.11 およびそれ以上のバージョンで標準のスキンです。さまざまな人気のスキンのコンセプトを組み合わせ、ユーザが初めて Kodi に触れる際に便利に使えるようにしてあります。</description>
+    <description lang="ko_KR">많은 인기 스킨의 컨셉과 좋은 아이디어를 모아서 하나의 스킨으로 만들었으며 초보자도 사용하기 쉽습니다.</description>
+    <description lang="lt_LT">Bandymas priimti ir integruoti vartotojų idėjas į teminę išvaizdą katra turėtų būti lengvai suprantama  pirmą kartą naudojantiems Kodi</description>
+    <description lang="lv_LV">Confluence 1080 ir apvienota daudzu populāru apvalku koncepcija un centieni pieņemt un integrēt labākās idejas, lai jaunajiem Kodi ietotājiem to būtu viegli izprast un lietot.</description>
+    <description lang="mk_MK">Тој е комбинација на концепти од повеќе популарни изгледи, и настојува да ги обедини и истакне нивните добри идеи во еден изглед разбирлив за почетници.</description>
+    <description lang="ms_MY">Ia merupakan gabungan konsep dari pelbagai kulit terkenal, dan berusaha untuk merangkumkan dan menyepadukan idea baik kulit-kulit tersebut menjadi satu kulit yang mudah difahami dan digunakan oleh pengguna baru Kodi .</description>
+    <description lang="mt_MT"> Hija taħlita ta' kunċetti minn ħafna dehriet popolari, u tipporva tgħaqqad u tintegra l-aqwa ideat tagħhom f'dehra li għandha tkun faċli biex jifmuha u jużawha dawk l-utenti li qed jużaw Kodi għall-ewwel darba.</description>
+    <description lang="nb_NO">Det er en kombinasjon av konseptene fra mange populære drakter, og prøver å omfavne og integrere de gode idéene i en drakt som bør være lett å forstå og benytte seg av for nye Kodi-brukere.</description>
+    <description lang="nl_NL">Het combineert de concepten van andere populaire skins, waarbij het tracht hun goede ideeën te integreren in een skin die gemakkelijk in gebruik is.</description>
+    <description lang="pl_PL">Confluence 1080 jest kombinacją koncepcji  wielu popularnych skór i próbą zawarcia tego, co w nich najlepsze w skórze, która będzie łatwa do opanowania dla początkującego użytkownika.</description>
+    <description lang="pt_BR"></description>
+    <description lang="pt_PT">É uma combinação de conceitos a partir de muitos temas populares e tenta integrar as boas ideias dos mesmos, num tema que deverá ser fácil de entender e utilizar pelos novos utilizadores do Kodi.</description>
+    <description lang="ro_RO">Este o combinație de concepte împrumutate de la mai multe costume populare, care încearcă să îmbrățișeze și să integreze ideile lor bune într-un costum care să fie ușor de înțeles și folosit de către utilizatorii Kodi începători.</description>
+    <description lang="ru_RU">Она представляет собой сочетание концепций, взятых из многих популярных обложек, в попытке интегрировать их удачные идеи в обложке, которая была бы простой для использования и понимания новыми пользователями Kodi.</description>
+    <description lang="sk_SK">Je kombináciou konceptov z mnoho populárnych skinov a pokusom integrovať ich dobré nápady do skinu, ktorý by bol ľahko zrozumiteľný a použiteľný pre nových používateľov Kodi.</description>
+    <description lang="sl_SI">Je kombinacija konceptov mnogih priljubljenih preoblek in poskuša zaobjeti in integrirati njihove dobre ideje v preobleko, ki bi bila preprosta za uporabo in razumevanje tudi novim uporabnikom.</description>
+    <description lang="sq_AL">Është nje kombinim nga shumë maska e popullarizuar dhe përpjeket për të përqafuar dhe integruar idetë më të mira në një maskë që të jetë sa më lehtë në përdorim dhe kuptim për përdoruasit duke e përdorur Kodi për herë të parë.</description>
+    <description lang="sr_RS">Confluence 1080 је мешавина концепата из многих других популарних маски, и покушај да се обједине њихове добре идеје у маску која би трeбала да буде лака за разумевање и употребу новим корисницима Kodi-а.</description>
+    <description lang="sr_RS@latin">Confluence 1080 je mešavina koncepata iz mnogih drugih popularnih maski, i pokušaja da se objedine njihove dobre ideje u masku koja bi trebala da bude laka za razumevanje i upotrebu novim korisnicima Kodi-a.</description>
+    <description lang="sv_SE">Confluence 1080 kombinerar koncept från många populära skal och försöker återanvända och integrera goda idéer för att skapa ett skal som är enkelt att förstå och använda för nya Kodi-användare.</description>
+    <description lang="szl">To je miszōng kōnceptōw ze mocki popularnych skōr i prōbuje te nŏjlepsze wkludzić do skōry, kerŏ winnŏ być prostŏ we użyciu i spokopiyniu dlŏ nowych używŏczōw Kodi.</description>
+    <description lang="tg_TJ">Ин пӯст аз унсурҳои пӯстҳои машҳури дигар сохта шудааст ва ва ҳамаи фикрҳои беҳтарин дар як пӯст ҷамъ мекунад, то ки корбарони навомад тавонанд Kodi-ро ба осонӣ фаҳманд ва истифода баранд.</description>
+    <description lang="th_TH">Confluence 1080เป็นสกินเริ่มต้นสำหรับ Kodi 9.11 หรือสูงกว่า มันเป็นส่วนผสมของแนวคิดจากสกินที่ได้รับความนิยมและพยายามที่จะยอมรับและบูรณาการส่วนที่ดีของมันเข้าไปในสกิน ซึ่งน่าจะง่ายสำหรับผู้ใช้ Kodiใหม่ ที่จะเข้าใจและใช้งานได้ดี</description>
+    <description lang="tr_TR">Birçok popüler dış görünümün kavramlarını bir araya getirip ilk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
+    <description lang="uk_UA">Концепції багатьох популярних обкладинок поєднано у спробі використати та інтегрувати їхні вдалі ідеї в обкладинці, що стала б зрозумілою та простою в застосуванні для нових користувачів Kodi.</description>
+    <description lang="vi_VN">Đây là sự kết hợp các khái niệm đến từ các giao diện khác nhau nhằm hướng người dùng đến sự đơn giản và dễ sử dụng.</description>
+    <description lang="zh_CN">力求把这些优点融合到一个皮肤中，使得首次使用 Kodi 的用户能更容易上手。</description>
+    <description lang="zh_TW">它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
+    <platform>all</platform>
+    <license>GNU General Public License version 2</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=314062</forum>
+    <website>https://github.com/OpenELEQ/repository.q/</website>
+    <email>OpenELEQ@gmail.com</email>
+    <source>https://github.com/OpenELEQ/repository.q/tree/master/krypton/skin.confluence.1080/</source>
+    <!--<video_guide>yt-id</video_guide>-->
+    <video_preview>BxyKxrZQ9xc</video_preview>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+      <screenshot>resources/screenshot-04.jpg</screenshot>
+      <screenshot>resources/screenshot-05.jpg</screenshot>
+    </assets>
+	 <size>15279144</size>
+    <news>Added Skin.ToggleDebug-button / Changed xml-location / Changed news-section in addon-info from fadelabel to textbox / Fixed appearance of scrollbars / Fixed LeftRating (0 &amp; 1) / Tweaked positioning of home-pushbuttons and rss / Updated Textures.xbt</news>
+  </extension>
+
+</addon>
+
+<addon id="skin.confluence.color" version="4.7.13" name="[COLOR fffff600]Confluence Color[/COLOR]" provider-name="SKINBASE,Jezz_X, Team Kodi">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af_ZA">Confluence oortreksel deur Jezz_X.</summary>
+		<summary lang="ar_SA">جلد "كونفليونس" من صنع Jezz_x. (الجلد المبدأى لبرنامج إكس بى إم سى)</summary>
+		<summary lang="be_BY">Абалонка Confluence ад Jezz_X.</summary>
+		<summary lang="bg_BG">Confluence облик от Jezz_X. (стандартния облик за Kodi)</summary>
+		<summary lang="ca_ES">Aparença Confluence per Jezz_X.</summary>
+		<summary lang="cs_CZ">Vzhled Confluence od Jezz_X.</summary>
+		<summary lang="cy_GB">Croen Confluence gan Jezz_X. (Croen rhagosodedig Kodi)</summary>
+		<summary lang="da_DK">Confluence-tema af Jezz_X.</summary>
+		<summary lang="de_DE">Confluence Skin von Jezz_X. (Standard-Skin von Kodi)</summary>
+		<summary lang="el_GR">Το κέλυφος Confluence από τον Jezz_X (προεπιλεγμένο κέλυφος του Kodi).</summary>
+		<summary lang="en_AU">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="en_GB">Confluence skin by Jezz_X.</summary>
+		<summary lang="en_NZ">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="en_US">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="es_AR">Skin Confluence por Jezz_X.</summary>
+		<summary lang="es_ES">Skin Confluence por Jezz_X.</summary>
+		<summary lang="es_MX">Skin confluende por Jezz_X. (skin por defecto de Kodi)</summary>
+		<summary lang="et_EE">Confluence rüü autor on Jezz_X.</summary>
+		<summary lang="eu_ES">Confluence azala Jezz_X-ek egina.</summary>
+		<summary lang="fa_IR">پوسته Confluence تهیه شده بوسیله Jezz_X.</summary>
+		<summary lang="fi_FI">Confluence-ulkoasu. Tekijä Jezz_X.</summary>
+		<summary lang="fo_FO">Confluence útsjónd av Jezz_X. (Kodi's vanliga útsjónd)</summary>
+		<summary lang="fr_CA">Habillage Confluence par Jezz_X.</summary>
+		<summary lang="fr_FR">Confluence, un habillage par Jezz_X.</summary>
+		<summary lang="gl_ES">Pel Confluence por Jezz_Z. (Pel predefinida do Kodi)</summary>
+		<summary lang="he_IL">המעטפת Confluence של Jezz_X. (ברירת המחדל של Kodi)</summary>
+		<summary lang="hr_HR">Confluence presvlaka autora Jezz_X. (uobičajena Kodi presvlaka)</summary>
+		<summary lang="hu_HU">Confluence felszín. Készítő: Jezz_X (Kodi alapértelmezett felszín)</summary>
+		<summary lang="hy_AM">''Confluence'' - տեսք՝ Jezz_X. կողմից (Kodi - հիմնական տեսք)</summary>
+		<summary lang="id_ID">Skin Confluence oleh Jezz_X. (Skin bawaan Kodi)</summary>
+		<summary lang="is_IS">Confluence eftir Jezz_X. (Sjálfgefið útlit Kodi)</summary>
+		<summary lang="it_IT">Skin Confluence da Jezz_X. (Skin predefinita di Kodi)</summary>
+		<summary lang="ja_JP">Confluenceスキン by Jezz_X.</summary>
+		<summary lang="ko_KR">Jezz_X가 만든 Confluence 스킨.</summary>
+		<summary lang="lt_LT">Confluence teminė išvaizda, kurią sukūrė Jezz_X. (Kodi numatytoji teminė išvaizda)</summary>
+		<summary lang="lv_LV">Confluence apvalks no Jeez_X.</summary>
+		<summary lang="mk_MK">Confluence skin by Jezz_X. (Kodi's default skin)</summary>
+		<summary lang="ms_MY">Penyatuan, kulit daripada Jezz_X. (Kulit lalai Kodi)</summary>
+		<summary lang="mt_MT">Dehra Confluence magħmula minn Jezz_X. (Id-dehra normali ta' Kodi)</summary>
+		<summary lang="nb_NO">Confluence-drakt av Jezz_X. (Kodis forvalgte drakt)</summary>
+		<summary lang="nl_NL">Confluence skin door Jezz_X. (Kodi's standaard skin)</summary>
+		<summary lang="pl_PL">Skóra Confluence autorstwa Jezz_X</summary>
+		<summary lang="pt_BR">Skin Confluence por Jezz_X. (Skin padrão do Kodi)</summary>
+		<summary lang="pt_PT">Tema Confluence por Jezz_X (tema padrão do Kodi)</summary>
+		<summary lang="ro_RO">Costumul Confluence de Jezz_X.</summary>
+		<summary lang="ru_RU">Обложка Confluence (стандартная обложка Kodi). Автор: Jezz_X.</summary>
+		<summary lang="sk_SK">Confluence skin od Jezz_X. (predvolený skin Kodi)</summary>
+		<summary lang="sl_SI">Preobleka Confluence avtorja Jezz_X. (Privzeta preobleka za Kodi)</summary>
+		<summary lang="sq_AL">Maska Confluence nga Jazz_X (maska kryesore së Kodi)</summary>
+		<summary lang="sr_RS">Confluence маска аутора Jezz_X.</summary>
+		<summary lang="sr_RS@latin">Confluence maska autora Jezz_X.</summary>
+		<summary lang="sv_SE">Confluence, ett skal av Jezz_X.</summary>
+		<summary lang="szl">Skōra Confluence zrychtowanŏ ôd Jeez_X. (wychodnŏ skōra we Kodi)</summary>
+		<summary lang="tg_TJ">Пӯсти ҳамҷараёнӣ аз ҷониби Jezz_X. (Пӯсти пешфарзи Kodi)</summary>
+		<summary lang="th_TH">ชุดตกแต่ง Confluence โดย  Jezz_X (สกินเริ่มต้นของ Kodi)</summary>
+		<summary lang="tr_TR">Confluence dış görünümü. Jezz_X (Kodi'nin varsayılan dış görünümü)</summary>
+		<summary lang="uk_UA">Обкладинка Confluence (стандартна обкладинка Kodi). Автор: Jezz_X.</summary>
+		<summary lang="vi_VN">Giao diện Confluence bởi Jezz_X. (Giao diện mặc định của Kodi)</summary>
+		<summary lang="zh_CN">Jezz_X 开发的 Confluence 皮肤。</summary>
+		<summary lang="zh_TW">Jezz_X 製作的佈景主題（Kodi的預設佈景主題）</summary>
+		<description lang="af_ZA">Confluence is 'n kombinasie van konsepte van 'n klomp gewilde oortreksels, en 'n poging om hulle goeie idees te omvat en te integreer in 'n oortreksel wat maklik behoort te wees vir eerste keer Kodi gebruikers om te verstaan en te gebruik.</description>
+		<description lang="ar_SA">"كونفليونس" هو الجلد المبدأى لبرنامج إكس بى إم سى اﻹصدار 9.11 وما فوق. هو خلط بين اشهر اﻷجلده الاخرى معاً ومحاوله لتبنى ودمج افكارهم للخروج بِنِتَاج يُفترض به ان يكون سهل اﻹستيعاب بمجرد النظر لمستخدمى إكس بى إم سى المبتدئين.</description>
+		<description lang="be_BY">Confluence уяўляе сабой спалучэнне канцэпцый з мноства папулярных абалонак, што намагаецца аб’яднаць усе найлепшыя ідэі ў адну абалонку, якая павінна быць простай і зручнай для карыстальнікаў Kodi.</description>
+		<description lang="bg_BG">Confluence е стандартният облик на Kodi 9.11 и по-новите версии. Представлява смесица от концепциите на много от популярните облици. Целта е да се интегрират тези добри идеи в подходящ и удобен вид за хора, които се сблъскват за първи път с Kodi.</description>
+		<description lang="ca_ES">Confluence és una combinació de conceptes de moltes aparences populars i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per als nous usuaris de Kodi.</description>
+		<description lang="cs_CZ">Confluence je kombinací konceptů z mnoha oblíbených vzhledů a pokouší se pojmout a integrovat jejich dobré nápady do vzhledu, který by měl být pro nové uživatele Kodi jednoduchý na pochopení a používání.</description>
+		<description lang="cy_GB">Confluence yw croen rhagosodedig Kodi 9.11 ac uwch. Mae'n gyfuniad o gysyniadau o nifer o grwyn poblogaidd ac mae'n ymdrechu i gyfuno eu syniadau da hwy i groen ddylai fod yn hawdd i ddefnyddiwr cyntaf Kodi ei deall a'i ddefnyddio.</description>
+		<description lang="da_DK">Confluence er en kombination af koncepter fra mange populære skins, og det forsøger at omfavne og integrere de gode ideer i et skin, der er let for førstegangsbrugere af Kodi at forstå og bruge.</description>
+		<description lang="de_DE">Confluence ist der Standardskin ab Kodi 14.0. Er ist eine Kombination mehrerer unterschiedlicher Skin-Konzepte und versucht dabei, die besten Ideen zu kombinieren, um einen einfachen Einstieg für neue Kodi-Nutzer zu ermöglichen.</description>
+		<description lang="el_GR">Το Confluence είναι η προεπιλεγμένη αμφίεση για τις εκδόσεις Kodi 14.0 και άνω. Είναι ένας συνδυασμός από πολλές δημοφιλής αμφιέσεις, και επιχειρεί να παρέχει τις καλύτερες ιδέες τους σε μία αμφίεση, το οποίο είναι εύκολο για τους αρχάριους χρήστες του Kodi να κατανοήσουν και να χρησιμοποιήσουν.</description>
+		<description lang="en_AU">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_GB">Confluence is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_NZ">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_US">Confluence is the default skin for Kodi 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="es_AR">Confluence es una combinación de conceptos de muchos skins populares, e intenta abarcar e integrar lo mejor de ellos en un skin que sea sencillo de entender y utilizar para los nuevos usuarios de Kodi.</description>
+		<description lang="es_ES">Confluence es la skin por defecto de Kodi 9.11 y posteriores. Es una combinación de conceptos de muchas skins populares, e intenta abarcar e integrar lo mejor de ellas en una skin que sea sencilla de entender y utilizar para los nuevos usuarios de Kodi.</description>
+		<description lang="es_MX">Confluence es el skin por defecto para Kodi 9.11 en adelante. Es una combinación de conceptos de varias skins populares, e intenta adoptar e integrar sus buenas ideas en un skin que debería ser fá de entender y usar para quienes usen Kodi por primera vez.</description>
+		<description lang="et_EE">Confluence on Kodi vaikerüü alates versioonist 9.11. Confluence on paljude populaarsete rüüde kombinatsioon, üritades omavahel siduda nende parimaid lahendusi, et saavutada esmakasutajale selget ja kergelt kasutatavat tulemust.</description>
+		<description lang="eu_ES">Confluence hainbat azal ospetsutatik hartutako kontzeptuen konbinaketa da. Horietatik ideia onak hartu eta integratzen saiatzen da, Kodi lehen aldiz erabiltzen dutenentzat ulertzeko eta erabiltzeko erraza izango den azal batean.</description>
+		<description lang="fa_IR">Confluence ترکیبی از چند پوسته محبوب دیگر است و تلاش دارد بهترین ایده ها را با هم ترکیب کند، تا شروعی ساده و آسان را برای کاربران جدید Kodi امکان پذیر سازد.</description>
+		<description lang="fi_FI">Confluence on yhdistelmä useiden suosittujen ulkoasujen konsepteista, ja yritys omaksua ja integroida heidän hyvät ideat ulkoasuun, jonka pitäisi olla helppokäyttöinen ja -tajuinen kaikille Kodin käyttäjille.</description>
+		<description lang="fo_FO">Confluence er vanliga útsjóndin, sum er brúkt í Kodi síðan útg. 9.11. Hetta er ein samansjóðan av fleiri hugtøkum. Ætlanin er at útsjóndin skal lætta um móttøku og nýtslu av Kodi fyri nýggjar brúkarar.</description>
+		<description lang="fr_CA">Confluence est une combinaison de concepts provenant de plusieurs habillages populaires. Il tente d’inclure et d’intégrer leurs bonnes idées en un habillage qui devrait être facile à comprendre et à utiliser pour les utilisateurs débutants de Kodi.</description>
+		<description lang="fr_FR">Confluence s'inspire des concepts de nombreux habillages populaires, et constitue une tentative d'inclusion et d'intégration des meilleures idées afin de créer un habillage d'interface qui soit facile à comprendre et à utiliser pour les personnes découvrant Kodi.</description>
+		<description lang="gl_ES">Confluence é a pel predeterminada para Kodi 9.11 e posteriores. É unha combinación de conceptos de algunhas peles populares, e tenta abranguer e integrar  as súas mellores ideas nunha pel que sexa fácil de entender e utilizar para as usuarias que utilizan por primeira vez Kodi.</description>
+		<description lang="he_IL">המעטפת Confluence היא מעטפת ברירת המחדל של Kodi. המעטפת הינה תוצר של אימוץ מאפיינים ממעטפות פופולריות רבות תוך רצון לשלב מאפיינים אלה למעטפת פשוטה לשימוש ולהכרה ראשונית ע"י משתמשי Kodi חדשים.</description>
+		<description lang="hr_HR">Confluence je uobičajena presvlaka za Kodi 14.0 naviše. To je mješavina koncepta iz mnogih drugih popularnih presvlaka, pokušaj da se objedine njihove dobre osobine u presvlaku i da budu lagane za upotrebu i razumljive novim Kodi korisnicima.</description>
+		<description lang="hu_HU">A Confluence az alapértelmezett felszín a Kodihoz a 9.11-es verziótól kezdődően. Merít sok sok népszerű felszín elképzeléséből, megpróbálva vegyíteni a jó ötleteket úgy, hogy az könnyen kezelhető legyen a Kodival először találkozóknak is.</description>
+		<description lang="id_ID">Confluence merupakan skin bawaan untuk Kodi 9.11 dan selanjutnya. Merupakan kombinasi konsep dari beberapa skin populer, dan berusaha untuk merangkul dan menyatukan ide bagus mereka ke sebuah skin yang mudah dipakai dan dipahami oleh pengguna Kodi pertama kali.</description>
+		<description lang="is_IS">Confluence er sjálfgefið útlit Kodi 14.0 og nýrra. Það er samsetning hugmynda frá mörgum vinsælum útlitum og er tilraun til að fanga og innlima þær góðu hugmyndir í útlit sem sé einfalt fyrir fyrir nýja Kodi notendur að skilja og nota</description>
+		<description lang="it_IT">Confluence è la skin predefinita di Kodi dalla versione 14.0 in poi. È una combinazione di elementi provenienti da altre skin popolari e cerca di integrare e coinvolgere tutte le loro grandi idee in una skin facile da usare e comprendere per l'utente inesperto di Kodi.</description>
+		<description lang="ja_JP">Confluenceは、さまざまな人気のあるスキンのコンセプトを組み合わせ、ユーザが初めて Kodi に触れる際、使い勝手が良いようにアイデアを盛り込み、簡単で分かり易くユーザーが使用できるようにしてあります。</description>
+		<description lang="ko_KR">Confluence 는 Kodi 14.0 이상을 위한 기본 스킨입니다. 많은 인기 스킨의 컨셉과 좋은 아이디어를 모아서 하나의 스킨으로 만들었으며 초보자도 사용하기 쉽습니다.</description>
+		<description lang="lt_LT">Confluence yra numatytoji teminė išvaizda pradedant Kodi 9.11 versija. Tai daugelio populiarių teminų išvaizdų derinys. Bandymas priimti ir integruoti vartotojų idėjas į teminę išvaizdą katra turėtų būti lengvai suprantama  pirmą kartą naudojantiems Kodi</description>
+		<description lang="lv_LV">Confluence ir apvienota daudzu populāru apvalku koncepcija un centieni pieņemt un integrēt labākās idejas, lai jaunajiem Kodi ietotājiem to būtu viegli izprast un lietot.</description>
+		<description lang="mk_MK">Confluence е основниот изглед на Kodi 14.0 и нагоре. Тој е комбинација на концепти од повеќе популарни изгледи, и настојува да ги обедини и истакне нивните добри идеи во еден изглед разбирлив за почетници.</description>
+		<description lang="ms_MY">Penyatuan ialah kulit lalai untuk Kodi 9.11 dan ke atas. Ia merupakan gabungan konsep dari pelbagai kulit terkenal, dan berusaha untuk merangkumkan dan menyepadukan idea baik kulit-kulit tersebut menjadi satu kulit yang mudah difahami dan digunakan oleh pengguna baru Kodi .</description>
+		<description lang="mt_MT">Confluence hija d-dehra normali ta' Kodi 14.0 il-fuq.  Hija taħlita ta' kunċetti minn ħafna dehriet popolari, u tipporva tgħaqqad u tintegra l-aqwa ideat tagħhom f'dehra li għandha tkun faċli biex jifmuha u jużawha dawk l-utenti li qed jużaw Kodi għall-ewwel darba.</description>
+		<description lang="nb_NO">Confluence er forvalgt drakt for Kodi 9.11 og oppover. Det er en kombinasjon av konseptene fra mange populære drakter, og prøver å omfavne og integrere de gode idéene i en drakt som bør være lett å forstå og benytte seg av for nye Kodi-brukere.</description>
+		<description lang="nl_NL">Confluence is de standaard skin voor Kodi 15.0 en hoger. Het combineert de concepten van andere populaire skins, waarbij het tracht hun goede ideeën te integreren in een skin die gemakkelijk in gebruik is.</description>
+		<description lang="pl_PL">Confluence jest kombinacją koncepcji  wielu popularnych skór i próbą zawarcia tego, co w nich najlepsze w skórze, która będzie łatwa do opanowania dla początkującego użytkownika.</description>
+		<description lang="pt_BR">Confluence é a skin padrão do Kodi 9.11 e acima. É uma combinação de conceitos das mais populares skins, visando abraçar e integrar as boas ideias em uma skin  que seja fácil de entender e usar, destinada  aos usuários iniciantes do Kodi. </description>
+		<description lang="pt_PT">O tema "Confluence" é o tema padrão do Kodi 14.0 e superior. É uma combinação de conceitos a partir de muitos temas populares e tenta integrar as boas ideias dos mesmos, num tema que deverá ser fácil de entender e utilizar pelos novos utilizadores do Kodi.</description>
+		<description lang="ro_RO">Confluence este costumul implicit pentru Kodi 9.11 și versiunile ulterioare. Este o combinație de concepte împrumutate de la mai multe costume populare, care încearcă să îmbrățișeze și să integreze ideile lor bune într-un costum care să fie ușor de înțeles și folosit de către utilizatorii Kodi începători.</description>
+		<description lang="ru_RU">Confluence — это стандартная обложка Kodi, начиная с версии 9.11. Она представляет собой сочетание концепций, взятых из многих популярных обложек, в попытке интегрировать их удачные идеи в обложке, которая была бы простой для использования и понимания новыми пользователями Kodi.</description>
+		<description lang="sk_SK">Confluence je predvolený pre Kodi 9.11 a vyššie. Je kombináciou konceptov z mnoho populárnych skinov a pokusom integrovať ich dobré nápady do skinu, ktorý by bol ľahko zrozumiteľný a použiteľný pre nových používateľov Kodi.</description>
+		<description lang="sl_SI">Confluence je privzeta preobleka za Kodi 14.0 in novejše. Je kombinacija konceptov mnogih priljubljenih preoblek in poskuša zaobjeti in integrirati njihove dobre ideje v preobleko, ki bi bila preprosta za uporabo in razumevanje tudi novim uporabnikom.</description>
+		<description lang="sq_AL">Confluence është maska kryesore për Kodi 9.11 dhe verzionet më të lartë. Është nje kombinim nga shumë maska e popullarizuar dhe përpjeket për të përqafuar dhe integruar idetë më të mira në një maskë që të jetë sa më lehtë në përdorim dhe kuptim për përdoruasit duke e përdorur Kodi për herë të parë.</description>
+		<description lang="sr_RS">Confluence је мешавина концепата из многих других популарних маски, и покушај да се обједине њихове добре идеје у маску која би трeбала да буде лака за разумевање и употребу новим корисницима Kodi-а.</description>
+		<description lang="sr_RS@latin">Confluence je mešavina koncepata iz mnogih drugih popularnih maski, i pokušaja da se objedine njihove dobre ideje u masku koja bi trebala da bude laka za razumevanje i upotrebu novim korisnicima Kodi-a.</description>
+		<description lang="sv_SE">Confluence kombinerar koncept från många populära skal och försöker återanvända och integrera goda idéer för att skapa ett skal som är enkelt att förstå och använda för nya Kodi-användare.</description>
+		<description lang="szl">Confluence to je wychodnŏ skōra dlŏ Kodi 14.0 i nowszych. To je miszōng kōnceptōw ze mocki popularnych skōr i prōbuje te nŏjlepsze wkludzić do skōry, kerŏ winnŏ być prostŏ we użyciu i spokopiyniu dlŏ nowych używŏczōw Kodi.</description>
+		<description lang="tg_TJ">Пӯсти ҳамҷараёнӣ ҳамчун пӯсти пешфарз барои Kodi 9.11 ё версияи навтар истифода мешавад. Ин пӯст аз унсурҳои пӯстҳои машҳури дигар сохта шудааст ва ва ҳамаи фикрҳои беҳтарин дар як пӯст ҷамъ мекунад, то ки корбарони навомад тавонанд Kodi-ро ба осонӣ фаҳманд ва истифода баранд.</description>
+		<description lang="th_TH">Confluenceเป็นสกินเริ่มต้นสำหรับ Kodi 9.11 หรือสูงกว่า มันเป็นส่วนผสมของแนวคิดจากสกินที่ได้รับความนิยมและพยายามที่จะยอมรับและบูรณาการส่วนที่ดีของมันเข้าไปในสกิน ซึ่งน่าจะง่ายสำหรับผู้ใช้ Kodiใหม่ ที่จะเข้าใจและใช้งานได้ดี</description>
+		<description lang="tr_TR">Confluence Kodi 14.0 ve yukarısı için varsayılan dış görünümdür. Birçok popüler dış görünümün kavramlarını bir araya getirip ilk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
+		<description lang="uk_UA">Confluence — це стандартна обкладинка Kodi, починаючи з версії 9.11. Концепції багатьох популярних обкладинок поєднано у спробі використати та інтегрувати їхні вдалі ідеї в обкладинці, що стала б зрозумілою та простою в застосуванні для нових користувачів Kodi.</description>
+		<description lang="vi_VN">Confluence là giao diện mặc định cho Kodi 9.11 and các phiên bản trở về trước. Đây là sự kết hợp các khái niệm đến từ các giao diện khác nhau nhằm hướng người dùng đến sự đơn giản và dễ sử dụng.</description>
+		<description lang="zh_CN">Confluence 集合了许多流行皮肤的创意，力求把这些优点融合到一个皮肤中，使得首次使用 Kodi 的用户能更容易上手。</description>
+		<description lang="zh_TW">Confluence 是從 Kodi 9.11 開始預設的佈景主題。它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
+		<platform>all</platform>
+		<license>GNU General Public License version 2</license>
+		<forum>https://forum.kodi.tv/forumdisplay.php?fid=125</forum>
+		<source>https://github.com/xbmc/skin.confluence</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+		</assets>
+		<news>- Add PVR guide controls dialog.</news>
+	</extension>
+</addon>
+
 <addon id="skin.confluence.exended" version="4.6.20" name="[COLOR fffff600]Confluence Exended[/COLOR] Matrix" provider-name="SKINBASE,Jezz_X, Team Kodi, YLLOW_DRAGON, plood">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -6961,6 +7222,156 @@ This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Matrix officia
 		<news lang="en_GB">Equipped with the Skin Topics Loader. A skin with endless possibilities and themes. You can find the settings in the Skin Settings!</news>
 		<news lang="de_DE">Ausgestattet mit dem Skin Topics Loader. Ein Skin mit unendlichen Möglichkeiten und Themen. Die Einstellungen findet ihr in den Skin Settings !</news>
 	</extension>
+</addon>
+
+<addon id="skin.diabolo.1080" version="3.1.4" name="[COLOR fffff600]Diabolo 1080[/COLOR]" provider-name="SKINBASE,OpenELEQ, original work by Jezz_X &amp; Team Kodi">
+  <requires>
+    <import addon="xbmc.gui" version="5.15.0"/>
+  </requires>
+  <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1.0">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="af_ZA">Confluence 1080 oortreksel deur [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ar_SA">جلد "كونفليونس" من صنع [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="be_BY">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="bg_BG">Confluence 1080 облик от [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ca_ES">Aparença Confluence 1080 per [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="cs_CZ">Vzhled Confluence 1080 od [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="cy_GB">Croen Confluence 1080 gan [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="da_DK">Confluence 1080-tema af [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="de_DE">Confluence 1080 Skin von [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="el_GR">Το κέλυφος Confluence 1080 από τον [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_AU">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_GB">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_NZ">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="en_US">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="es_AR">Skin Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="es_ES">Skin Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="es_MX">Skin confluende por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="et_EE">Confluence 1080 rüü autorilt [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="eu_ES">Confluence 1080 azala [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]-ek egina.</summary>
+    <summary lang="fa_IR">پوسته Confluence 1080 تهیه شده بوسیله [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]. </summary>
+    <summary lang="fi_FI">Confluence 1080-ulkoasu. Tekijä [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="fo_FO">Confluence 1080 útsjónd av [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="fr_CA">Habillage Confluence 1080 par [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="fr_FR">Confluence 1080 par [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="gl_ES">Pel Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="he_IL">המעטפת Confluence 1080 של [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="hr_HR">Confluence 1080 presvlaka autora [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="hu_HU">Confluence 1080 felszín. Készítő: [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="hy_AM">''Confluence 1080'' - տեսք՝ [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]. կողմից</summary>
+    <summary lang="id_ID">Skin Confluence 1080 oleh [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="is_IS">Confluence 1080 eftir [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="it_IT">Skin Confluence 1080 da [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ja_JP">Confluence 1080 スキン by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ko_KR">Confluence 1080 스킨 [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR] 만듦</summary>
+    <summary lang="lt_LT">Confluence 1080 teminė išvaizda, kurią sukūrė [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="lv_LV">Confluence 1080 apvalks no Jeez_X.</summary>
+    <summary lang="mk_MK">Confluence 1080 skin by [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ms_MY">Penyatuan, kulit daripada [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="mt_MT">Dehra Confluence 1080 magħmula minn [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="nb_NO">Confluence 1080-drakt av [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="nl_NL">Confluence 1080 skin door [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="pl_PL">Skóra Confluence 1080 autorstwa [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="pt_BR">Skin Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="pt_PT">Tema Confluence 1080 por [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="ro_RO">Costum Confluence 1080 de [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="ru_RU">Обложка Confluence 1080. Автор: [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sk_SK">Confluence 1080 skin od [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sl_SI">Preobleka Confluence 1080 avtorja [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sq_AL">Maska Confluence 1080 nga Jazz_X</summary>
+    <summary lang="sr_RS">Confluence 1080 маска аутора [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sr_RS@latin">Confluence 1080 maska autora [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="sv_SE">Confluence 1080, ett skal av [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="szl">Skōra Confluence 1080 zrychtowanŏ ôd Jeez_X.</summary>
+    <summary lang="tg_TJ">Пӯсти ҳамҷараёнӣ аз ҷониби [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="th_TH">ชุดตกแต่ง Confluence 1080 โดย  [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="tr_TR">Confluence 1080 dış görünümü. [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]</summary>
+    <summary lang="uk_UA">Обкладинка Confluence 1080. Автор: [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="vi_VN">Giao diện Confluence 1080 bởi [COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR].</summary>
+    <summary lang="zh_CN">[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR] 开发的 Confluence 1080 皮肤。</summary>
+    <summary lang="zh_TW">[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR] 製作的佈景主題（Kodi的預設佈景主題）</summary>
+    <description lang="af_ZA">Dit is 'n kombinasie van konsepte van 'n klomp gewilde oortreksels, en 'n poging om hulle goeie idees te omvat en te integreer in 'n oortreksel wat maklik behoort te wees vir eerste keer Kodi gebruikers om te verstaan en te gebruik.</description>
+    <description lang="ar_SA">هو خلط بين اشهر اﻷجلده الاخرى معاً ومحاوله لتبنى ودمج افكارهم للخروج بِنِتَاج يُفترض به ان يكون سهل اﻹستيعاب بمجرد النظر لمستخدمى إكس بى إم سى المبتدئين.</description>
+    <description lang="be_BY">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="bg_BG">Целта е да се интегрират тези добри идеи в подходящ и удобен вид за хора, които се сблъскват за първи път с Kodi.</description>
+    <description lang="ca_ES">Confluence 1080 és una combinació de conceptes de moltes aparences populars i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per als nous usuaris de Kodi.</description>
+    <description lang="cs_CZ">Confluence 1080 je kombinací konceptů z mnoha oblíbených vzhledů a pokouší se pojmout a integrovat jejich dobré nápady do vzhledu, který by měl být pro nové uživatele Kodi jednoduchý na pochopení a používání.</description>
+    <description lang="cy_GB">Mae'n gyfuniad o gysyniadau o nifer o grwyn poblogaidd ac mae'n ymdrechu i gyfuno eu syniadau da hwy i groen ddylai fod yn hawdd i ddefnyddiwr cyntaf Kodi ei deall a'i ddefnyddio.</description>
+    <description lang="da_DK">Det er en kombination af koncepter fra mange populære skins, og det forsøger at omfavne og integrere de gode ideer i et skin, der er let for førstegangsbrugere af Kodi at forstå og bruge.</description>
+    <description lang="de_DE">Er ist eine Kombination mehrerer unterschiedlicher Skin-Konzepte und versucht dabei, die besten Ideen zu kombinieren, um einen einfachen Einstieg für neue Kodi-Nutzer zu ermöglichen.</description>
+    <description lang="el_GR">Είναι ένας συνδυασμός από πολλές δημοφιλής αμφιέσεις, και επιχειρεί να παρέχει τις καλύτερες ιδέες τους σε μία αμφίεση, το οποίο είναι εύκολο για τους αρχάριους χρήστες του Kodi να κατανοήσουν και να χρησιμοποιήσουν.</description>
+    <description lang="en_AU">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="en_GB">Confluence 1080 is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="en_NZ">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="en_US">It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+    <description lang="es_AR">Confluence 1080 es una combinación de conceptos de muchos skins populares, e intenta abarcar e integrar lo mejor de ellos en un skin que sea sencillo de entender y utilizar para los nuevos usuarios de Kodi.</description>
+    <description lang="es_ES">Es una combinación de conceptos de muchas skins populares, e intenta abarcar e integrar lo mejor de ellas en una skin que sea sencilla de entender y utilizar para los nuevos usuarios de Kodi.</description>
+    <description lang="es_MX">Es una combinación de conceptos de varias skins populares, e intenta adoptar e integrar sus buenas ideas en un skin que debería ser fá de entender y usar para quienes usen Kodi por primera vez.</description>
+    <description lang="et_EE">Confluence 1080 on paljude populaarsete rüüde kombinatsioon, üritades omavahel siduda nende parimaid lahendusi, et saavutada esmakasutajale selget ja kergelt kasutatavat tulemust.</description>
+    <description lang="eu_ES">Horietatik ideia onak hartu eta integratzen saiatzen da, Kodi lehen aldiz erabiltzen dutenentzat ulertzeko eta erabiltzeko erraza izango den azal batean.</description>
+    <description lang="fa_IR">این پوسته ترکیبی از چند پوسته محبوب دیگر است و تلاش دارد بهترین ایده ها را با هم ترکیب کند، تا شروعی ساده و آسان را برای کاربران جدید Kodi امکان پذیر سازد.</description>
+    <description lang="fi_FI">Confluence 1080 on yhdistelmä useiden suosittujen ulkoasujen konsepteista, ja yritys omaksua ja integroida heidän hyvät ideat ulkoasuun, jonka pitäisi olla helppokäyttöinen ja -tajuinen kaikille Kodin käyttäjille.</description>
+    <description lang="fo_FO">Ætlanin er at útsjóndin skal lætta um móttøku og nýtslu av Kodi fyri nýggjar brúkarar.</description>
+    <description lang="fr_CA">Il tente d'inclure et d'intégrer leurs bonnes idées en un habillage qui devrait être facile à comprendre et à utiliser pour les utilisateurs débutants de Kodi.</description>
+    <description lang="fr_FR">Reprenant les concepts issus de plusieurs habillages populaires, il est une tentative d'inclusion et d'intégration des meilleures idées afin de créer un habillage d'interface qui soit facile à comprendre et à utiliser pour les personnes découvrant Kodi.</description>
+    <description lang="gl_ES">É unha combinación de conceptos de algunhas peles populares, e tenta abranguer e integrar  as súas mellores ideas nunha pel que sexa fácil de entender e utilizar para as usuarias que utilizan por primeira vez Kodi.</description>
+    <description lang="he_IL">המעטפת הינה תוצר של אימוץ מאפיינים ממעטפות פופולריות רבות תוך רצון לשלב מאפיינים אלה למעטפת פשוטה לשימוש ולהכרה ראשונית ע"י משתמשי Kodi חדשים.</description>
+    <description lang="hr_HR">To je mješavina koncepta iz mnogih drugih popularnih presvlaka, pokušaj da se objedine njihove dobre osobine u presvlaku i da budu lagane za upotrebu i razumljive novim Kodi korisnicima.</description>
+    <description lang="hu_HU">Merít sok sok népszerű felszín elképzeléséből, megpróbálva vegyíteni a jó ötleteket úgy, hogy az könnyen kezelhető legyen a Kodival először találkozóknak is.</description>
+    <description lang="id_ID">Merupakan kombinasi konsep dari beberapa skin populer, dan berusaha untuk merangkul dan menyatukan ide bagus mereka ke sebuah skin yang mudah dipakai dan dipahami oleh pengguna Kodi pertama kali.</description>
+    <description lang="is_IS">Það er samsetning hugmynda frá mörgum vinsælum útlitum og er tilraun til að fanga og innlima þær góðu hugmyndir í útlit sem sé einfalt fyrir fyrir nýja Kodi notendur að skilja og nota</description>
+    <description lang="it_IT">È una combinazione di elementi provenienti da altre skin popolari e cerca di integrare e coinvolgere tutte le loro grandi idee in una skin facile da usare e comprendere per l'utente inesperto di Kodi.</description>
+    <description lang="ja_JP">Confluence 1080 は Kodi 9.11 およびそれ以上のバージョンで標準のスキンです。さまざまな人気のスキンのコンセプトを組み合わせ、ユーザが初めて Kodi に触れる際に便利に使えるようにしてあります。</description>
+    <description lang="ko_KR">많은 인기 스킨의 컨셉과 좋은 아이디어를 모아서 하나의 스킨으로 만들었으며 초보자도 사용하기 쉽습니다.</description>
+    <description lang="lt_LT">Bandymas priimti ir integruoti vartotojų idėjas į teminę išvaizdą katra turėtų būti lengvai suprantama  pirmą kartą naudojantiems Kodi</description>
+    <description lang="lv_LV">Confluence 1080 ir apvienota daudzu populāru apvalku koncepcija un centieni pieņemt un integrēt labākās idejas, lai jaunajiem Kodi ietotājiem to būtu viegli izprast un lietot.</description>
+    <description lang="mk_MK">Тој е комбинација на концепти од повеќе популарни изгледи, и настојува да ги обедини и истакне нивните добри идеи во еден изглед разбирлив за почетници.</description>
+    <description lang="ms_MY">Ia merupakan gabungan konsep dari pelbagai kulit terkenal, dan berusaha untuk merangkumkan dan menyepadukan idea baik kulit-kulit tersebut menjadi satu kulit yang mudah difahami dan digunakan oleh pengguna baru Kodi .</description>
+    <description lang="mt_MT"> Hija taħlita ta' kunċetti minn ħafna dehriet popolari, u tipporva tgħaqqad u tintegra l-aqwa ideat tagħhom f'dehra li għandha tkun faċli biex jifmuha u jużawha dawk l-utenti li qed jużaw Kodi għall-ewwel darba.</description>
+    <description lang="nb_NO">Det er en kombinasjon av konseptene fra mange populære drakter, og prøver å omfavne og integrere de gode idéene i en drakt som bør være lett å forstå og benytte seg av for nye Kodi-brukere.</description>
+    <description lang="nl_NL">Het combineert de concepten van andere populaire skins, waarbij het tracht hun goede ideeën te integreren in een skin die gemakkelijk in gebruik is.</description>
+    <description lang="pl_PL">Confluence 1080 jest kombinacją koncepcji  wielu popularnych skór i próbą zawarcia tego, co w nich najlepsze w skórze, która będzie łatwa do opanowania dla początkującego użytkownika.</description>
+    <description lang="pt_BR"></description>
+    <description lang="pt_PT">É uma combinação de conceitos a partir de muitos temas populares e tenta integrar as boas ideias dos mesmos, num tema que deverá ser fácil de entender e utilizar pelos novos utilizadores do Kodi.</description>
+    <description lang="ro_RO">Este o combinație de concepte împrumutate de la mai multe costume populare, care încearcă să îmbrățișeze și să integreze ideile lor bune într-un costum care să fie ușor de înțeles și folosit de către utilizatorii Kodi începători.</description>
+    <description lang="ru_RU">Она представляет собой сочетание концепций, взятых из многих популярных обложек, в попытке интегрировать их удачные идеи в обложке, которая была бы простой для использования и понимания новыми пользователями Kodi.</description>
+    <description lang="sk_SK">Je kombináciou konceptov z mnoho populárnych skinov a pokusom integrovať ich dobré nápady do skinu, ktorý by bol ľahko zrozumiteľný a použiteľný pre nových používateľov Kodi.</description>
+    <description lang="sl_SI">Je kombinacija konceptov mnogih priljubljenih preoblek in poskuša zaobjeti in integrirati njihove dobre ideje v preobleko, ki bi bila preprosta za uporabo in razumevanje tudi novim uporabnikom.</description>
+    <description lang="sq_AL">Është nje kombinim nga shumë maska e popullarizuar dhe përpjeket për të përqafuar dhe integruar idetë më të mira në një maskë që të jetë sa më lehtë në përdorim dhe kuptim për përdoruasit duke e përdorur Kodi për herë të parë.</description>
+    <description lang="sr_RS">Confluence 1080 је мешавина концепата из многих других популарних маски, и покушај да се обједине њихове добре идеје у маску која би трeбала да буде лака за разумевање и употребу новим корисницима Kodi-а.</description>
+    <description lang="sr_RS@latin">Confluence 1080 je mešavina koncepata iz mnogih drugih popularnih maski, i pokušaja da se objedine njihove dobre ideje u masku koja bi trebala da bude laka za razumevanje i upotrebu novim korisnicima Kodi-a.</description>
+    <description lang="sv_SE">Confluence 1080 kombinerar koncept från många populära skal och försöker återanvända och integrera goda idéer för att skapa ett skal som är enkelt att förstå och använda för nya Kodi-användare.</description>
+    <description lang="szl">To je miszōng kōnceptōw ze mocki popularnych skōr i prōbuje te nŏjlepsze wkludzić do skōry, kerŏ winnŏ być prostŏ we użyciu i spokopiyniu dlŏ nowych używŏczōw Kodi.</description>
+    <description lang="tg_TJ">Ин пӯст аз унсурҳои пӯстҳои машҳури дигар сохта шудааст ва ва ҳамаи фикрҳои беҳтарин дар як пӯст ҷамъ мекунад, то ки корбарони навомад тавонанд Kodi-ро ба осонӣ фаҳманд ва истифода баранд.</description>
+    <description lang="th_TH">Confluence 1080เป็นสกินเริ่มต้นสำหรับ Kodi 9.11 หรือสูงกว่า มันเป็นส่วนผสมของแนวคิดจากสกินที่ได้รับความนิยมและพยายามที่จะยอมรับและบูรณาการส่วนที่ดีของมันเข้าไปในสกิน ซึ่งน่าจะง่ายสำหรับผู้ใช้ Kodiใหม่ ที่จะเข้าใจและใช้งานได้ดี</description>
+    <description lang="tr_TR">Birçok popüler dış görünümün kavramlarını bir araya getirip ilk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
+    <description lang="uk_UA">Концепції багатьох популярних обкладинок поєднано у спробі використати та інтегрувати їхні вдалі ідеї в обкладинці, що стала б зрозумілою та простою в застосуванні для нових користувачів Kodi.</description>
+    <description lang="vi_VN">Đây là sự kết hợp các khái niệm đến từ các giao diện khác nhau nhằm hướng người dùng đến sự đơn giản và dễ sử dụng.</description>
+    <description lang="zh_CN">力求把这些优点融合到一个皮肤中，使得首次使用 Kodi 的用户能更容易上手。</description>
+    <description lang="zh_TW">它結合了許多受歡迎的佈景主題的概念，且試圖包含並整合它們的優點，使第一次使用 Kodi 的使用者可以簡單地上手。</description>
+    <platform>all</platform>
+    <license>GNU General Public License version 2</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=314062</forum>
+    <website>https://github.com/OpenELEQ/repository.q/</website>
+    <email>OpenELEQ@gmail.com</email>
+    <source>https://github.com/OpenELEQ/repository.q/tree/master/krypton/skin.confluence.1080/</source>
+    <!--<video_guide>yt-id</video_guide>-->
+    <video_preview>BxyKxrZQ9xc</video_preview>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+      <screenshot>resources/screenshot-04.jpg</screenshot>
+      <screenshot>resources/screenshot-05.jpg</screenshot>
+    </assets>
+	 <size>15279144</size>
+    <news>Added Skin.ToggleDebug-button / Changed xml-location / Changed news-section in addon-info from fadelabel to textbox / Fixed appearance of scrollbars / Fixed LeftRating (0 &amp; 1) / Tweaked positioning of home-pushbuttons and rss / Updated Textures.xbt</news>
+  </extension>
+
 </addon>
 
 <addon id="skin.embuary-matrix" version="19.0.1" name="Embuary (Matrix)" provider-name="sualfred">
@@ -7454,6 +7865,33 @@ This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Matrix officia
 
 </addon>
 
+<addon id="skin.my.scope.nox" version="1.3.1" name="[COLOR fffff600]My Scope Nox[/COLOR]" provider-name="pfp-az">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0" />
+		<import addon="script.grab.fanart" version="0.12.8" />
+		<import addon="script.skinshortcuts" version="0.4.5" />
+		<import addon="service.library.data.provider" version="0.0.7" />
+		<import addon="script.embuary.info" version="2.0.8" />
+		<import addon="script.embuary.helper" version="2.0.8" />
+		<import addon="plugin.video.themoviedb.helper" version="4.3.0" />
+		<import addon="resource.images.studios.white" version="0.0.28" />
+		<import addon="resource.images.studios.coloured" version="0.0.20" />
+		<import addon="resource.images.recordlabels.white" version="0.0.1" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="21x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">My Scope Nox: A mod of a mod, Aeon Nox formatted to suit Zoomed CIH projector setups.</summary>
+		<description lang="en">My Scope Nox: Aeon Nox in a format suitable for people using projectors and zooming for CIH. (GUI within 800-820 pixels).  Original mod - ScopeNox by Funkd</description>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
 <addon
 	id="skin.night"
 	version="2.5.2"
@@ -7574,6 +8012,42 @@ This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Matrix officia
 		      v.5.1 Update Language Germany
 			  v.5.3 Update Widgets and Font.</news>
 	</extension>
+</addon>
+
+<addon
+  id="skin.pm3-hd"
+  version="2.6.10"
+  name="[COLOR fffff600]PM3.HD[/COLOR]"
+  provider-name="SKINBASE,Jezz_X, Team XBMC, TigerbotHesh, qqbenq">
+  <requires>
+    <import addon="xbmc.gui" version="5.15.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="Textures.xbt"
+    debugging="false"
+    effectslowdown="1.0">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Skins und Skin Themen by Guidos Skinbase.</summary>
+		<summary lang="en_GB">Skins and Skin Themen by Guidos Skinbase.</summary>
+		<description lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </description>
+		<description lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</description>
+		<platform>all</platform>
+		<news lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </news>
+		<news lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+		</assets>
+		<size>21802757</size>
+	</extension>
+
 </addon>
 
 <addon id="skin.quartz" version="5.19.0" name="Quartz" provider-name="nonjon">
@@ -7730,6 +8204,51 @@ This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Matrix officia
 	</extension>
 </addon>
 
+<!-- BINGIE -->
+<addon id="skin.titan.bingie.mod" version="2.0.1" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
+	<requires>
+		<import version="5.15.0" addon="xbmc.gui"/>
+		<import addon="script.bingie.helper" version="1.0.0"/>
+		<import addon="script.skinshortcuts" version="0.6.5"/>
+		<import addon="script.skin.helper.service" version="1.0.0"/>
+        <import addon="script.skin.helper.widgets" version="1.0.0"/>
+        <import addon="script.skin.helper.backgrounds" version="1.0.0"/>
+        <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0"/>
+        <import addon="resource.images.skinicons.wide" version="1.0.0"/>
+        <import addon="resource.images.backgroundoverlays.basic" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Titan BINGIE MOD... The new Titan skin for Kodi Matrix.</summary>
+		<description>Titan is back for Kodi Matrix with the new NETFLIX layout!</description>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=355993</forum>
+		<website>https://forum.kodi.tv/showthread.php?tid=355993</website>
+		<email></email>
+		<source>https://github.com/AchillesPunks/skin.titan.bingie.mod/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
+			<screenshot>resources/screenshot007.jpg</screenshot>
+			<screenshot>resources/screenshot008.jpg</screenshot>
+		</assets>
+		<news>
+			[B]Titan BINGIE MOD v2[/B][CR]Follow the forum thread about the latest news for the skin.[CR]https://forum.kodi.tv/showthread.php?tid=355993
+		</news>
+	</extension>
+</addon>
+
 <addon
 	id="skin.unity"
 	version="0.19.2"
@@ -7793,5 +8312,52 @@ This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Matrix officia
 			<screenshot>resources/screenshot10.jpg</screenshot>
 		</assets>
 	</extension>
+</addon>
+
+<addon
+  id="skin.xonfluence"
+  version="4.1.5"
+  name="[COLOR fffff600]Xonfluence[/COLOR]"
+  provider-name="Helly,bsoriano">
+  <requires>
+    <import addon="xbmc.gui" version="5.15.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    debugging="false"
+    effectslowdown="1.0">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">eXtended MOD of Confluence skin originally by Jezz_X and CCM by Mudislander.</summary>
+    <summary lang="en_US">eXtended MOD of Confluence skin originally by Jezz_X and CCM by Mudislander.</summary>
+    <summary lang="nl">Uitgebreide MOD van Confluence skin origineel door Jezz_X en CCM door Mudislander.</summary>
+    <description lang="en">Xonfluence is a MOD of Confluence to enable a greater degree of user customisation to the default skin (based by Mudislander's CCM).</description>
+    <description lang="en_US">Xonfluence is a MOD of Confluence to enable a greater degree of user customisation to the default skin (based by Mudislander's CCM).</description>
+    <description lang="nl">Xonfluence is een MOD van Confluence om een grotere aanpassingsmogelijkheid te geven ten opzichten van de standaard skin (gebaseerd op Mudislander's CCM).</description>
+    <disclaimer lang="en">You break it - You get to keep the pieces</disclaimer>
+    <disclaimer lang="en_US">You break it - You get to keep the pieces</disclaimer>
+    <disclaimer lang="nl">Wie zijn billen brandt - moet op de blaren zitten</disclaimer>
+    <platform>all</platform>
+	  <license>GNU General Public License version 2</license>
+	  <forum>https://forum.kodi.tv/showthread.php?tid=346302</forum>
+	  <website></website>
+	  <email></email>
+	  <source>https://github.com/bartolomesoriano/skin.xonfluence</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+	    <screenshot>resources/screenshot-01.jpg</screenshot>
+	    <screenshot>resources/screenshot-02.jpg</screenshot>
+	    <screenshot>resources/screenshot-03.jpg</screenshot>
+	    <screenshot>resources/screenshot-04.jpg</screenshot>
+	    <screenshot>resources/screenshot-05.jpg</screenshot>
+	    <screenshot>resources/screenshot-06.jpg</screenshot>
+	    <screenshot>resources/screenshot-07.jpg</screenshot>
+	    <screenshot>resources/screenshot-08.jpg</screenshot>
+	    <screenshot>resources/screenshot-09.jpg</screenshot>
+    </assets>
+    <news>See changelog for latest changes</news>
+  </extension>
 </addon>
 </addons>
