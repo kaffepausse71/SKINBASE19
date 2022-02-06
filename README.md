@@ -1,2 +1,1 @@
-# SKINBASE19
-Kodi 19 Repo for Skins 😁
+# SKINBASE Repo für Kodi 19  😁 The Biggest Repo of the World  😁

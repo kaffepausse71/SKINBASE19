@@ -5855,6 +5855,30 @@ I had this disabled because i want to be able to jump to the most right object b
 	</extension>
 </addon>
 
+<addon id="skin.aeon.terror" version="1.0.3" name="Aeon:Terror" provider-name="Terror Skins">
+	<requires>
+		<import addon="script.skin.helper.colorpicker" version="1.0.12" />
+		<import addon="xbmc.gui" version="5.15.0" />
+		<import addon="script.skinshortcuts" version="1.0.10" />
+		<import addon="service.library.data.provider" version="0.0.7" />
+		<import addon="script.grab.fanart" version="0.12.8" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_US">Skin mod by Terror Skins</summary>
+		<description lang="en_US">Fork of Aeon Nox SiLVO</description>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>[COLOR red][I]v1.0.3[/I][/COLOR][COLOR blue][CR]-Fix Apps left panel scroll bar for Android OS.[CR]-Fix OSD Sider.[CR]-Fix default_settings backgrounds.[CR][COLOR red][I]v1.0.2[/I][/COLOR][COLOR blue][CR]-Added default Favs submenu authorize for resolvers and trakt.  Added default zip and repo install.[CR]-Fix PVR video window.[CR]-Added "Make It Snow" option.[CR]-Changed font, added 3D label, and shadow color to main menu labels.[CR]-Fixed Apps right panel scroll bar.[CR]-Added extra icons for menu. Adjusted vert and horz icons and labels.[CR]-Removed xbt files from media.[/COLOR][COLOR grey][CR][I]v1.0.1[/I][CR]-Moved debug grid image to backgrounds folder so special source not required.[CR]-Added an optional widget 2 slide up for compact panel when in center position.[CR]-Fixed widget 2 glow and made panel and glow there own options.[CR]-Add the png for the time line bar in the new pvr[CR]-Fix supported addons view.[CR][I]v1.0.0[/I][CR]-Release to repo.[CR]http://terrorskins.ca/repo[/COLOR][CR]</news>
+	</extension>
+</addon>
+
 <addon id="skin.aeonmq5.matrixmod" name="[COLOR fffff600]Aeon MQ 5[/COLOR] Matrixmod" provider-name="MarcosQui / scott967" version="11.1.0">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
@@ -7831,6 +7855,37 @@ This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Matrix officia
 		</assets>
 		<news>Updated for Kodi v19 (Matrix).</news>
 	</extension>
+</addon>
+
+<addon id="skin.fuse.modorange" version="1.0.60" name="[COLOR orange]fuse mod orange[/COLOR]" provider-name="jurialmunkey,SKINBASE">
+    <requires>
+        <import addon="xbmc.gui" version="5.15.0"/>
+        <import addon="script.skinshortcuts" version="0.4.0"/>
+        <import addon="resource.images.studios.white" version="0.0.10"/>
+        <import addon="resource.images.moviegenreicons.transparent" version="0.0.6"/>
+    </requires>
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de_DE">Skins und Skin Themen by Guidos Skinbase.</summary>
+		<summary lang="en_GB">Skins and Skin Themen by Guidos Skinbase.</summary>
+		<description lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </description>
+		<description lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</description>
+		<platform>all</platform>
+		<news lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </news>
+		<news lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+		</assets>
+		<size>9163554</size>
+    </extension>
 </addon>
 
 <addon id="skin.horizonzv" name="[COLOR fffff600]Horizonz V[/COLOR] (alpha)" version="1.19.0.0" provider-name="blauesgruen">
