@@ -5750,7 +5750,7 @@ I had this disabled because i want to be able to jump to the most right object b
 	</extension>
 </addon>
 
-<addon id="skin.aeon.nox.silvo.ultimate" version="7.9.6" name="[COLOR fffff600]Aeon Nox: SiLVO[/COLOR] [B][COLOR red]Ultimate Topics[/COLOR][/B]" provider-name="SiLVO,SKINBASE">
+<addon id="skin.aeon.nox.silvo.ultimate" version="8.0.1" name="[COLOR fffff600]Aeon Nox: SiLVO[/COLOR] [B][COLOR red]Ultimate Topics[/COLOR][/B]" provider-name="SiLVO,SKINBASE">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="script.skinshortcuts" version="1.0.10" />
