@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.phenomenal" name="[COLOR fffff600]Phenomenal[/COLOR]" version="5.4.19" provider-name="tomer953 - SKINBASE - Anonymous Update For Kodi 18">
+<addon id="skin.phenomenal" name="[COLOR FFC1C127]Phenomenal[/COLOR]" version="5.4.19" provider-name="tomer953 - SKINBASE - Anonymous Update For Kodi 18">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skin.helper.widgets" version="1.0.42"/>
-		<import addon="script.skin.helper.colorpicker" version="1.0.0"/>
-		<import addon="script.skinshortcuts" version="0.6.6"/>
+		<import addon="script.skin.helper.colorpicker" version="1.0.13"/>
+		<import addon="script.skinshortcuts" version="1.0.17"/>
+		<import addon="xbmc.python" version="3.0.0"/> 
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080p"/>
