@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.aeonmq8" version="2.9.19" name="[COLOR fffff600]Aeon MQ 8[/COLOR] Matrix" provider-name="SKINBASE,MarcosQui">
+	<addon id="skin.aeonmq8" version="2.9.19" name="[COLOR FFC1C127]Aeon MQ 8[/COLOR] Matrix" provider-name="SKINBASE,MarcosQui">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>

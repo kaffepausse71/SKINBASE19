@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.ace2.matrix" version="1.6.1" name="[COLOR fffff600]Ace 2 Matrix[/COLOR]" provider-name="SKINBASE,MarcosQui">
+	<addon id="skin.ace2.matrix" version="1.6.1" name="[COLOR FFC1C127]Ace 2 Matrix[/COLOR]" provider-name="MarcosQui|SKINBASE">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>

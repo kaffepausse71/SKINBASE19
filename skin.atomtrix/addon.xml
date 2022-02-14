@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon id="skin.atomtrix" version="0.0.01" name="[COLORlimegreen]AtomTrix[/COLOR]" provider-name="ATOM1C and DJAY THEMES">
+<addon id="skin.atomtrix" version="0.0.01" name="[COLOR FFC1C127]AtomTrix[/COLOR]" provider-name="ATOM1C and DJAY THEMES,SKINBASE">
     <requires>
         <import addon="xbmc.gui" version="5.15.0"/>
         <import addon="script.skinshortcuts" version="1.0.17"/>

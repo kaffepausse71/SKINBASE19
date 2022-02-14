@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeon.nox.silvo.kodiboy" version="8.0.5" name="Aeon Nox: SiLVO [COLOR FF6DB9E5]KodiBoy[/COLOR]" provider-name="SiLVO,KodiBoy,SKINBASE">
+<addon id="skin.aeon.nox.silvo.kodiboy" version="8.0.5" name="[COLOR FFC1C127]KodiBoy[/COLOR]" provider-name="SiLVO,KodiBoy,SKINBASE">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="script.skinshortcuts" version="1.0.10" />

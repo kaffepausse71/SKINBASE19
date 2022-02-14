@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeon.nox.5" version="8.0.0" name="[COLOR fffff600]Aeon Nox[/COLOR] Matrix" provider-name="SKINBASE,BigNoid">
+<addon id="skin.aeon.nox.5" version="8.0.0" name="[COLOR FFC1C127]Aeon Nox[/COLOR]" provider-name="SKINBASE,BigNoid">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<!--<import addon="script.grab.fanart" version="0.12.8"/>-->

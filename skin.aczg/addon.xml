@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aczg" version="5.4.4" name="[COLOR fffff600]A Confluence ZEITGEIST[/COLOR] (Alpha) (KODI 19)" provider-name="axbmcuser">
+<addon id="skin.aczg" version="5.4.4" name="[COLOR FFC1C127]A Confluence ZEITGEIST[/COLOR] (Alpha) (KODI 19)" provider-name="axbmcuser|SKINBASE">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<!--

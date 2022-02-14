@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeon.terror" version="1.0.3" name="Aeon:Terror" provider-name="Terror Skins">
+<addon id="skin.aeon.terror" version="1.0.3" name="[COLOR FFC1C127]Aeon:Terror[/COLOR]" provider-name="Terror Skins,SKINBASE">
 	<requires>
 		<import addon="script.skin.helper.colorpicker" version="1.0.12" />
 		<import addon="xbmc.gui" version="5.15.0" />

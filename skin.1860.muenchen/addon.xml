@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.1860.muenchen" version="8.0.0" name="[COLOR fffff600]1860 München[/COLOR]" provider-name="SKINBASE|SiLVO">
+<addon id="skin.1860.muenchen" version="8.0.0" name="[COLOR FFC1C127]1860 München[/COLOR]" provider-name="SiLVO|SKINBASE">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="script.skinshortcuts" version="1.0.10" />
