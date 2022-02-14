@@ -2,8 +2,8 @@
 <addon
   id="skin.pm3-hd"
   version="2.6.10"
-  name="[COLOR fffff600]PM3.HD[/COLOR]"
-  provider-name="SKINBASE,Jezz_X, Team XBMC, TigerbotHesh, qqbenq">
+  name="[COLOR FFC1C127]PM3.HD[/COLOR]"
+  provider-name="SKINBASE,Jezz_X,Team XBMC,TigerbotHesh,qqbenq">
   <requires>
     <import addon="xbmc.gui" version="5.15.0"/>
   </requires>

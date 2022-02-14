@@ -2,8 +2,8 @@
 <addon
   id="skin.xonfluence"
   version="4.1.5"
-  name="[COLOR fffff600]Xonfluence[/COLOR]"
-  provider-name="Helly,bsoriano">
+  name="[COLOR FFC1C127]Xonfluence[/COLOR]"
+  provider-name="Helly,bsoriano,SKINBASE">
   <requires>
     <import addon="xbmc.gui" version="5.15.0"/>
   </requires>

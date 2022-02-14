@@ -2,8 +2,8 @@
 <addon
 	id="skin.unity"
 	version="0.19.2"
-	name="Unity"
-	provider-name="Eddage, Bumpaneer">
+	name="[COLOR FFC1C127]Unity[/COLOR]"
+	provider-name="Eddage, Bumpaneer,SKINBASE">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="1.1.4"/>
