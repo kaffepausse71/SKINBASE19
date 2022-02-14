@@ -2,7 +2,7 @@
 <addon
   id="skin.mimic.red"
   version="6.0.19"
-  name="[COLOR fffff600]Mimic Red 6[/COLOR] Matrix"
+  name="[COLOR FFC1C127]Mimic Red 6[/COLOR]"
   provider-name="SKINBASE,braz">
     <requires>
         <import addon="xbmc.gui" version="5.15.0"/>

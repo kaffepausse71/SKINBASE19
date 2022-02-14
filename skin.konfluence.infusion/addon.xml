@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.konfluence.infusion" version="3.0.19" name="[COLOR fffff600]Konfluence Infusion[/COLOR] Matrix" provider-name="SKINBASE,SchisM-CDTV">
+<addon id="skin.konfluence.infusion" version="3.0.19" name="[COLOR FFC1C127]Konfluence Infusion[/COLOR]" provider-name="SKINBASE,SchisM-CDTV">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="0.4.0" />

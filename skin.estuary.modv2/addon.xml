@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.modv2" version="3.0.7+matrix.2" name="[COLOR fffff600]Estuary MOD V2[/COLOR] Matrix" provider-name="Guilouz, K19 branch by BJ1">
+<addon id="skin.estuary.modv2" version="3.0.7+matrix.2" name="[COLOR FFC1C127]Estuary MOD V2[/COLOR] Matrix" provider-name="Guilouz, K19 branch by BJ1,SKINBASE">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.gui" version="5.15.0"/>

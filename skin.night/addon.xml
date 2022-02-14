@@ -2,8 +2,8 @@
 <addon
 	id="skin.night"
 	version="2.5.2"
-	name="[COLOR fffff600]Night[/COLOR]"
-	provider-name="bkury">
+	name="[COLOR FFC1C127]Night[/COLOR]"
+	provider-name="bkury,SKINBASE">
 
 	<import addon="xbmc.gui" version="5.15.0"/>
 

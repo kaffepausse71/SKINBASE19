@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.fuse.modorange" version="1.0.60" name="[COLOR orange]fuse mod orange[/COLOR]" provider-name="jurialmunkey,SKINBASE">
+<addon id="skin.fuse.modorange" version="1.0.60" name="[COLOR FFC1C127]fuse mod orange[/COLOR]" provider-name="jurialmunkey,SKINBASE">
     <requires>
         <import addon="xbmc.gui" version="5.15.0"/>
         <import addon="script.skinshortcuts" version="0.4.0"/>

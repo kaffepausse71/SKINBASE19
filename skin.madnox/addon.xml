@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon id="skin.madnox" version="20.12.24+m" name="[COLOR fffff600]Madnox[/COLOR]" provider-name="Mr. V">
+<addon id="skin.madnox" version="20.12.24+m" name="[COLOR FFC1C127]Madnox[/COLOR]" provider-name="Mr. V,SKINBASE">
     <requires>
         <import addon="xbmc.gui" version="5.15.0"/>
         <import addon="script.skinshortcuts" version="1.0.17"/>

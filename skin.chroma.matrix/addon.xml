@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon id="skin.chroma.matrix" version="5.0.19" name="[COLOR fffff600]Chroma[/COLOR] Matrix" provider-name="SKINBASE,Tgx">
+<addon id="skin.chroma.matrix" version="5.0.19" name="[COLOR FFC1C127]Chroma[/COLOR] Matrix" provider-name="SKINBASE,Tgx">
     <requires>
         <import addon="xbmc.gui" version="5.15.0"/>
         <import addon="script.favourites" version="3.2.0"/>
