@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+    <!-- CONFLUENCE LITE COLORS -->
+    <color name="white">FFFFFFFF</color>
+    <color name="grey">FFB4B4B4</color>
+    <color name="grey2">88FFFFFF</color>
+    <color name="grey3">33FFFFFF</color>
+    <color name="grey4">17FFFFFF</color>
+    <color name="black">FF000000</color>
+    <color name="blue">FFD204A9</color>
+    <color name="selected">FFD204A9</color>
+    <color name="dialogheader">FFDDA0DD</color>
+    <color name="theme">FFD204A9</color>
+</colors>

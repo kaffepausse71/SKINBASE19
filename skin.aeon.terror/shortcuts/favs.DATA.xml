@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>Install from Zip</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>installfromzip</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Install from Repo</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(10040,"addons://repos/",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Auth ResolveURL</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>RunPlugin(plugin://script.module.resolveurl/?mode=auth_rd)</action>
+		<visible>System.HasAddon(script.module.resolveurl)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Auth URLResolver</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>RunPlugin(plugin://script.module.urlresolver/?mode=auth_rd)</action>
+		<visible>System.HasAddon(script.module.urlresolver)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Auth Trakt</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>RunScript(script.trakt, action=auth_info)</action>
+		<visible>System.HasAddon(script.trakt)</visible>
+	</shortcut>
+</shortcuts>

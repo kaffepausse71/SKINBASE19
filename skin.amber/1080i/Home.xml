@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- Load favourites -->
+	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
+	<!-- Build menu/submenus/custom shelves -->
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|powermenu&amp;levels=5)</onload>
+    <!-- Start skin.info.service, used for set info -->
+	<onload condition="System.HasAddon(script.skin.info.service) + String.IsEmpty(Window(home).Property(skininfos_daemon_running))">RunScript(script.skin.info.service)</onload>
+    <!-- Build include for viewtype visiblity -->
+	<onload condition="System.HasAddon(script.skinvariables)">RunScript(script.skinvariables,action=buildviews)</onload>
+	<!-- Remember what the focused menu item background is -->
+	<onunload condition="!String.IsEmpty(Container(300).ListItem.Property(Background))">Skin.SetString(FocusedMenu.Background,$INFO[Container(300).ListItem.Property(Background)])</onunload>
+    <onunload condition="!String.IsEmpty(Container(300).ListItem.Property(backgroundPlaylist))">Skin.SetString(FocusedMenu.BackgroundPlaylist,$INFO[Container(300).ListItem.Property(backgroundPlaylist)])</onunload>
+	<!-- Clear TMDbHelper widgetcontainer id -->
+	<onunload condition="Skin.HasSetting(Enable.TMDbHelper)">ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
+	
+	<defaultcontrol always="true">300</defaultcontrol>
+	<controls>
+		<!-- Hidden lists used for random fanart backgrounds -->
+		<include>HomeBackgroundLists</include>
+		<!-- Hidden lists used for statistics line -->
+		<include condition="Skin.HasSetting(ShowInfoLine)">HomeInfoLineLists</include>
+		<!-- Hidden lists if using script.embuary.helper for random fanart backgrounds and statistics lines -->
+		<include condition="Skin.HasSetting(Enable.EmbuaryHelper) + Skin.HasSetting(UseEHBackgrounds)">HomeEHBackgroundLists</include>
+		<include condition="Skin.HasSetting(Enable.EmbuaryHelper) + Skin.HasSetting(UseEHInfoLine)">HomeEHInfoLineLists</include>
+		 
+		<control type="multiimage">
+			<visible>![Player.HasVideo + Skin.HasSetting(Show_VideoBackground)]</visible>
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+            <randomize>true</randomize>
+            <include>MultiImageTime</include>
+			<imagepath background="true">$VAR[HomeBackground]</imagepath>
+            <aspectratio>scale</aspectratio>
+		</control>
+		<control type="visualisation">
+			<visible>Player.HasAudio + Skin.HasSetting(Show_MusicVizBackground)</visible>
+			<include>Dimensions_Fullscreen</include>
+		</control>
+		<control type="videowindow" id="350">
+			<visible>Player.HasVideo + Skin.HasSetting(Show_VideoBackground)</visible>
+			<include>Dimensions_Fullscreen</include>
+		</control>
+		<control type="group" description="Content">
+			<animation effect="fade" start="0" end="100" time="1000" condition="Window.Previous(Startup.xml)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" condition="!Window.Previous(Startup.xml)">Conditional</animation>
+			<include condition="Skin.HasSetting(VerticalHome)">Vertical_Home_Layout</include>
+			<include condition="!Skin.HasSetting(VerticalHome)">Horizontal_Home_Layout</include>
+			<include>Time</include>
+            <!-- Fanart background title -->
+			<include condition="[!Skin.HasSetting(Home_DefaultBG) + Skin.HasSetting(Enable.FanartTitle)]">ShowFanartTitle</include>
+			<include condition="Skin.HasSetting(ShowHomeLogo)">HomeClearLogo</include>
+		</control>
+		<include condition="Skin.HasSetting(holiday)">Holiday</include>
+	</controls>
+</window>

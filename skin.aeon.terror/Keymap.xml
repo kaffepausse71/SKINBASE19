@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<keymap>
+    <global>
+        <keyboard>
+			<F1>Skin.ToggleSetting(Disable.IconsMenuLabel)</F1>
+			<F2>Skin.HasSetting(HomeMenuBarFade)</F2>
+			<F3>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</F3>
+			<F4>Skin.ToggleSetting(Enable.VisibleSubmenu)</F4>
+            <F5>XBMC.ReloadSkin()</F5>
+			<F6>ActivateWindow(SkinSettings)</F6>
+            <F7>Skin.ToggleDebug</F7>
+            <F8>Skin.ToggleSetting(SystemBarOnTop)</F8>
+			<F9>Skin.SetString(MainMenu.Position,low)</F9>
+			<F10>Skin.Reset(MainMenu.Position)</F10>
+			<F11>Skin.SetString(MainMenu.Position,high)</F11>
+        </keyboard>
+    </global>
+    <MusicInformation>
+        <keyboard>
+            <i>Close</i>
+        </keyboard>
+    </MusicInformation>
+</keymap> 

@@ -1,0 +1,4390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Aeon MQ 8 -->
+	<include name="mainmenu_font">
+		<definition>
+			<control type="label">
+				<left>50</left>
+				<top>$PARAM[top]</top>
+				<width>550</width>
+				<height>90</height>				
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<font>$PARAM[font]</font>
+				<textcolor>$INFO[skin.string(colorfont)]</textcolor>
+				<animation effect="fade" end="40" condition="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="300" condition="Skin.HasSetting(submode)">Conditional</animation>
+			</control>
+		</definition>
+	</include>
+	<include name="mainmenu_fontfocus">
+		<definition>
+			<control type="label">
+				<left>50</left>
+				<top>$PARAM[top]</top>
+				<width>525</width>
+				<height>90</height>				
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<font>$PARAM[font]</font>
+				<textcolor>$INFO[skin.string(colorfont)]</textcolor>
+				<animation effect="zoom" center="50,20" start="100" end="130" time="500" delay="150" tween="sine" easing="out">Focus</animation>
+				<animation effect="zoom" center="50,20" start="130" end="100" time="100" delay="0" tween="sine" easing="out">UnFocus</animation>
+				<animation effect="fade" start="100" end="50" time="100" condition="!Control.Hasfocus(9000)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,40" time="400" delay="300" tween="quadratic" easing="in" condition="Skin.HasSetting(submode) + Skin.HasSetting(mainmenuvertical)">Conditional</animation>
+			</control>			
+		</definition>
+	</include>	
+	<include name="mainmenucustom_font">
+		<definition>
+			<control type="label">
+				<left>30</left>
+				<top>0</top>
+				<width>390</width>
+				<height>60</height>
+				<font>font_plot</font>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>			
+		</definition>
+	</include>
+	<include name="mainmenucustom_fontfocus">
+		<definition>
+			<control type="label">
+				<left>30</left>
+				<top>0</top>
+				<width>390</width>
+				<height>60</height>
+				<font>font_list</font>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>E0101010</textcolor>
+				<animation effect="fade" start="100" end="80" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
+			</control>			
+		</definition>
+	</include>
+	<include name="mainmenucustom_color">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>450</width>
+			<height>60</height>
+			<texture>grey.png</texture>
+			<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+			<visible>$PARAM[visible]</visible>
+		</control>
+	</include>
+	<include name="mainmenucustom_colorfocus">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>450</width>
+			<height>60</height>
+			<texture>grey.png</texture>
+			<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+			<animation effect="fade" start="100" end="80" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
+			<visible>$PARAM[visible]</visible>
+		</control>
+	</include>
+	<include name="mainmenu_presets">
+		<item>
+			<label>31169</label>
+			<icon>$VAR[settings_background]</icon>
+			<property name="condition"></property>
+			<property name="name">menuvirtual</property>
+			<property name="master">virtual</property>
+			<property name="status">virtual</property>
+			<property name="submenu">none</property>
+			<property name="path">none</property>
+			<onclick>SetFocus(450)</onclick>
+		</item>
+	</include>
+	<include name="mainmenu_controls">
+		<definition>
+			<control type="$PARAM[type]" id="$PARAM[id]">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<width>36</width>
+				<height>36</height>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>9000</onup>
+				<ondown>8003</ondown>
+				<onclick>$PARAM[action]</onclick>
+				<onclick>$PARAM[action2]</onclick>
+				<label></label>
+				<texturefocus>$PARAM[texture]</texturefocus>
+				<texturenofocus>$PARAM[texture]</texturenofocus>
+				<usealttexture>$PARAM[usealttexture]</usealttexture>
+				<alttexturefocus>$PARAM[alttexture]</alttexturefocus>
+				<alttexturenofocus>$PARAM[alttexture]</alttexturenofocus>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus($PARAM[id])">conditional</animation>
+				<enable>$PARAM[enable]</enable>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- Conteudo do menu principal -->
+	<include name="mainmenu_items">
+		<definition>
+			<label fallback="31014">$VAR[menu$PARAM[item].label]</label>
+			<icon>$VAR[themes_path]$INFO[skin.string(menu$PARAM[item].master)].jpg</icon>
+			<thumb>$INFO[skin.string(menu$PARAM[item].background)]</thumb>
+			<property name="composition">$INFO[skin.string(menu$PARAM[item].composition)]</property>
+			<property name="colorcomposition">$INFO[skin.string(menu$PARAM[item].colorcomposition)]</property>
+			<property name="visible">$INFO[skin.string(menu$PARAM[item].visible)]</property>
+			<property name="name">menu$PARAM[item]</property>
+			<property name="master">$INFO[skin.string(menu$PARAM[item].master)]</property>
+			<property name="status">$INFO[skin.string(menu$PARAM[item].master)]$PARAM[item]</property>
+			<property name="submenu">$INFO[skin.string(menu$PARAM[item].submenu)]</property>
+			<property name="type">$INFO[skin.string(menu$PARAM[item].type)]</property>
+			<property name="sort">$INFO[skin.string(menu$PARAM[item].sort)]</property>
+			<property name="order">$INFO[skin.string(menu$PARAM[item].order)]</property>
+			<property name="widgets">$INFO[skin.string(menu$PARAM[item].widgets)]</property>
+			<property name="widgetsstatussort">$INFO[skin.string(menu$PARAM[item].widgetsstatussort)]</property>
+			<property name="widgetsstatus">$INFO[skin.string(menu$PARAM[item].widgetsstatus)]</property>			
+			<property name="type1">$INFO[skin.string(menu$PARAM[item].type1)]</property>
+			<property name="sort1">$INFO[skin.string(menu$PARAM[item].sort1)]</property>
+			<property name="order1">$INFO[skin.string(menu$PARAM[item].order1)]</property>
+			<property name="widgets1">$INFO[skin.string(menu$PARAM[item].widgets1)]</property>
+			<property name="widgetsstatussort1">$INFO[skin.string(menu$PARAM[item].widgetsstatussort1)]</property>
+			<property name="widgetsstatus1">$INFO[skin.string(menu$PARAM[item].widgetsstatus1)]</property>			
+			<property name="type2">$INFO[skin.string(menu$PARAM[item].type2)]</property>
+			<property name="sort2">$INFO[skin.string(menu$PARAM[item].sort2)]</property>
+			<property name="order2">$INFO[skin.string(menu$PARAM[item].order2)]</property>
+			<property name="widgets2">$INFO[skin.string(menu$PARAM[item].widgets2)]</property>
+			<property name="widgetsstatussort2">$INFO[skin.string(menu$PARAM[item].widgetsstatussort2)]</property>
+			<property name="widgetsstatus2">$INFO[skin.string(menu$PARAM[item].widgetsstatus2)]</property>			
+			<property name="type3">$INFO[skin.string(menu$PARAM[item].type3)]</property>
+			<property name="sort3">$INFO[skin.string(menu$PARAM[item].sort3)]</property>
+			<property name="order3">$INFO[skin.string(menu$PARAM[item].order3)]</property>
+			<property name="widgets3">$INFO[skin.string(menu$PARAM[item].widgets3)]</property>
+			<property name="widgetsstatussort3">$INFO[skin.string(menu$PARAM[item].widgetsstatussort3)]</property>
+			<property name="widgetsstatus3">$INFO[skin.string(menu$PARAM[item].widgetsstatus3)]</property>			
+			<property name="fastchange">$INFO[skin.string(menu$PARAM[item].fastchange)]</property>			
+			<property name="path">$INFO[skin.string(menu$PARAM[item].path)]</property>
+			<property name="playlistcount">$INFO[Window(home).Property(playlist$PARAM[item].count)]</property>
+			<property name="playlistunwatched">$INFO[Window(home).Property(playlist$PARAM[item].unwatched)]</property>
+			<onclick>Skin.SetString(backgroundcopy,$INFO[Container(9000).ListItem.Icon])</onclick>
+			<onclick condition="Window.IsVisible(home) + ![String.IsEqual(skin.string(menu$PARAM[item].master),vplaylist) | String.IsEqual(skin.string(menu$PARAM[item].master),aplaylist) | String.IsEqual(skin.string(menu$PARAM[item].master),vnodes) | String.IsEqual(skin.string(menu$PARAM[item].master),anodes) | String.IsEqual(skin.string(menu$PARAM[item].master),addons)]">$INFO[skin.string(menu$PARAM[item].path)]</onclick>
+			<onclick condition="Window.IsVisible(home) + [String.IsEqual(skin.string(menu$PARAM[item].master),vplaylist) | String.IsEqual(skin.string(menu$PARAM[item].master),vnodes)]">ActivateWindow(videos,$INFO[skin.string(menu$PARAM[item].path)],return)</onclick>
+			<onclick condition="Window.IsVisible(home) + [String.IsEqual(skin.string(menu$PARAM[item].master),aplaylist) | String.IsEqual(skin.string(menu$PARAM[item].master),anodes)]">ActivateWindow(music,$INFO[skin.string(menu$PARAM[item].path)],return)</onclick>
+			<onclick condition="Window.IsVisible(home) + String.IsEqual(skin.string(menu$PARAM[item].master),addons)">RunAddon($INFO[skin.string(menu$PARAM[item].path)])</onclick>
+			<onclick condition="Window.IsVisible(1157)">SetFocus(450)</onclick>
+			<visible>![String.IsEmpty(skin.string(menu$PARAM[item].master)) | String.IsEqual(skin.string(menu$PARAM[item].visible),off)] | Window.IsVisible(1157)</visible>
+		</definition>
+	</include>
+	<!-- ########## MENU PRINCIPAL ########## -->
+	<include name="mainmenu">
+		<definition>
+			<control type="$PARAM[type]" id="9000">
+				<left>0</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<onleft condition="Window.IsVisible(1157) + ![String.IsEqual(Container(9000).ListItem.Property(master),virtual) | String.IsEmpty(Container(9000).ListItem.Property(master)) | String.IsEmpty(Container(9000).ListItem.Property(submenu))]">Skin.SetString(submenu,$INFO[Container(9000).ListItem.Property(submenu)])</onleft>
+				<onleft condition="Window.IsVisible(1157) + ![String.IsEqual(Container(9000).ListItem.Property(master),virtual) | String.IsEmpty(Container(9000).ListItem.Property(master)) | String.IsEmpty(Container(9000).ListItem.Property(submenu))]">Skin.SetBool(submode)</onleft>
+				<onleft condition="Window.IsVisible(1157) + ![String.IsEqual(Container(9000).ListItem.Property(master),virtual) | String.IsEmpty(Container(9000).ListItem.Property(master)) | String.IsEmpty(Container(9000).ListItem.Property(submenu))]">ActivateWindow(1101)</onleft>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
+				<orientation>$PARAM[orientation]</orientation>
+				<scrolltime tween="sine" easing="out">500</scrolltime>
+				<focusposition>0</focusposition>
+				<movement>$PARAM[movement]</movement>
+				<animation effect="fade" start="100" end="0" time="200" condition="$PARAM[fade]">Conditional</animation>
+				<itemlayout width="$PARAM[itemlayoutwidth]" height="$PARAM[itemlayoutheight]">
+					<include content="mainmenucustom_color" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="50007399" />
+						<param name="visible" value="![String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(visible))]" />
+					</include>
+					<include content="mainmenucustom_color" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="50B20000" />
+						<param name="visible" value="[String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(visible))]" />
+					</include>
+					<include content="mainmenucustom_color" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="50C4941D" />
+						<param name="visible" value="String.IsEmpty(ListItem.Property(master))" />
+					</include>
+					<include content="mainmenucustom_color" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="304C9900" />
+						<param name="visible" value="String.IsEqual(ListItem.Property(master),virtual)" />
+					</include>
+					<include content="mainmenucustom_font" condition="Window.IsVisible(1157)">
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font1)">
+						<param name="font" value="font_menu1" />
+						<param name="top" value="3" />
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font2)">
+						<param name="font" value="font_menu2" />
+						<param name="top" value="1" />
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font3)">
+						<param name="font" value="font_menu3" />
+						<param name="top" value="3" />
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font4)">
+						<param name="font" value="font_menu4" />
+						<param name="top" value="1" />
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font5)">
+						<param name="font" value="font_menu5" />
+						<param name="top" value="8" />
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font6)">
+						<param name="font" value="font_menu6" />
+						<param name="top" value="0" />
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font7)">
+						<param name="font" value="font_menu7" />
+						<param name="top" value="8" />
+					</include>
+					<include content="mainmenu_font" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font8)">
+						<param name="font" value="font_menu8" />
+						<param name="top" value="-2" />
+					</include>
+				</itemlayout>
+				<focusedlayout width="$PARAM[focusedlayoutwidth]" height="$PARAM[focusedlayoutheight]">
+					<control type="button">
+						<include>invisible</include>
+						<onfocus condition="String.Contains(ListItem.Property(widgets),directors)">Skin.SetString(widgetsfix,directors)</onfocus>
+						<onfocus condition="String.IsEqual(ListItem.Property(widgets),music.genres)">Skin.SetString(widgetsfix,musicgenres)</onfocus>
+						<onfocus condition="String.Contains(ListItem.Property(widgets),genres) + !String.IsEqual(Container(9000).ListItem.Property(widgets),music.genres)">Skin.SetString(widgetsfix,videogenres)</onfocus>
+						<onfocus condition="String.Contains(ListItem.Property(widgets),countries)">Skin.SetString(widgetsfix,countries)</onfocus>
+						<onfocus condition="String.Contains(ListItem.Property(widgets),studios)">Skin.SetString(widgetsfix,studios)</onfocus>						
+						<onfocus condition="String.Contains(ListItem.Property(widgets),years)">Skin.SetString(widgetsfix,years)</onfocus>
+						<onfocus condition="!String.Contains(ListItem.Property(widgets),directors) + !String.Contains(ListItem.Property(widgets),genres) + !String.Contains(ListItem.Property(widgets),countries) + !String.Contains(ListItem.Property(widgets),studios) + !String.Contains(ListItem.Property(widgets),years)">Skin.Reset(widgetsfix)</onfocus>						
+					</control>
+					<control type="button">
+						<include>invisible</include>
+						<onfocus condition="Player.HasMedia + !Skin.HasSetting(home_nonowplayingpanel)">AlarmClock(playercontrols,ActivateWindow(playercontrols),0:08,true)</onfocus>
+					</control>
+					<control type="button">
+						<include>invisible</include>
+						<onfocus condition="Player.HasMedia + System.IdleTime() + !Skin.HasSetting(home_nonowplayingpanel)">CancelAlarm(playercontrols,true)</onfocus>
+					</control>
+					<include content="mainmenucustom_colorfocus" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="FF007399" />
+						<param name="animation" value="FF007399" />
+						<param name="visible" value="![String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(visible))]" />
+					</include>
+					<include content="mainmenucustom_colorfocus" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="FFB20000" />
+						<param name="visible" value="[String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(visible))]" />
+					</include>
+					<include content="mainmenucustom_colorfocus" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="FFC4941D" />
+						<param name="visible" value="String.IsEmpty(ListItem.Property(master))" />
+					</include>
+					<include content="mainmenucustom_colorfocus" condition="Window.IsVisible(1157)">
+						<param name="colordiffuse" value="FF4C9900" />
+						<param name="visible" value="String.IsEqual(ListItem.Property(master),virtual)" />
+					</include>
+					<include content="mainmenucustom_fontfocus" condition="Window.IsVisible(1157)">
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font1)">
+						<param name="font" value="font_menu1" />
+						<param name="top" value="3" />
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font2)">
+						<param name="font" value="font_menu2" />
+						<param name="top" value="1" />
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font3)">
+						<param name="font" value="font_menu3" />
+						<param name="top" value="3" />
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font4)">
+						<param name="font" value="font_menu4" />
+						<param name="top" value="1" />
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font5)">
+						<param name="font" value="font_menu5" />
+						<param name="top" value="8" />
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font6)">
+						<param name="font" value="font_menu6" />
+						<param name="top" value="0" />
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font7)">
+						<param name="font" value="font_menu7" />
+						<param name="top" value="8" />
+					</include>
+					<include content="mainmenu_fontfocus" condition="Window.IsVisible(home) + String.IsEqual(skin.string(stylefont),font8)">
+						<param name="font" value="font_menu8" />
+						<param name="top" value="-2" />
+					</include>
+				</focusedlayout>
+				<content>
+					<include condition="Window.IsVisible(1157)">mainmenu_presets</include>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="1" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="2" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="3" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="4" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="5" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="6" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="7" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="8" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="9" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="10" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="11" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="12" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="13" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="14" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="15" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="16" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="17" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="18" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="19" />
+						</include>
+					</item>
+					<item>
+						<include content="mainmenu_items">
+							<param name="item" value="20" />
+						</include>
+					</item>
+				</content>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## SUBMENU ########## -->
+	<include name="submenu_font">
+		<definition>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(label1)]</label>
+				<font>font_button</font>
+				<visible>!String.IsEmpty(ListItem.Property(label1))</visible>				
+			</control>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(label2)]</label>
+				<font>font_button</font>
+				<visible>String.IsEmpty(ListItem.Property(label1)) + String.StartsWith(ListItem.Property(master),addons)</visible>				
+			</control>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(label3)]</label>
+				<font>font_button</font>
+				<visible>String.IsEmpty(ListItem.Property(label1)) + ![String.StartsWith(ListItem.Property(master),addons)| String.IsEmpty(ListItem.Property(label3))]</visible>				
+			</control>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<font>font_button</font>
+				<visible>String.IsEmpty(ListItem.Property(label1)) + String.IsEmpty(ListItem.Property(label3)) +  !String.StartsWith(ListItem.Property(master),addons)</visible>				
+			</control>
+		</definition>
+	</include>
+	<include name="submenu_fontfocus">
+		<definition>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(label1)]</label>
+				<font>font_button</font>				
+				<textcolor>$INFO[skin.string(colortextfocused)]</textcolor>
+				<visible>!String.IsEmpty(ListItem.Property(label1))</visible>
+			</control>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(label2)]</label>
+				<font>font_button</font>				
+				<textcolor>$INFO[skin.string(colortextfocused)]</textcolor>
+				<visible>String.IsEmpty(ListItem.Property(label1)) + String.StartsWith(ListItem.Property(master),addons)</visible>
+			</control>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(label3)]</label>
+				<font>font_button</font>				
+				<textcolor>$INFO[skin.string(colortextfocused)]</textcolor>
+				<visible>String.IsEmpty(ListItem.Property(label1)) + ![String.StartsWith(ListItem.Property(master),addons)| String.IsEmpty(ListItem.Property(label3))]</visible>
+			</control>
+			<control type="label">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<height>50</height>
+				<width>$PARAM[width]</width>
+				<align>$PARAM[align]</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<font>font_button</font>				
+				<textcolor>$INFO[skin.string(colortextfocused)]</textcolor>
+				<visible>String.IsEmpty(ListItem.Property(label1)) + String.IsEmpty(ListItem.Property(label3)) +  !String.StartsWith(ListItem.Property(master),addons)</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="menu_fontstyle">
+		<definition>
+			<control type="label">
+				<left>50</left>
+				<top>542</top>
+				<height>90</height>
+				<width>525</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[skin.string(mainmenulabel)]</label>
+				<font>$PARAM[font]</font>
+				<textcolor>$INFO[skin.string(colorfont)]</textcolor>
+				<animation effect="zoom" center="50,20" start="100" end="130" time="400" tween="cubic" easing="out" condition="true">conditional</animation>
+				<animation effect="slide" start="0,0" end="700,20" time="250" easing="in" tween="quadratic" condition="Skin.HasSetting(submode) + Skin.HasSetting(mainmenuvertical)">Conditional</animation>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- Mobilia -->
+	<include name="submenu_furniture">
+		<control type="multiimage">
+			<include>backgroundspecs_multi</include>
+			<include>animation_fade</include>
+			<imagepath background="true">$INFO[Container(9010).ListItem.Icon]</imagepath>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>525</top>
+			<width>1920</width>
+			<height>555</height>
+			<texture diffuse="shadow_mask.png">$VAR[texture_base]</texture>
+			<colordiffuse>$INFO[skin.string(colortexture)]</colordiffuse>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">Visible</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<visible>Skin.HasSetting(submode) + Window.IsVisible(home)</visible>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>500</width>
+			<height>765</height>
+			<texture flipx="true" diffuse="shadow_mask_v.png">$VAR[texture_base]</texture>
+			<colordiffuse>$INFO[skin.string(colortexture)]</colordiffuse>
+			<include>animation_submenu</include>
+			<animation effect="fade" end="85" condition="true">Conditional</animation>
+			<visible>Window.IsVisible(home) + Skin.HasSetting(mainmenuvertical)</visible>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="0" end="100" time="200" delay="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+			<animation effect="slide" start="0,180" end="0,100" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical) + !Integer.IsGreater(Container(9010).numitems,6)">True</animation>
+			<animation effect="slide" start="0,180" end="0,50" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical) + Integer.IsGreater(Container(9010).numitems,6) + !Integer.IsGreater(Container(9010).numitems,12)">True</animation>
+			<animation effect="slide" start="0,180" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical) + Integer.IsGreater(Container(9010).numitems,12)">True</animation>
+			<visible>Window.IsVisible(home)</visible>
+			<control type="image">
+				<left>0</left>
+				<top>800</top>
+				<width>1920</width>
+				<height>87</height>
+				<texture>menu_bar.png</texture>
+				<colordiffuse>$INFO[skin.string(colormainmenubar)]</colordiffuse>
+				<visible>Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>765</top>
+				<width>1920</width>
+				<height>87</height>
+				<texture flipy="true">menu_bar.png</texture>
+				<colordiffuse>$INFO[skin.string(colormainmenubar)]</colordiffuse>
+				<visible>Window.IsVisible(home) + Skin.HasSetting(mainmenuvertical)</visible>
+			</control>
+			<!-- Texto copia do menu em foco -->
+			<control type="label">
+				<left>50</left>
+				<top>848</top>
+				<width>596</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$VAR[submenu_status]</label>
+				<font>font_plot</font>
+				<textcolor>FFF8F8F8</textcolor>
+				<animation effect="slide" start="0,0" end="0,-75" time="250" easing="in" tween="quadratic" condition="Skin.HasSetting(mainmenuvertical)">Conditional</animation>
+			</control>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu1" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font1)" />
+			</include>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu2" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font2)" />
+			</include>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu3" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font3)" />
+			</include>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu4" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font4)" />
+			</include>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu5" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font5)" />
+			</include>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu6" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font6)" />
+			</include>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu7" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font7)" />
+			</include>
+			<include content="menu_fontstyle">
+				<param name="font" value="font_menu8" />
+				<param name="visible" value="String.IsEqual(skin.string(stylefont),font8)" />
+			</include>			
+		</control>
+		<include condition="Window.IsVisible(1157)">MenuCustom</include>
+	</include>	
+	<!-- botao no rodape para alterar modo menu/submenu -->
+	<include name="SubmenuGoTo">
+		<control type="group">
+			<include>animation_fade</include>
+			<control type="button" id="5200">
+				<left>0</left>
+				<top>1035</top>
+				<width>450</width>
+				<height>44</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>5100</ondown>
+				<onclick>Close</onclick>
+				<onclick>Skin.Reset(submode)</onclick>
+				<align>left</align>
+				<font>font_button</font>
+				<textwidth>225</textwidth>
+				<textcolor>FFF8F8F8</textcolor>
+				<focusedcolor>E0101010</focusedcolor>
+				<label>$VAR[label1]</label>
+				<texturefocus>grey.png</texturefocus>
+				<texturenofocus></texturenofocus>
+			</control>
+			<control type="image">
+				<left>30</left>
+				<top>1040</top>
+				<width>33</width>
+				<height>33</height>
+				<texture>arrow_left.png</texture>
+				<colordiffuse>$VAR[arrow1_color]</colordiffuse>
+			</control>
+		</control>
+	</include>	
+	<include name="submenu">
+		<definition>
+		<include>animation_submenu</include>
+		<viewtype>list</viewtype>
+		<left>0</left>
+		<top>$PARAM[top]</top>
+		<width>$PARAM[width]</width>
+		<height>$PARAM[height]</height>
+		<onleft>$PARAM[onleft]</onleft>
+		<onleft condition="!Skin.HasSetting(nosmartsub)">$PARAM[onleft2]</onleft>
+		<onright>$PARAM[onright]</onright>
+		<onright>$PARAM[onright2]</onright>
+		<onup>$PARAM[onup]</onup>
+		<onup>$PARAM[onup2]</onup>
+		<onup>$PARAM[onup3]</onup>
+		<ondown>$PARAM[ondown]</ondown>
+		<ondown condition="!Skin.HasSetting(nosmartsub)">$PARAM[ondown2]</ondown>
+		<orientation>$PARAM[orientation]</orientation>
+		<scrolltime tween="sine" easing="out">500</scrolltime>
+		<focusposition>$PARAM[focusposition]</focusposition>
+		<movement>0</movement>
+		<itemgap>0</itemgap>
+		<itemlayout width="$PARAM[itemlayoutwidth]" height="$PARAM[itemlayoutheight]">
+			<!-- azul -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>50</height>
+				<texture>grey.png</texture>
+				<colordiffuse>50007399</colordiffuse>
+				<visible>Window.IsVisible(1157) + ![String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(condition))]</visible>
+			</control>
+			<!-- vermelho -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>50</height>
+				<texture>grey.png</texture>
+				<colordiffuse>50B20000</colordiffuse>
+				<visible>Window.IsVisible(1157) + [String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(visible))]</visible>
+			</control>
+			<!-- amarelo -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>50</height>
+				<texture>grey.png</texture>
+				<colordiffuse>50C4941D</colordiffuse>
+				<visible>Window.IsVisible(1157) + String.IsEmpty(ListItem.Property(master))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>4</height>
+				<texture>divider.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+				<visible>Window.IsVisible(1157) | Skin.HasSetting(mainmenuvertical)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>320</width>
+				<height>50</height>
+				<texture colordiffuse="$INFO[skin.string(colortext)]">submenu_button_nofocus.png</texture>
+				<visible>Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical)</visible>
+			</control>
+			<include content="submenu_font" condition="Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical)">
+				<param name="left" value="11" />
+				<param name="width" value="298" />
+				<param name="align" value="center" />
+			</include>
+			<include content="submenu_font" condition="Window.IsVisible(home) + Skin.HasSetting(mainmenuvertical)">
+				<param name="left" value="50" />
+				<param name="width" value="390" />
+				<param name="align" value="left" />
+			</include>
+			<include content="submenu_font" condition="Window.IsVisible(1157)">
+				<param name="left" value="0" />
+				<param name="width" value="390" />
+				<param name="align" value="right" />
+			</include>
+		</itemlayout>
+		<focusedlayout width="$PARAM[focusedlayoutwidth]" height="$PARAM[focusedlayoutheight]">
+			<!-- azul -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>50</height>
+				<texture>grey.png</texture>
+				<colordiffuse>FF007399</colordiffuse>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Skin.HasSetting(submode)">conditional</animation>
+				<visible>Window.IsVisible(1157) + ![String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(condition))]</visible>
+			</control>
+			<!-- vermelho -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>50</height>
+				<texture>grey.png</texture>
+				<colordiffuse>FFB20000</colordiffuse>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Skin.HasSetting(submode)">conditional</animation>
+				<visible>Window.IsVisible(1157) + [String.IsEmpty(ListItem.Property(master)) | !String.IsEmpty(ListItem.Property(visible))]</visible>
+			</control>
+			<!-- amarelo -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>50</height>
+				<texture>grey.png</texture>
+				<colordiffuse>FFC4941D</colordiffuse>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Skin.HasSetting(submode)">conditional</animation>
+				<visible>Window.IsVisible(1157) + String.IsEmpty(ListItem.Property(master))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>320</width>
+				<height>50</height>
+				<texture colordiffuse="$INFO[skin.string(colortext)]">white.png</texture>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Skin.HasSetting(submode)">conditional</animation>
+				<visible>Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>450</width>
+				<height>50</height>
+				<texture flipx="true" diffuse="shadow_mask_v.png" colordiffuse="$INFO[skin.string(colortext)]">white.png</texture>
+				<visible>Window.IsVisible(home) + Skin.HasSetting(mainmenuvertical)</visible>
+			</control>
+			<include content="submenu_fontfocus" condition="Window.IsVisible(home) + !Skin.HasSetting(mainmenuvertical)">
+				<param name="left" value="11" />
+				<param name="width" value="298" />
+				<param name="align" value="center" />
+			</include>
+			<include content="submenu_fontfocus" condition="Window.IsVisible(home) + Skin.HasSetting(mainmenuvertical)">
+				<param name="left" value="50" />
+				<param name="width" value="390" />
+				<param name="align" value="left" />
+			</include>
+			<include content="submenu_fontfocus" condition="Window.IsVisible(1157)">
+				<param name="left" value="0" />
+				<param name="width" value="390" />
+				<param name="align" value="right" />
+			</include>
+		</focusedlayout>
+		</definition>
+	</include>	
+	<!-- ########## SUBMENU ITENS ########## -->
+	<include name="submenu_items">
+		<definition>
+			<label fallback="31014">$PARAM[label]</label>
+			<icon></icon>
+			<thumb>$INFO[skin.string(submenu$PARAM[item].background)]</thumb>
+			<property name="label1">$INFO[skin.string(submenu$PARAM[item].customlabel)]</property>
+			<property name="label2">$INFO[system.addontitle(skin.string(submenu$PARAM[item].path))]</property>
+			<property name="label3">$INFO[skin.string(submenu$PARAM[item].label)]</property>
+			<property name="customthumb">$INFO[skin.string(submenu$PARAM[item].customthumb)]</property>
+			<property name="visible">$INFO[skin.string(submenu$PARAM[item].visible)]</property>
+			<property name="name">submenu$PARAM[item]</property>
+			<property name="master">$INFO[skin.string(submenu$PARAM[item].master)]</property>
+			<property name="control">$INFO[skin.string(submenu$PARAM[item].master)]$PARAM[item]</property>
+			<property name="type">$INFO[skin.string(submenu$PARAM[item].type)]</property>
+			<onclick condition="Window.IsVisible(home)">Close</onclick>
+			<onclick condition="Window.IsVisible(home) + ![String.IsEqual(skin.string(submenu$PARAM[item].master),vplaylist) | String.IsEqual(skin.string(submenu$PARAM[item].master),aplaylist) | String.IsEqual(skin.string(submenu$PARAM[item].master),vnodes) | String.IsEqual(skin.string(submenu$PARAM[item].master),anodes) | String.IsEqual(skin.string(submenu$PARAM[item].master),addons)]">$INFO[skin.string(submenu$PARAM[item].path)]</onclick>
+			<onclick condition="Window.IsVisible(home) + [String.IsEqual(skin.string(submenu$PARAM[item].master),vplaylist) | String.IsEqual(skin.string(submenu$PARAM[item].master),vnodes)]">ActivateWindow(videos,$INFO[skin.string(submenu$PARAM[item].path)],return)</onclick>
+			<onclick condition="Window.IsVisible(home) + [String.IsEqual(skin.string(submenu$PARAM[item].master),aplaylist) | String.IsEqual(skin.string(submenu$PARAM[item].master),anodes)]">ActivateWindow(music,$INFO[skin.string(submenu$PARAM[item].path)],return)</onclick>
+			<onclick condition="Window.IsVisible(home) + String.IsEqual(skin.string(submenu$PARAM[item].master),addons)">RunAddon($INFO[skin.string(submenu$PARAM[item].path)])</onclick>
+			<onclick condition="Window.IsVisible(1157)">SetFocus(450)</onclick>
+			<visible>![String.IsEmpty(skin.string(submenu$PARAM[item].master)) | String.IsEqual(skin.string(submenu$PARAM[item].visible),off)] | Window.IsVisible(1157)</visible>
+		</definition>
+	</include>
+	<!-- ########## SUBMENU INCLUDES ########## -->
+	<include name="submenu1">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.1" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[31583]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.2" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[31029]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.3" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[31091]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.4" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[31036]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.5" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[31045]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.6" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[31090]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.7" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[31047]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.8" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[20451]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.9" />
+				<param name="label" value="$LOCALIZE[31003]-$LOCALIZE[20459]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.10" />
+				<param name="label" value="$LOCALIZE[31001]-$LOCALIZE[31231]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.11" />
+				<param name="label" value="$LOCALIZE[31001]-$LOCALIZE[31747]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.12" />
+				<param name="label" value="$LOCALIZE[31033]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.13" />
+				<param name="label" value="$LOCALIZE[31746]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.14" />
+				<param name="label" value="$LOCALIZE[31993]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.15" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.16" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.17" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.18" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.19" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="1.20" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu2">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.1" />
+				<param name="label" value="$LOCALIZE[31527]-$LOCALIZE[31583]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.2" />
+				<param name="label" value="$LOCALIZE[31067]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.3" />
+				<param name="label" value="$LOCALIZE[31005]-$LOCALIZE[31091]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.4" />
+				<param name="label" value="$LOCALIZE[31005]-$LOCALIZE[31036]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.5" />
+				<param name="label" value="$LOCALIZE[31005]-$LOCALIZE[31045]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.6" />
+				<param name="label" value="$LOCALIZE[31005]-$LOCALIZE[31047]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.7" />
+				<param name="label" value="$LOCALIZE[31001]-$LOCALIZE[31231]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.8" />
+				<param name="label" value="$LOCALIZE[31001]-$LOCALIZE[31747]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.9" />
+				<param name="label" value="$LOCALIZE[31033]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.10" />
+				<param name="label" value="$LOCALIZE[31746]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.13" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.14" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.15" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.16" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.17" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.18" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.19" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="2.20" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu3">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.1" />
+				<param name="label" value="$LOCALIZE[31013]-$LOCALIZE[31583]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.2" />
+				<param name="label" value="$LOCALIZE[31013]-$LOCALIZE[31091]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.3" />
+				<param name="label" value="$LOCALIZE[31013]-$LOCALIZE[31036]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.4" />
+				<param name="label" value="$LOCALIZE[31013]-$LOCALIZE[31045]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.5" />
+				<param name="label" value="$LOCALIZE[31013]-$LOCALIZE[31040]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.6" />
+				<param name="label" value="$LOCALIZE[31013]-$LOCALIZE[31090]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.7" />
+				<param name="label" value="$LOCALIZE[31013]-$LOCALIZE[31047]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.8" />
+				<param name="label" value="$LOCALIZE[31001]-$LOCALIZE[31231]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.9" />
+				<param name="label" value="$LOCALIZE[31001]-$LOCALIZE[31747]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.10" />
+				<param name="label" value="$LOCALIZE[31033]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.11" />
+				<param name="label" value="$LOCALIZE[31746]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.13" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.14" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.15" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.16" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.17" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.18" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.19" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="3.20" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu4">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.1" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31043]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.2" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31583]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.3" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31949]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.4" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31091]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.5" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31092]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.6" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31037]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.7" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31040]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.8" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31340]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.9" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31033]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.10" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31038]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.11" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31041]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.12" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31042]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.13" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31231]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.14" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31747]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.15" />
+				<param name="label" value="$LOCALIZE[31746]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.16" />
+				<param name="label" value="$LOCALIZE[31002]-$LOCALIZE[31034]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.17" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.18" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.19" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="4.20" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu5">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.1" />
+				<param name="label" value="$LOCALIZE[19023]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.2" />
+				<param name="label" value="$LOCALIZE[31006]-$LOCALIZE[19069]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.3" />
+				<param name="label" value="$LOCALIZE[31006]-$LOCALIZE[137]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.4" />
+				<param name="label" value="$LOCALIZE[31006]-$LOCALIZE[19163]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.5" />
+				<param name="label" value="$LOCALIZE[31006]-$LOCALIZE[19040]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.6" />
+				<param name="label" value="$LOCALIZE[31006]-$LOCALIZE[31011]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="5.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu6">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="6.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu7">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="7.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu8">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.1" />
+				<param name="label" value="$LOCALIZE[31007]-$LOCALIZE[10040]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="8.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu9">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="9.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu10">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="10.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu11">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.1" />
+				<param name="label" value="$LOCALIZE[31009]-$LOCALIZE[31051]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.2" />
+				<param name="label" value="$LOCALIZE[31009]-$LOCALIZE[31052]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.3" />
+				<param name="label" value="$LOCALIZE[31009]-$LOCALIZE[31053]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.4" />
+				<param name="label" value="$LOCALIZE[31009]-$LOCALIZE[31054]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.5" />
+				<param name="label" value="$LOCALIZE[31009]-$LOCALIZE[31011]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.6" />
+				<param name="label" value="$LOCALIZE[31009]-$LOCALIZE[31876]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="11.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu12">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.1" />
+				<param name="label" value="$LOCALIZE[31207]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.2" />
+				<param name="label" value="$LOCALIZE[31165]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.3" />
+				<param name="label" value="$LOCALIZE[31371]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.4" />
+				<param name="label" value="$LOCALIZE[31010]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.5" />
+				<param name="label" value="$LOCALIZE[31027]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.6" />
+				<param name="label" value="$LOCALIZE[31024]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.7" />
+				<param name="label" value="$LOCALIZE[31025]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.8" />
+				<param name="label" value="$LOCALIZE[35049]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.9" />
+				<param name="label" value="$LOCALIZE[31026]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.10" />
+				<param name="label" value="$LOCALIZE[31063]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.11" />
+				<param name="label" value="$LOCALIZE[31064]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="12.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu13">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.1" />
+				<param name="label" value="$LOCALIZE[31012]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.2" />
+				<param name="label" value="$LOCALIZE[31058]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.3" />
+				<param name="label" value="$LOCALIZE[31059]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.4" />
+				<param name="label" value="$LOCALIZE[31060]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.5" />
+				<param name="label" value="$LOCALIZE[31061]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.6" />
+				<param name="label" value="$LOCALIZE[31055]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.7" />
+				<param name="label" value="$LOCALIZE[31056]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.8" />
+				<param name="label" value="$LOCALIZE[31062]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.9" />
+				<param name="label" value="$LOCALIZE[31241]" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="13.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu14">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="14.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu21">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="21.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu22">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="22.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu23">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="23.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu24">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="24.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu25">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="25.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu26">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="26.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu27">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="27.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu28">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="28.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu29">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="29.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu30">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="30.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu31">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="31.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu41">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="41.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu42">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="42.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu43">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="43.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu44">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="44.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<include name="submenu45">
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.1" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.2" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.3" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.4" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.5" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.6" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.7" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.8" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.9" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.10" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.11" />
+				<param name="label" value="" />
+			</include>
+		</item>
+		<item>
+			<include content="submenu_items">
+				<param name="item" value="45.12" />
+				<param name="label" value="" />
+			</include>
+		</item>
+	</include>
+	<!-- ########## BACKGROUNS/DIMENSOES ########## -->
+	<include name="media_backgrounds">
+		<control type="videowindow">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<visible>Player.HasVideo + Skin.HasSetting(background_live)</visible>
+		</control>
+		<control type="multiimage">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<timeperimage>6000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>commonfadetime</fadetime>
+			<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
+			<imagepath background="true">$INFO[skin.string(backgroundcopy)]</imagepath>
+			<include>animation_panscan</include>
+			<visible>[!Player.HasVideo | Player.HasVideo + !Skin.HasSetting(background_live)] + $PARAM[visible]</visible>
+		</control>
+		<control type="multiimage">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<timeperimage>6000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>commonfadetime</fadetime>
+			<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
+			<imagepath background="true">$VAR[media_fanart]</imagepath>
+			<include>animation_panscan</include>
+			<visible>[!Player.HasVideo | Player.HasVideo + !Skin.HasSetting(background_live)] + $PARAM[visible]</visible>			
+		</control>		
+		<control type="multiimage">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<timeperimage>6000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>commonfadetime</fadetime>
+			<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
+			<imagepath background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArts)]</imagepath>
+			<animation effect="fade" end="100" time="200" delay="3000">Visible</animation>
+			<include>animation_panscan</include>
+			<visible>[!Player.HasVideo | Player.HasVideo + !Skin.HasSetting(background_live)] + $PARAM[visible] + ![String.IsEqual(ListItem.Label,..) | String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArts))] + [Window.IsActive(videos) + [!Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets)] + String.Contains(skin.string(videofanart),extra)] + $PARAM[visible]</visible>
+		</control>
+		<control type="multiimage">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<timeperimage>6000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>commonfadetime</fadetime>
+			<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
+			<imagepath background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</imagepath>
+			<animation effect="fade" end="100" time="200" delay="3000">Visible</animation>
+			<include>animation_panscan</include>
+			<visible>[!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.ExtraFanArt)) +  Window.IsActive(music) + String.Contains(skin.string(musicfanart),extra)] | [Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets)] + String.Contains(skin.string(videofanart),extra) + $PARAM[visible]</visible>
+		</control>	
+		<control type="multiimage">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<timeperimage>6000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>commonfadetime</fadetime>
+			<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
+			<imagepath background="true">special://skin/backgrounds/extras/curtains.jpg</imagepath>
+			<include>animation_panscan</include>
+			<visible>[!Player.HasVideo | Player.HasVideo + !Skin.HasSetting(background_live)] + $PARAM[visible] + [Window.IsActive(videos) + String.IsEqual(skin.string(videofanart),curtains) | Window.IsActive(music) + String.IsEqual(skin.string(musicfanart),curtains)]</visible>
+		</control>		
+	</include>
+	<!-- ########## SELETOR DE ESTOJOS ########## -->
+	<include name="case_selector">
+		<definition>
+			<control type="group">
+				<orientation>horizontal</orientation>
+				<width>300</width>
+				<height>900</height>
+				<control type="button" id="$PARAM[id]">
+					<left>0</left>
+					<top>0</top>
+					<onleft>$PARAM[left]</onleft>
+					<onright>$PARAM[right]</onright>
+					<width>285</width>
+					<height>405</height>
+					<onup>10025</onup>
+					<onup>Skin.SetString(custom_codec,$PARAM[codec])</onup>
+					<ondown>9100</ondown>
+					<texturefocus colordiffuse="$INFO[skin.string($PARAM[colorcase])]">thumb_box_default.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[skin.string($PARAM[colorcase])]">thumb_box_default.png</texturenofocus>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[colorcase])</onclick>
+					<enable>System.HasAddon(script.skin.helper.colorpicker)</enable>
+					<include>animation_visiblechange</include>
+					<visible>String.IsEqual(skin.string(videocasestyle),default)</visible>
+				</control>
+				<control type="button" id="$PARAM[id]">
+					<left>0</left>
+					<top>0</top>
+					<onleft>$PARAM[left]</onleft>
+					<onright>$PARAM[right]</onright>
+					<width>285</width>
+					<height>405</height>
+					<onup>10025</onup>
+					<onup>Skin.SetString(custom_codec,$PARAM[codec])</onup>
+					<ondown>9100</ondown>
+					<texturefocus colordiffuse="$INFO[skin.string($PARAM[colorcase])]">thumb_box_glass.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[skin.string($PARAM[colorcase])]">thumb_box_glass.png</texturenofocus>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[case])</onclick>
+					<enable>System.HasAddon(script.skin.helper.colorpicker)</enable>
+					<include>animation_visiblechange</include>
+					<visible>String.IsEqual(skin.string(videocasestyle),glass)</visible>
+				</control>
+				<control type="button" id="$PARAM[id]">
+					<left>0</left>
+					<top>0</top>
+					<onleft>$PARAM[left]</onleft>
+					<onright>$PARAM[right]</onright>
+					<width>285</width>
+					<height>405</height>
+					<onup>10025</onup>
+					<onup>Skin.SetString(custom_codec,$PARAM[codec])</onup>
+					<ondown>9100</ondown>
+					<texturefocus colordiffuse="$INFO[skin.string($PARAM[colorcase])]">thumb_box_gloss.png</texturefocus>
+					<texturenofocus colordiffuse="$INFO[skin.string($PARAM[colorcase])]">thumb_box_gloss.png</texturenofocus>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[case])</onclick>
+					<enable>System.HasAddon(script.skin.helper.colorpicker)</enable>
+					<include>animation_visiblechange</include>
+					<visible>String.IsEqual(skin.string(videocasestyle),gloss)</visible>
+				</control>
+				<!-- Codec -->
+				<control type="image">
+					<include>CaseCodec</include>
+					<texture>$PARAM[codecimage]</texture>
+					<colordiffuse>$INFO[skin.string(colorcodeccase)]</colordiffuse>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## SELETOR DE ESTRELAS ########## -->
+	<include name="starsselector_item">
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<onup>$PARAM[up]</onup>
+				<ondown>$PARAM[down]</ondown>
+				<onleft>9100</onleft>
+				<label>$PARAM[label]</label>
+				<onclick>RunScript(script.skin.helper.colorpicker,skinstring=colorratingstars$PARAM[set])</onclick>
+				<onright>RunScript(script.skin.helper.colorpicker,skinstring=colorratingstars$PARAM[set])</onright>
+				<enable>System.HasAddon(script.skin.helper.colorpicker)</enable>
+			</control>
+			<control type="image">
+				<top>10</top>
+				<left>170</left>
+				<width>525</width>
+				<height>40</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="150">Hidden</animation>
+				<texture>$VAR[styleratingstars,,$PARAM[starnofocus].png]</texture>
+				<colordiffuse>$INFO[skin.string(colorratingstars$PARAM[set])]</colordiffuse>
+				<visible>!Control.HasFocus($PARAM[id])</visible>
+			</control>
+			<control type="image">
+				<top>10</top>
+				<left>170</left>
+				<width>525</width>
+				<height>40</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="150">Hidden</animation>
+				<texture>$VAR[styleratingstars,,$PARAM[starfocus].png]</texture>
+				<colordiffuse>$INFO[skin.string(colorratingstars$PARAM[set])]</colordiffuse>
+				<visible>Control.HasFocus($PARAM[id])</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## DISCOS ########## -->
+	<include name="mediainfo_disc">
+		<definition>
+			<control type="group">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<animation type="Visible">
+				<effect type="slide" start="0,0" end="$PARAM[slidedisc1],$PARAM[slidedisc2]" time="800" delay="2000" tween="sine" easing="inout" />
+				<effect type="fade" start="0" end="100" time="800" delay="2000" />
+			</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="$PARAM[hiddenfade]" />
+			</animation>
+			<animation effect="slide" start="0,0" end="$PARAM[slidecolumn],0" time="0" tween="sine" easing="inout" condition="$PARAM[slidecolumncondition]">conditional</animation>
+			<animation effect="fade" end="100" time="500">WindowOpen</animation>
+			<animation effect="fade" end="100" time="200">Visible</animation>
+			<visible>$PARAM[visible]</visible>
+				<control type="image">					
+					<left>0</left>
+					<top>0</top>
+					<width>$PARAM[size]</width>
+					<height>$PARAM[size]</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture diffuse="cdart_diffuse.png" background="true">$PARAM[disclayout]</texture>
+					<include>animation_cdart</include>
+				</control>
+				<control type="image">					
+					<left>0</left>
+					<top>0</top>
+					<width>$PARAM[size]</width>
+					<height>$PARAM[size]</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture diffuse="cdart_diffuse.png" background="true">$PARAM[discart]</texture>
+					<include>animation_cdart</include>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## DISCOS PARA CONJUNTOS ########## -->
+	<include name="discart_items">
+		<definition>
+			<control type="image">
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<fadetime>commonfadetime</fadetime>
+				<aspectratio align="center" aligny="center">keep</aspectratio>				
+				<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Art.DiscArt)]</texture>
+				<include>animation_viewscdart</include>
+				<visible>![String.IsEmpty(Window(home).Property(SkinHelper.ListItem.$PARAM[item].Art.DiscArt)) | String.IsEqual(ListItem.Label,..)]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## ITEMS DA VISTA SETS ########## -->
+	<include name="viewsets_items">
+		<definition>
+			<label>$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Label)]</label>
+			<icon>$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Art.Poster)]</icon>
+			<property name="Disc">$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Art.DiscArt)]</property>
+			<property name="Fanart">$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Art.FanArt)]</property>
+			<property name="Plot">$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Plot)]</property>
+			<property name="Year">$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Year)]</property>
+			<property name="Duration">$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].Duration)]</property>
+			<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinHelper.ListItem.$PARAM[item].DBID)])</onclick>
+			<visible>![String.IsEmpty(Window(home).Property(SkinHelper.ListItem.$PARAM[item].Art.Poster)) | String.IsEqual(ListItem.Label,..)]</visible>
+		</definition>
+	</include>
+	<!-- ########## LOGO E CLEARART ########## -->
+	<include name="logoandclearart_items">
+		<definition>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<fadetime>commonfadetime</fadetime>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>	
+				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>									
+				<visible>!String.IsEqual(ListItem.Label,..) + Window.IsActive(programs) + !Skin.HasSetting(noartprograms)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<fadetime>commonfadetime</fadetime>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>	
+				<texture background="true">$VAR[videologoandclearart]</texture>									
+				<visible>!String.IsEqual(ListItem.Label,..) + Window.IsActive(videos) + !Skin.HasSetting(noartvideo)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<fadetime>commonfadetime</fadetime>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>	
+				<texture background="true">$VAR[musiclogoandclearart]</texture>									
+				<visible>!String.IsEqual(ListItem.Label,..) + Window.IsActive(music) + !Skin.HasSetting(noartmusic)</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- ##########  MENU VIRTUAL - FONTE ########## -->
+	<include name="mainmenuvirtual_font">
+		<definition>
+			<control type="label">
+				<left>0</left>
+				<top>$PARAM[top]</top>
+				<width>489</width>
+				<height>72</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<font>$PARAM[font]</font>
+				<textcolor>$INFO[skin.string(colorfont)]</textcolor>
+				<animation effect="fade" end="40" condition="true">Conditional</animation>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="mainmenuvirtual_fontfocus">
+		<definition>
+			<control type="label">
+				<left>62</left>
+				<top>$PARAM[top]</top>
+				<width>489</width>
+				<height>72</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<font>$PARAM[font]</font>
+				<textcolor>$INFO[skin.string(colorfont)]</textcolor>
+				<animation effect="zoom" center="275,40" start="100" end="130" time="400" tween="cubic" easing="out" condition="true">conditional</animation>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## PROXIMAS FAIXAS ########## -->
+	<include name="nexttracks_items">
+		<definition>
+			<label>$PARAM[track]: $INFO[MusicPlayer.offset($PARAM[track]).Title]</label>
+			<label2>$INFO[MusicPlayer.offset($PARAM[track]).Artist]</label2>
+			<icon>$INFO[MusicPlayer.offset($PARAM[track]).Cover]</icon>
+			<property name="Details">$INFO[MusicPlayer.offset($PARAM[track]).Album][CR]$INFO[MusicPlayer.offset($PARAM[track]).Duration]</property>
+			<onclick>Playlist.PlayOffset($PARAM[track])</onclick>
+			<visible>!String.IsEmpty(MusicPlayer.offset($PARAM[track]).Artist)</visible>
+		</definition>
+	</include>
+	<include name="nexttracks_content">
+		<content>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="1" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="2" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="3" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="4" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="5" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="6" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="7" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="8" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="9" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="10" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="11" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="12" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="13" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="14" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="15" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="16" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="17" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="18" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="19" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="20" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="21" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="22" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="23" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="24" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="25" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="26" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="27" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="28" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="29" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="30" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="31" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="32" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="33" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="34" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="35" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="36" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="37" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="38" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="39" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="40" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="41" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="42" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="43" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="44" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="45" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="46" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="47" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="48" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="49" />
+				</include>
+			</item>
+			<item>
+				<include content="nexttracks_items">
+					<param name="track" value="50" />
+				</include>
+			</item>
+		</content>
+	</include>
+	<!-- ########## MINI WEATHER ########## -->
+	<include name="miniweather_items">
+		<definition>
+			<control type="group">
+				<width>79</width>
+				<height>118</height>
+				<control type="label">
+					<left>5</left>
+					<top>5</top>
+					<width>87</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Daily.$PARAM[item].ShortDay)]</label>
+					<font>font_plot</font>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<left>24</left>
+					<top>54</top>
+					<width>50</width>
+					<height>50</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[weathericons_path]$INFO[Window(Weather).Property(Daily.$PARAM[item].OutlookIcon)]</texture>
+					<animation effect="fade" time="250">Visible</animation>
+					<animation effect="fade" time="50">Hidden</animation>
+					<visible>![Skin.HasSetting(resource.images.weathericons.multi) | String.IsEmpty(skin.string(resource.images.weathericons.path))]</visible>
+				</control>
+				<control type="multiimage">
+					<left>24</left>
+					<top>45</top>
+					<width>50</width>
+					<height>50</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<imagepath>$VAR[weathericons_path]$INFO[Window(Weather).Property(Daily.$PARAM[item].FanartCode)]</imagepath>
+					<timeperimage>75</timeperimage>
+					<randomize>false</randomize>
+					<fadetime>1</fadetime>
+					<animation effect="fade" time="250">Visible</animation>
+					<animation effect="fade" time="50">Hidden</animation>
+					<visible>Skin.HasSetting(resource.images.weathericons.multi) | String.IsEmpty(skin.string(resource.images.weathericons.path))</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## WIDGETS ########## -->
+	<include name="widgets_selector_default">
+		<definition>
+			<icon>$PARAM[icon]</icon>
+			<label>$PARAM[label]</label>
+			<onclick condition="$PARAM[condition]">InstallAddon($PARAM[addon])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].type,$PARAM[type])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].sort,$PARAM[sort])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].order,$PARAM[order])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgets,$PARAM[widgets])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus,$PARAM[label])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort,$PARAM[sortstatus])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.Reset($INFO[skin.string(menulabel)].fastchange)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].type$INFO[skin.string(fastchange)],$PARAM[type])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].sort$INFO[skin.string(fastchange)],$PARAM[sort])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].order$INFO[skin.string(fastchange)],$PARAM[order])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgets$INFO[skin.string(fastchange)],$PARAM[widgets])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus$INFO[skin.string(fastchange)],$PARAM[label])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort$INFO[skin.string(fastchange)],$PARAM[sortstatus])</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),1)">Skin.SetString(fastchange,2)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),1)">AlarmClock(fastchangealert,Notification(Item 1 - $PARAM[label],$LOCALIZE[31237]),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),2)">Skin.SetString(fastchange,3)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),2)">AlarmClock(fastchangealert,Notification(Item 2 - $PARAM[label],$LOCALIZE[31237]),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">Skin.SetString($INFO[skin.string(menulabel)].fastchange,1)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangealert,Notification(Item 3 - $PARAM[label],$LOCALIZE[31239]),0:00,true)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangestep,Close,0:01,true)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangedone,SetFocus(8009),0:02,true)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">Skin.Reset(fastchange_mode)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Close</onclick>
+			<visible>$PARAM[visible]</visible>
+		</definition>
+	</include>
+	<include name="widgets_selector_playlist">
+		<definition>
+			<icon>$PARAM[icon]</icon>
+			<label>$PARAM[label]</label>
+			<onclick condition="!System.HasAddon(script.randomandlastitems)">InstallAddon(script.randomandlastitems)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].type,$PARAM[type])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].sort,dateadded)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].order,descending)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgets,$PARAM[playlist]$PARAM[item].title)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus,$PARAM[label])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort,$LOCALIZE[552])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">RunScript(script.randomandlastitems,limit=1,playlist=$INFO[skin.string(menu$PARAM[item].path)],property=playlist$PARAM[item])</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].type$INFO[skin.string(fastchange)],$PARAM[type])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].sort$INFO[skin.string(fastchange)],dateadded)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].order$INFO[skin.string(fastchange)],descending)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgets$INFO[skin.string(fastchange)],$PARAM[playlist]$PARAM[item].title)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus$INFO[skin.string(fastchange)],$PARAM[label])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort$INFO[skin.string(fastchange)],$PARAM[sortstatus])</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),1)">Skin.SetString(fastchange,2)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),1)">AlarmClock(fastchangealert,Notification(Item 1 - $PARAM[label],$LOCALIZE[31237]),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),2)">Skin.SetString(fastchange,3)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),2)">AlarmClock(fastchangealert,Notification(Item 2 - $PARAM[label],$LOCALIZE[31237]),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">Skin.SetString($INFO[skin.string(menulabel)].fastchange,1)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangealert,Notification(Item 3 - $PARAM[label],Tudo pronto!),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangestep,Close,0:01,true)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangedone,SetFocus(8009),0:02,true)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">Skin.Reset(fastchange_mode)</onclick>	
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Close</onclick>
+			<visible>String.StartsWith(skin.string(menu$PARAM[item].master),$PARAM[playlist])</visible>
+		</definition>
+	</include>
+	<include name="widgets_selector_node">
+		<definition>
+			<icon>$PARAM[icon]</icon>
+			<label>$PARAM[label]</label>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].type,$PARAM[type])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].sort,dateadded)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].order,descending)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgets,$PARAM[node]$PARAM[item])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus,$PARAM[label])</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort,$LOCALIZE[552])</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].type$INFO[skin.string(fastchange)],$PARAM[type])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].sort$INFO[skin.string(fastchange)],dateadded)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].order$INFO[skin.string(fastchange)],descending)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgets$INFO[skin.string(fastchange)],$PARAM[node]$PARAM[item])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus$INFO[skin.string(fastchange)],$PARAM[label])</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort$INFO[skin.string(fastchange)],$LOCALIZE[552])</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),1)">Skin.SetString(fastchange,2)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),1)">AlarmClock(fastchangealert,Notification(Item 1 - $PARAM[label],$LOCALIZE[31237]),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),2)">Skin.SetString(fastchange,3)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),2)">AlarmClock(fastchangealert,Notification(Item 2 - $PARAM[label],$LOCALIZE[31237]),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">Skin.SetString($INFO[skin.string(menulabel)].fastchange,1)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangealert,Notification(Item 3 - $PARAM[label],Tudo pronto!),0:00,true)</onclick>			
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangestep,Close,0:01,true)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">AlarmClock(fastchangedone,SetFocus(8009),0:02,true)</onclick>
+			<onclick condition="Skin.HasSetting(fastchange_mode) + String.IsEqual(skin.string(fastchange),3)">Skin.Reset(fastchange_mode)</onclick>
+			<onclick condition="!Skin.HasSetting(fastchange_mode)">Close</onclick>
+			<visible>String.StartsWith(skin.string(menu$PARAM[item].master),$PARAM[node])</visible>
+		</definition>
+	</include>
+	<include name="widgets_selector_mymenu">
+		<definition>
+			<icon>$PARAM[icon]</icon>
+			<label>$PARAM[label]</label>
+			<onclick>Skin.SetString($INFO[skin.string(menulabel)].type,11)</onclick>
+			<onclick>Skin.SetString($INFO[skin.string(menulabel)].widgets,mymenu$PARAM[item])</onclick>
+			<onclick>Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus,$PARAM[label])</onclick>
+			<onclick>Close</onclick>
+			<visible>$PARAM[visible]</visible>
+		</definition>
+	</include>
+	<include name="widgets_selector_sort">
+		<definition>
+			<label>$PARAM[label]</label>
+			<onclick>Skin.SetString($INFO[skin.string(menulabel)].sort,$PARAM[action])</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),2)">Skin.SetString($INFO[skin.string(menulabel)].sort1,$PARAM[action])</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),3)">Skin.SetString($INFO[skin.string(menulabel)].sort2,$PARAM[action])</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),1)">Skin.SetString($INFO[skin.string(menulabel)].sort3,$PARAM[action])</onclick>
+			<onclick>Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort,$PARAM[label])</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),2)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort1,$PARAM[label])</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),3)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort2,$PARAM[label])</onclick>
+			<onclick condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),1)">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort3,$PARAM[label])</onclick>
+			<onclick>SetFocus(8008)</onclick>
+			<visible>$PARAM[visible]</visible>
+		</definition>
+	</include>
+	<!-- ########## TROCA RAPIDA ########## -->
+	<include name="fastchange_menu">
+		<definition>
+			<onfocus condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),$PARAM[item])">Skin.SetString($INFO[skin.string(menulabel)].type,$INFO[Container(9000).ListItem.Property(type$PARAM[item])])</onfocus>
+			<onfocus condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),$PARAM[item])">Skin.SetString($INFO[skin.string(menulabel)].sort,$INFO[Container(9000).ListItem.Property(sort$PARAM[item])])</onfocus>
+			<onfocus condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),$PARAM[item])">Skin.SetString($INFO[skin.string(menulabel)].order,$INFO[Container(9000).ListItem.Property(order$PARAM[item])])</onfocus>
+			<onfocus condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),$PARAM[item])">Skin.SetString($INFO[skin.string(menulabel)].widgets,$INFO[Container(9000).ListItem.Property(widgets$PARAM[item])])</onfocus>
+			<onfocus condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),$PARAM[item])">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatus,$INFO[Container(9000).ListItem.Property(widgetsstatus$PARAM[item])])</onfocus>
+			<onfocus condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),$PARAM[item])">Skin.SetString($INFO[skin.string(menulabel)].widgetsstatussort,$INFO[Container(9000).ListItem.Property(widgetsstatussort$PARAM[item])])</onfocus>
+			<onfocus condition="String.IsEqual(Container(9000).ListItem.Property(fastchange),$PARAM[item])">AlarmClock(fastchangestep,Skin.SetString($INFO[skin.string(menulabel)].fastchange,$PARAM[step]),0:01,true)</onfocus>	
+		</definition>
+	</include>
+	<include name="fastchange_bar">
+		<definition>
+			<control type="group">
+				<width>270</width>
+				<control type="image">
+					<left>432</left>
+					<top>5</top>
+					<width>30</width>
+					<height>30</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture colordiffuse="$INFO[skin.string(colortext)]">$PARAM[texture]</texture>
+					<animation effect="fade" start="20" end="100" time="600" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<left>475</left>
+					<top>0</top>
+					<width>200</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$PARAM[label]</label>
+					<font>font_button</font>
+					<scroll>true</scroll>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## SUBWIDGETS ITENS ########## -->
+	<include name="subwidgets_items">
+		<definition>
+			<label fallback="">$PARAM[label]</label>
+			<icon></icon>
+			<property name="type">$PARAM[type]</property>
+			<property name="sort">$PARAM[sort]</property>
+			<property name="order">$PARAM[order]</property>
+			<property name="widgets">$PARAM[widgets]</property>
+			<onclick>$PARAM[action]</onclick>
+			<visible>$PARAM[visible]</visible>
+		</definition>
+	</include>
+	<!-- ########## MENU M/OSD ########## -->
+	<include name="osd_controls">
+		<definition>
+			<control type="$PARAM[type]" id="$PARAM[id]">
+				<left>$PARAM[left]</left>
+				<top>0</top>
+				<width>60</width>
+				<height>60</height>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup condition="Window.IsVisible(videoosd) + !Control.HasFocus(112)">888</onup>
+				<onup condition="Window.IsVisible(videoosd) + Control.HasFocus(112) + !System.HasAddon(service.subtitles.opensubtitles)">InstallAddon(service.subtitles.opensubtitles)</onup>
+				<onup condition="Window.IsVisible(videoosd) + Control.HasFocus(112) + System.HasAddon(service.subtitles.opensubtitles)">Close</onup>
+				<onup condition="Window.IsVisible(videoosd) + Control.HasFocus(112) + System.HasAddon(service.subtitles.opensubtitles)">ActivateWindow(SubtitleSearch)</onup>				
+				<ondown>Close</ondown>
+				<onclick>$PARAM[action]</onclick>
+				<onclick>$PARAM[action2]</onclick>
+				<onclick>$PARAM[action3]</onclick>
+				<label></label>
+				<texturefocus>$PARAM[texture]</texturefocus>
+				<texturenofocus>$PARAM[texture]</texturenofocus>
+				<usealttexture>$PARAM[usealttexture]</usealttexture>
+				<alttexturefocus>$PARAM[alttexture]</alttexturefocus>
+				<alttexturenofocus>$PARAM[alttexture]</alttexturenofocus>
+				<colordiffuse>$INFO[skin.string(colortextlist)]</colordiffuse>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus($PARAM[id])">conditional</animation>
+				<animation effect="fade" start="100" end="50" time="0" condition="$PARAM[fade]">conditional</animation>
+				<animation effect="zoom" center="auto" start="100" end="140" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+				<enable>$PARAM[enable]</enable>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## GERENCIADOR DE ADD-ONS ########## -->
+	<include name="addons_manager">
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<label>$PARAM[label]</label>
+				<label2>$VAR[addon$PARAM[id].label]$INFO[System.AddonVersion($PARAM[addon])]</label2>				
+				<onclick condition="!System.HasAddon($PARAM[addon])">InstallAddon($PARAM[addon])</onclick>
+				<onclick condition="System.HasAddon($PARAM[addon])">Addon.OpenSettings($PARAM[addon])</onclick>
+			</control>
+		</definition>
+	</include>	
+	<!-- ########## ESTOJOS ########## -->
+	<include name="views_videocase">
+		<definition>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcase3dbd)]">$VAR[videocase_style]</texture>				
+				<visible>String.Contains(ListItem($PARAM[item]).Filenameandpath,.3dbd.) | String.Contains(ListItem($PARAM[item]).Filenameandpath,.3d.)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcasebluray)]">$VAR[videocase_style]</texture>
+				<visible>[String.Contains(ListItem($PARAM[item]).Filenameandpath,bluray) | String.Contains(ListItem($PARAM[item]).Filenameandpath,blu-ray) | String.Contains(ListItem($PARAM[item]).Filenameandpath,bdrip)] + ![String.Contains(ListItem($PARAM[item]).Filenameandpath,.3dbd.) | String.Contains(ListItem($PARAM[item]).Filenameandpath,.3d.)]</visible>				
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcase4k)]">$VAR[videocase_style]</texture>
+				<visible>String.Contains(ListItem($PARAM[item]).Filenameandpath,4k)</visible>
+			</control>			
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcasewebtv)]">$VAR[videocase_style]</texture>
+				<visible>String.Contains(ListItem($PARAM[item]).Filenameandpath,web)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcasehdtv)]">$VAR[videocase_style]</texture>
+				<visible>String.Contains(ListItem($PARAM[item]).Filenameandpath,hdtv)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcasedvd)]">$VAR[videocase_style]</texture>
+				<visible>String.Contains(ListItem($PARAM[item]).Filenameandpath,dvd) | String.Contains(ListItem($PARAM[item]).Filenameandpath,.ifo,Right) | String.Contains(ListItem($PARAM[item]).Filenameandpath,.iso,Right)</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcaseset)]">$VAR[videocase_style]</texture>
+				<visible>ListItem($PARAM[item]).IsCollection</visible>
+			</control>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" aligny="$PARAM[aligny]">stretch</aspectratio>
+				<texture flipy="$PARAM[flipy]" diffuse="$PARAM[diffuse]" colordiffuse="$INFO[skin.string(colorcasedefault)]">$VAR[videocase_style]</texture>
+				<visible>![String.Contains(ListItem($PARAM[item]).Filenameandpath,.3dbd.) | String.Contains(ListItem($PARAM[item]).Filenameandpath,.3d.) | String.Contains(ListItem($PARAM[item]).Filenameandpath,bluray) | String.Contains(ListItem($PARAM[item]).Filenameandpath,blu-ray) | String.Contains(ListItem($PARAM[item]).Filenameandpath,bdrip) | String.Contains(ListItem($PARAM[item]).Filenameandpath,4k) | String.Contains(ListItem($PARAM[item]).Filenameandpath,web) | String.Contains(ListItem($PARAM[item]).Filenameandpath,hdtv) | String.Contains(ListItem($PARAM[item]).Filenameandpath,dvd) | String.Contains(ListItem($PARAM[item]).Filenameandpath,.ifo,Right) | String.Contains(ListItem($PARAM[item]).Filenameandpath,.iso,Right) | ListItem($PARAM[item]).IsCollection]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## SELETOR DAS VISTAS ########## -->
+	<include name="viewsselector_item">
+		<definition>
+			<control type="radiobutton" id="192$PARAM[id]">
+				<radioposx>1300</radioposx>
+				<label>$PARAM[label]</label>
+				<onclick>Skin.ToggleSetting($PARAM[view]_$PARAM[type])</onclick>
+				<onclick condition="!Skin.HasSetting($PARAM[view]_$PARAM[type])">Skin.SetString(setview$PARAM[type],$PARAM[id])</onclick>
+				<onclick condition="!Skin.HasSetting($PARAM[view]_$PARAM[type]) + Skin.HasSetting(clickactivateview_$PARAM[type])">back</onclick>
+				<selected>Skin.HasSetting($PARAM[view]_$PARAM[type])</selected>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## VISTA PAREDE DIMMER ########## -->
+	<include name="viewwall_dimmer">
+		<definition>
+			<animation effect="fade" start="100" end="$PARAM[dim]" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + $PARAM[condition]">conditional</animation>
+		</definition>
+	</include>
+	<!-- ########## VISTA SHOWCASE ########## -->
+	<include name="viewshowcase_poster">
+		<definition>
+		<control type="group">
+			<visible>[Skin.HasSetting(noshowcasevideocase) | Window.IsActive(programs) | Container.Content(genres)]</visible>
+			<include>animation_visiblechange</include>
+			<control type="image">
+				<left>74</left>
+				<top>394</top>
+				<width>260</width>
+				<height>381</height>
+				<aspectratio align="center" aligny="top">stretch</aspectratio>
+				<colordiffuse>50ffffff</colordiffuse>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[poster$PARAM[item]]</texture>
+			</control>
+			<control type="image">
+				<left>74</left>
+				<top>12</top>
+				<width>260</width>
+				<height>381</height>
+				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[poster$PARAM[item]]</texture>
+			</control>
+			<control type="image">
+				<left>284</left>
+				<top>9</top>
+				<width>52</width>
+				<height>52</height>
+				<texture>$VAR[watched_style]</texture>
+				<colordiffuse>$INFO[skin.string(colorwatched)]</colordiffuse>
+				<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem($PARAM[item]).Overlay,OverlayWatched.png)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(noshowcasevideocase) | Container.Content(genres) | Window.IsActive(programs)</visible>
+			<include>animation_visiblechange</include>
+				<control type="image">
+					<left>84</left>
+					<top>400</top>
+					<width>228</width>
+					<height>318</height>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[poster$PARAM[item]]</texture>
+				</control>
+				<include content="views_videocase">	
+					<param name="left" value="63" />
+					<param name="top" value="369" />
+					<param name="width" value="284" />
+					<param name="height" value="390" />
+					<param name="aligny" value="top" />
+					<param name="flipy" value="true" />
+					<param name="diffuse" value="thumb_box_reflect.png" />
+					<param name="item" value="$PARAM[item]" />
+				</include>
+				<control type="image">
+					<left>84</left>
+					<top>64</top>
+					<width>228</width>
+					<height>318</height>
+					<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+					<texture fallback="DefaultVideoPoster.png" background="true">$VAR[poster$PARAM[item]]</texture>
+				</control>
+				<control type="image">
+					<left>261</left>
+					<top>70</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>$VAR[watched_style]</texture>
+					<colordiffuse>$INFO[skin.string(colorwatched)]</colordiffuse>
+					<animation effect="slide" start="0,0" end="3,-16" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(flattenshowcase)">Conditional</animation>
+					<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem($PARAM[item]).Overlay,OverlayWatched.png)</visible>
+				</control>
+				<include content="views_videocase">	
+					<param name="left" value="63" />
+					<param name="top" value="14" />
+					<param name="width" value="284" />
+					<param name="height" value="400" />
+					<param name="aligny" value="bottom" />
+					<param name="flipy" value="false" />
+					<param name="diffuse" value="" />
+					<param name="item" value="$PARAM[item]" />
+				</include>
+				<control type="image">
+					<left>174</left>
+					<top>21</top>
+					<width>57</width>
+					<height>57</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$VAR[videocodec$PARAM[item]]</texture>
+				</control>	
+			</control>			
+		</definition>
+	</include>
+	<!-- ########## BARRA DE LEGENDAS DOS AJUSTES ########## -->	
+	<include name="legend_4items">
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>40</width>
+				<height>28</height>
+				<texture colordiffuse="$PARAM[color]">grey.png</texture>
+			</control>
+			<control type="label">
+				<left>55</left>
+				<top>0</top>
+				<width>404</width>
+				<height>28</height>
+				<label align="left" aligny="center">$PARAM[label]</label>
+				<font>font_plot</font>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+			</control>
+		</definition>
+	</include>
+	<include name="legend_6items">
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>40</width>
+				<height>28</height>
+				<texture colordiffuse="$PARAM[color]">grey.png</texture>
+			</control>
+			<control type="label">
+				<left>55</left>
+				<top>0</top>
+				<width>245</width>
+				<height>28</height>
+				<label align="left" aligny="center">$PARAM[label]</label>
+				<font>font_plot</font>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+			</control>
+		</definition>
+	</include>
+	<!-- ########## ETIQUETAS DE MIDIA ########## -->
+	<include name="mediaflags_common">
+		<definition>
+			<control type="image" id="$PARAM[flag_id]">
+				<include>invisible</include>
+				<texture>$PARAM[flag]</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>110</width>
+				<height>66</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture colordiffuse="$INFO[skin.string(colorflags)]">$VAR[extras_path]flag_default.png</texture>
+				<visible>String.IsEmpty(Control.GetLabel($PARAM[flag_id]))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>110</width>
+				<height>66</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture colordiffuse="$INFO[skin.string(colorflags)]">$PARAM[flag]</texture>
+				<visible>!String.IsEmpty(Control.GetLabel($PARAM[flag_id]))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>7</top>
+				<width>1</width>
+				<height>65</height>
+				<texture>flagseparator.png</texture>
+				<colordiffuse>$INFO[skin.string(colorflags)]</colordiffuse>
+				<visible>$PARAM[separator]</visible>
+			</control>						
+		</definition>
+	</include>	
+</includes>
