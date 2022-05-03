@@ -1,2 +1,0 @@
-﻿v 1.19.0.0
-- Kopie aus Kodi 18
