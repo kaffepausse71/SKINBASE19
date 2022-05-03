@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-	<setting id="omdb_api_key" label="OMDb API Key" type="text"/>
-	<setting id="tmdb_api_key" label="TMDb API Key" type="text"/>
-</settings>

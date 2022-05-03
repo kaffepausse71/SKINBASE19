@@ -1,4 +1,0 @@
-4.0.0
-- Remove ExtendedInfo
-- Remove XBMC. prefix
-- Remove autocompletion plugin
