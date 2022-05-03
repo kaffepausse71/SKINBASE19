@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.guidos-skinbase"
+		name="[COLOR orange]Guidos SKINBASE.DE[/COLOR]"
+		version="1.0.0"
+		provider-name="SKINBASE,Litti19928">
+	<requires>
+		<!--py3 compliant-->
+		<import addon="xbmc.python" version="3.0.0" targetversion="3.0.0"/>
+        <!--<import addon="xbmc.python" version="2.24.0" />-->
+		<import addon="script.module.litti"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+	<summary>[COLOR orange]Created by litti19928,SKINBASE[/COLOR]</summary>
+	<description>[COLOR orange]PYTHON 2 AND 3[/COLOR]</description>
+	<disclaimer></disclaimer>
+	<language>de</language>
+	<platform>all</platform>
+	<license></license>
+	<forum></forum>
+	<website></website>
+	<email></email>
+	<source></source>
+	<news></news>
+	<assets>
+		<icon>resources/icon.jpg</icon>
+		<fanart>resources/fanart.jpg</fanart>
+		<banner></banner>
+		<clearlogo></clearlogo>
+		<screenshot></screenshot>
+	</assets>
+	</extension>
+</addon>

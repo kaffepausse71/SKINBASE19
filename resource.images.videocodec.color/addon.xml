@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="resource.images.videocodec.color" name="Media Icons - VideoCodec.Color" version="1.0.0" provider-name="Wanilton">
+	<extension point="kodi.resource.images" compile="true" type="mediaicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Media Icons Pack - VideoCodec.Color</summary>
+		<description lang="en">Media Icons Pack - Videocodec.Color, made by Devilshura</description>
+		<platform>all</platform>
+	</extension>
+</addon>
