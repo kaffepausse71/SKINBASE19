@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="skin.confluence.extended2" version="4.6.12" name="[COLOR orange]Confluence Extended[/COLOR] 2.0" provider-name="Jezz_X, Team Kodi, YLLOW_DRAGON, plood">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0" />
+		<import addon="script.skinshortcuts" version="1.0.18" />
+		<import addon="script.image.resource.select" version="2.0.4"/>
+		<import addon="service.skin.widgets" version="0.0.33"/>
+		<import addon="script.globalsearch" version="8.0.13"/>
+		<import addon="script.extendedinfo" version="5.6.1"/>
+		<import addon="script.simpleplaylists" version="1.1.1"/>
+		<import addon="script.skin.helper.backgrounds" version="1.0.34"/>
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1.0">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Confluence Extended skin by Jezz_X, Team XBMC, YLLOW_DRAGON, plood.</summary>
+		<summary lang="ru_RU">Обложка Confluence Extended. Авторы: Jezz_X, Team XBMC, YLLOW_DRAGON, plood.</summary>
+		<summary lang="uk_UA">Обкладинка Confluence Extended. Автори: Jezz_X, Team XBMC, YLLOW_DRAGON, plood.</summary>
+		<description lang="en_GB">Confluence Extended is the modernized skin for KODI. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use.</description>
+		<description lang="ru_RU">Confluence Extended — это модернизированная обложка KODI. Она представляет собой сочетание концепций, взятых из многих популярных обложек, в попытке интегрировать их удачные идеи в обложке, которая была простой для использования и понимания новыми пользователями KODI.</description>
+		<description lang="uk_UA">Confluence Extended — це модернізована обкладинка Kodi. Концепції багатьох популярних обкладинок поєднано у спробі використати та інтегрувати їхні вдалі ідеї в обкладинці, що стала б зрозумілою та простою в застосуванні для нових користувачів Kodi.</description>
+		<platform>all</platform>
+		<license>GNU General Public License version 2</license>
+		<forum>http://forum.kodi.tv/forumdisplay.php?fid=125</forum>
+		<website></website>
+		<email>nkvoronov@gmail.com</email>
+		<source>https://github.com/nkvoronov/skin.confluence-extended.git</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+		</assets>
+		<news>Added support for new episode spoilers feature.</news>
+	</extension>
+</addon>
+
+<addon
+  id="skin.neon"
+  version="6.0.18"
+  name="[COLOR orange]Neon[/COLOR]"
+  provider-name="stoli,SKINBASE">
+  <requires>
+    <import addon="xbmc.gui" version="5.15.0"/>
+    <import addon="script.skinshortcuts" version="1.0.10" />
+	<import addon="service.library.data.provider" version="0.0.7" />
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultresolution="720p"
+    defaultresolutionwide="720p"
+    defaultthemename="textures.xbt"
+    effectslowdown="1"
+    debugging="true">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Skins und Skin Themen by Guidos Skinbase.</summary>
+		<summary lang="en_GB">Skins and Skin Themen by Guidos Skinbase.</summary>
+		<description lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </description>
+		<description lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</description>
+		<platform>all</platform>
+		<news lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </news>
+		<news lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
+			<screenshot>resources/screenshot007.jpg</screenshot>
+		</assets>
+		<size></size>
+	</extension>
+
+</addon>
 <addon id="metadata.album.universal"
        name="Universal Album Scraper"
        version="3.1.6"
