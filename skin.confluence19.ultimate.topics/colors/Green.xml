@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="white">FF23AB2F</color>
+	<color name="grey">FFb4b4b4</color>
+	<color name="grey2">FF999999</color>
+	<color name="grey3">FF505050</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FF23AB2F</color>
+	<color name="selected">FF23AB2F</color>
+	<color name="invalid">FF23AB2F</color>
+	<color name="themecolor">FF23AB2F</color>
+</colors>

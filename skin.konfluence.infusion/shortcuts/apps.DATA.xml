@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>Benutzer-Addons</defaultID>
+		<label>Benutzer-Addons</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(10040,&quot;addons://user/&quot;,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Aus Repository installieren</defaultID>
+		<label>Aus Repository installieren</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(10040,&quot;addons://repos/&quot;,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Aus ZIP-Datei installieren</defaultID>
+		<label>Aus ZIP-Datei installieren</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>installfromzip</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Suchen</defaultID>
+		<label>Suchen</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(10040,&quot;addons://search/&quot;,return)</action>
+	</shortcut>
+</shortcuts>

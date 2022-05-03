@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="View_53_ShowCase">
+        <control type="group">
+            <visible>Control.IsVisible(53)</visible>
+            <top>3</top>
+			 <include>ViewAnimation</include>
+			<control type="image">
+			<depth>DepthFloor</depth>
+			<left>-20</left>
+			<top/>
+			<bottom>0</bottom>
+			<width>1520</width>
+			<height>100</height>
+			<texture colordiffuse="$INFO[Skin.String(menuColor)]" >floor.png</texture>
+			<visible>!Skin.HasSetting(NoFloor)</visible>
+		</control>
+
+            <control type="group">
+                <camera x="640" y="540" />
+                <control type="group" id="6001">
+                    <left>37</left>
+                    <top>380</top>
+                    <visible>Container.OnNext</visible>
+                    <animation effect="slide" end="-90,0" time="200" reversible="false">Hidden</animation>
+                    
+					<control type="group">
+                        <left>10</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-7).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <visible>Container.OnNext</visible>
+                        <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+                        <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-7</include>
+                    </control>
+                    <control type="group">
+                        <left>100</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-6</include>
+                    </control>
+                    <control type="group">
+                        <left>190</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-5</include>
+                    </control>
+                    <control type="group">
+                        <left>280</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-4</include>
+                    </control>
+                    <control type="group">
+                        <left>370</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-3</include>
+                    </control>
+                    <control type="group">
+                        <left>460</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-2</include>
+                    </control>
+                    <control type="group">
+                        <left>1090</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <visible>!Container.OnNext</visible>
+                        <animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+                        <animation effect="rotatey" center="1400" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem6</include>
+                    </control>
+                    <control type="group">
+                        <left>1000</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1310" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem5</include>
+                    </control>
+                    <control type="group">
+                        <left>910</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1220" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem4</include>
+                    </control>
+                    <control type="group">
+                        <left>820</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1130" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem3</include>
+                    </control>
+                    <control type="group">
+                        <left>730</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1040" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem2</include>
+                    </control>
+                    <control type="group">
+                        <left>640</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="950" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem1</include>
+                    </control>
+                    <control type="group">
+                        <visible>Container.OnNext</visible>
+                        <animation effect="slide" end="50,0" time="200" reversible="false">Hidden</animation>
+                        <control type="group">
+                            <left>550</left>
+                            <visible>Container.OnNext</visible>
+                            <visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                            <animation effect="rotatey" center="860" end="-55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                            <animation effect="rotatey" center="860" start="55" end="55" time="0" condition="true">Conditional</animation>
+                            <include>MovieShowCaseItem0</include>
+                        </control>
+                        <control type="group">
+                            <left>505</left>
+                            <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                            <visible>Container.OnNext</visible>
+                            <animation effect="rotatey" center="405" end="-55" time="200" reversible="false" tween="quadratic">Hidden</animation>
+                           
+						   <control type="image">
+                                <texture background="true" diffuse="thumbs/poster_diffuse_itemlist.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
+                                <include>MovieShowcaseThumb</include>
+                            </control>
+                            <control type="image">
+                                <include>WatchedOverlayShowCase</include>
+                                <texture>$VAR[IconOverlay-1Var]</texture>
+                            </control>
+                            <control type="group">
+                                <left>19</left>
+                                <top>15</top>
+                                <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-1</include>
+                            </control>
+                            <control type="image">
+                                <texture background="true" flipy="true" diffuse="thumbs/poster_diffuse_itemlist.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
+                                <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+                                <include>MovieShowcaseThumbReflection</include>
+                            </control>
+                        </control>
+						
+                    </control>
+                </control>
+                <control type="group" id="6002">
+                    <left>37</left>
+                    <top>380</top>
+                    <visible>Container.OnPrevious</visible>
+                    <animation effect="slide" end="90,0" time="200" reversible="false">Hidden</animation>
+                    <control type="group">
+                        <left>1000</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(7).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <visible>Container.OnPrevious</visible>
+                        <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+                        <animation effect="rotatey" center="1310" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem7</include>
+                    </control>
+                    <control type="group">
+                        <left>910</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1220" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem6</include>
+                    </control>
+                    <control type="group">
+                        <left>820</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1130" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem5</include>
+                    </control>
+                    <control type="group">
+                        <left>730</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1040" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem4</include>
+                    </control>
+                    <control type="group">
+                        <left>640</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="950" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem3</include>
+                    </control>
+                    <control type="group">
+                        <left>550</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="860" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem2</include>
+                    </control>
+                    <control type="group">
+                        <left>-80</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <visible>!Container.OnPrevious</visible>
+                        <animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+                        <animation effect="rotatey" center="-180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-6</include>
+                    </control>
+                    <control type="group">
+                        <left>10</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-5</include>
+                    </control>
+                    <control type="group">
+                        <left>100</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-4</include>
+                    </control>
+                    <control type="group">
+                        <left>190</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-3</include>
+                    </control>
+                    <control type="group">
+                        <left>280</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-2</include>
+                    </control>
+                    <control type="group">
+                        <left>370</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-1</include>
+                    </control>
+                    <control type="group">
+                        <visible>Container.OnPrevious</visible>
+                        <animation effect="slide" end="-50,0" time="200" reversible="false">Hidden</animation>
+                        <control type="group">
+                            <left>460</left>
+                            <visible>Container.OnPrevious</visible>
+                            <visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                            <animation effect="rotatey" center="360" end="55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                            <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                            <include>MovieShowCaseItem0</include>
+                        </control>
+                        <control type="group">
+                            <left>505</left>
+                            <visible>!String.IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                            <visible>Container.OnPrevious</visible>
+                            <animation effect="rotatey" center="815" end="55" time="200" reversible="false" tween="quadratic">Hidden</animation>
+                            <control type="image">
+                                <texture background="true" diffuse="thumbs/poster_diffuse_itemlist.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
+                                <include>MovieShowcaseThumb</include>
+                            </control>
+                            <control type="image">
+                                <include>WatchedOverlayShowCase</include>
+                                <texture>$VAR[IconOverlay1Var]</texture>
+                            </control>
+                            <control type="group">
+                                <left>19</left>
+                                <top>15</top>
+                                <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon1</include>
+                            </control>
+                            <control type="image">
+                                <texture background="true" flipy="true" diffuse="thumbs/poster_diffuse_itemlist.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
+                                <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+                                <include>MovieShowcaseThumbReflection</include>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+                <control type="group" id="6000">
+                    <left>37</left>
+                    <top>380</top>
+                    <visible>!Control.IsVisible(6001) + !Control.IsVisible(6002)</visible>
+                    <control type="group">
+                        <left>10</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-6</include>
+                    </control>
+                    <control type="group">
+                        <left>100</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-5</include>
+                    </control>
+                    <control type="group">
+                        <left>190</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-4</include>
+                    </control>
+                    <control type="group">
+                        <left>280</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-3</include>
+                    </control>
+                    <control type="group">
+                        <left>370</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-2</include>
+                    </control>
+                    <control type="group">
+                        <left>460</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem-1</include>
+                    </control>
+                    <control type="group">
+                        <left>1000</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1310" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem6</include>
+                    </control>
+                    <control type="group">
+                        <left>910</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1220" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem5</include>
+                    </control>
+                    <control type="group">
+                        <left>820</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1130" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem4</include>
+                    </control>
+                    <control type="group">
+                        <left>730</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="1040" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem3</include>
+                    </control>
+                    <control type="group">
+                        <left>640</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="950" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem2</include>
+                    </control>
+                    <control type="group">
+                        <left>550</left>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <animation effect="rotatey" center="860" start="55" end="55" time="0" condition="true">Conditional</animation>
+                        <include>MovieShowCaseItem1</include>
+                    </control>
+                    <control type="group">
+                        <left>505</left>
+                        <!-- Workaround for camera bug. As soon as the camera tag is applied to the group, label will be invisible -->
+                        <animation effect="rotatey" center="0" start="1" end="1" time="0" condition="true">Conditional</animation>
+                        <visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <include>MovieShowCaseItem0</include>
+                    </control>
+                </control>
+            </control>
+			<control type="label">
+				<left>30</left>
+				<top>630</top>
+				<width>1220</width>
+				<height>35</height>
+				<font>font28_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<left>-400</left>
+				<top>670</top>
+				<width>1280</width>
+				<align>center</align>
+				<itemgap>2</itemgap>
+				<orientation>horizontal</orientation>
+				  <include>VideoStudioConditions</include>
+                  <include>VideoCodecFlaggingConditions</include>
+		         <include>AudioChannelsFlaggingConditions</include>
+		         <include>AudioCodecFlaggingConditions</include>
+		         <include>AspectCodecFlaggingConditions</include>
+		         <include>VideoStereoscopicsFlaggingConditions</include>
+	             <include>VideoMPAAFlaggingConditions</include>
+                 <include>Animation_HiddenByInfo</include>
+                 <include>Animation_ZoomInZoomOut</include>
+ 
+			</control>
+			<control type="group">
+			<left>180</left>
+			<top>40</top>
+			<visible>Control.IsVisible(53) + ![ListItem.IsFolder + String.IsEqual(ListItem.DBType,movie)] + !Skin.HasSetting(View53HideInfo)</visible>
+			<visible>!ListItem.IsParentFolder</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>920</width>
+				<height>310</height>
+				<texture colordiffuse="$INFO[Skin.String(menuColor)]" border="20">ContentPanel.png</texture>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>20</top>
+				<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>$INFO[Skin.String(menuColor)]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>31308</label>
+				</control>
+				<control type="fadelabel">
+					<left>0</left>
+					<top>30</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Genre]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<left>0</left>
+					<top>55</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Year][/B]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<left>0</left>
+					<top>80</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$VAR[DurationInMinutes]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<left>0</left>
+					<top>105</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[563]: $INFO[ListItem.RatingAndVotes]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+			</control>
+			<control type="group">
+				<left>480</left>
+				<top>20</top>
+				<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>$INFO[Skin.String(menuColor)]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>20339</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>30</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Director]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>75</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>$INFO[Skin.String(menuColor)]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>20417</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>105</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Writer]</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>20</top>
+				<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>$INFO[Skin.String(menuColor)]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>20351</label>
+				</control>
+				<control type="fadelabel">
+					<left>0</left>
+					<top>30</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Genre]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<left>0</left>
+					<top>55</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Year][/B]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<left>0</left>
+					<top>80</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[563]: $INFO[ListItem.RatingAndVotes]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+			</control>
+			<control type="group">
+				<left>480</left>
+				<top>20</top>
+				<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>$INFO[Skin.String(menuColor)]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>20360</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>30</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[20161]: $INFO[ListItem.Episode]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>55</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>80</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[16101]: $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>170</top>
+				<visible>!String.IsEqual(ListItem.DBType,set)</visible>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>400</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>$INFO[Skin.String(menuColor)]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>207</label>
+				</control>
+				<control type="textbox">
+					<description>Description For Movie</description>
+					<left>0</left>
+					<top>32</top>
+					<width>850</width>
+					<height>98</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<label>$INFO[ListItem.Plot]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>0</top>
+				<visible>String.IsEqual(ListItem.DBType,set)</visible>
+				<control type="textbox">
+					<description>Description For Movie</description>
+					<left>0</left>
+					<top>10</top>
+					<width>850</width>
+					<height>330</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<label>$INFO[ListItem.Plot]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
+				<control type="textbox">
+					<description>Description For Movie</description>
+					<left>0</left>
+					<top>10</top>
+					<width>850</width>
+					<height>330</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+			</control>
+			<!--<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<left>30</left>
+				<top>360</top>
+				<width>800</width>
+				<align>left</align>
+				<itemgap>2</itemgap>
+				<orientation>horizontal</orientation>
+				<include>VideoCodecFlaggingConditions</include>
+				<include>AudioCodecFlaggingConditions</include>
+				<include>AudioChannelsFlaggingConditions</include>
+				<include>AspectCodecFlaggingConditions</include>
+				<include>VideoStereoscopicsFlaggingConditions</include>
+				<include>VideoTypeHackFlaggingConditions</include>
+			</control>
+			<control type="grouplist">
+				<description>MPAA Rating Flagging Images</description>
+				<left>95</left>
+				<top>360</top>
+				<width>800</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>VideoMPAAFlaggingConditions</include>
+			</control>-->
+		</control>
+            <include condition="Skin.HasSetting(HorizontalListNav)">scmfixed</include>
+            <include condition="!Skin.HasSetting(HorizontalListNav)">scmwrap</include>
+            <control type="scrollbar" id="5360">
+                <left>73</left>
+                <top>656</top>
+                <width>1120</width>
+                <height>8</height>
+                <onup>53</onup>
+                <ondown>615</ondown>
+                <texturesliderbackground />
+                <texturesliderbar border="6,0,6,0">scrollbar/texturesliderbar_hor.png</texturesliderbar>
+                <texturesliderbarfocus border="6,0,6,0">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+                <textureslidernib />
+                <textureslidernibfocus />
+                <showonepage>false</showonepage>
+                <orientation>horizontal</orientation>
+                <animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+            </control>
+        </control>
+    </include>
+    <include name="ShowCaseInfoPanel">
+        <control type="group" id="12000">
+            <visible>!String.IsEmpty(Control.GetLabel(4420)) + Control.IsVisible(4420) + !ListItem.IsParentFolder</visible>
+            <animation effect="slide" start="0,-800" end="0,0" time="720" tween="cubic">VisibleChange</animation>
+            <animation effect="slide" start="0,-800" end="0,0" time="720" tween="cubic">WindowOpen</animation>
+            <animation effect="slide" end="0,-800" start="0,0" time="720" tween="cubic">WindowClose</animation>
+            <animation effect="slide" start="0,0" end="0,13" time="720" tween="cubic" condition="Control.IsVisible(53)">Conditional</animation>
+            <top>33</top>
+            <control type="image">
+                <description>background image</description>
+                <left>71</left>
+                <top>556</top>
+                <width>1137</width>
+                <height>489</height>
+                <texture border="40">panel_reflect.png</texture>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>71</left>
+                <top>87</top>
+                <width>1137</width>
+                <height>489</height>
+                <texture border="40">listpanel_back.png</texture>
+            </control>
+            <control type="group">
+                <visible>String.IsEqual(Control.GetLabel(4420),1)</visible>
+                <include>SettingsFadeAnimation</include>
+                <control type="grouplist">
+                    <left>91</left>
+                    <top>108</top>
+                    <control type="button">
+                        <label>$VAR[InfoPanelLabel1Var]</label>
+                        <include>ShowCaseInfoPanelButtonsValues</include>
+                    </control>
+                    <control type="button">
+                        <label>$VAR[InfoPanelLabel2Var]</label>
+                        <include>ShowCaseInfoPanelButtonsValues</include>
+                    </control>
+                </control>
+                <control type="image">
+                    <left>425</left>
+                    <top>108</top>
+                    <width>1</width>
+                    <height>119</height>
+                    <texture border="1">separator3.png</texture>
+                </control>
+                <control type="grouplist">
+                    <left>427</left>
+                    <top>108</top>
+                    <control type="button">
+                        <label>$VAR[InfoPanelLabel3Var]</label>
+                        <include>ShowCaseInfoPanelButtonsValues</include>
+                    </control>
+                    <control type="group">
+                        <control type="button">
+                            <label>$VAR[InfoPanelLabel4Var]</label>
+                            <width>167</width>
+                            <include>ShowCaseInfoPanelButtonsValues</include>
+                        </control>
+                        <control type="image">
+                            <left>167</left>
+                            <width>1</width>
+                            <height>59</height>
+                            <texture border="1">separator3.png</texture>
+                        </control>
+                        <control type="button">
+                            <label>$VAR[InfoPanelLabel5Var]</label>
+                            <left>167</left>
+                            <width>167</width>
+                            <include>ShowCaseInfoPanelButtonsValues</include>
+                        </control>
+                    </control>
+                </control>
+                <control type="textbox">
+                    <label>$VAR[VideoPlot]</label>
+                    <top>228</top>
+                    <left>101</left>
+                    <width>647</width>
+                    <height>120</height>
+                    <font>font14</font>
+                    <pagecontrol>62</pagecontrol>
+                    <autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+           
+                </control>
+                <control type="scrollbar" id="62">
+                    <top>228</top>
+                    <left>752</left>
+                    <width>9</width>
+                    <height>120</height>
+                    <onup>SetProperty(MediaMenu,True,home)</onup>
+                    <onup>SetFocus(9050)</onup>
+                    <onleft>50</onleft>
+                    <onright>50</onright>
+                    <ondown>50</ondown>
+                    <texturesliderbackground>scrollbar/texturesliderbackground3.png</texturesliderbackground>
+                    <texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar3.png</texturesliderbar>
+                    <texturesliderbarfocus border="1">scrollbar/texturesliderbar3.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <orientation>vertical</orientation>
+                </control>
+                <control type="image">
+                    <left>91</left>
+                    <top>309</top>
+                    <width>1095</width>
+                    <height>40</height>
+                    <texture border="1">separator2.png</texture>
+                </control>
+                <control type="image">
+                    <left>761</left>
+                    <top>108</top>
+                    <width>427</width>
+                    <height>240</height>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+                    <bordertexture border="1,1,2,1">thumbs/panel_border.png</bordertexture>
+                    <bordersize>1,1,2,1</bordersize>
+                </control>
+                <control type="image">
+                    <left>761</left>
+                    <top>108</top>
+                    <width>427</width>
+                    <height>240</height>
+                    <texture>black.png</texture>
+                    <visible>Player.HasVideo</visible>
+                </control>
+                <control type="videowindow">
+                    <left>761</left>
+                    <top>108</top>
+                    <width>427</width>
+                    <height>240</height>
+                    <visible>Player.HasVideo</visible>
+                </control>
+            </control>
+			
+		
+			
+         <control type="group">
+                <visible>String.IsEqual(Control.GetLabel(4420),2)</visible>
+                <include>SettingsFadeAnimation</include>
+                <control type="grouplist">
+                    <left>91</left>
+                    <top>108</top>
+                    <control type="button">
+                        <label>$VAR[InfoPanelLabel1Var]</label>
+                        <include>ShowCaseInfoPanelButtonsValues</include>
+                    </control>
+                    <control type="button">
+                        <label>$VAR[InfoPanelLabel2Var]</label>
+                        <include>ShowCaseInfoPanelButtonsValues</include>
+                    </control>
+                    <control type="button">
+                        <label>$VAR[InfoPanelLabel3Var]</label>
+                        <include>ShowCaseInfoPanelButtonsValues</include>
+                    </control>
+                    <control type="group">
+                        <control type="button">
+                            <label>$VAR[InfoPanelLabel4Var]</label>
+                            <width>167</width>
+                            <height>61</height>
+                            <include>ShowCaseInfoPanelButtonsValues</include>
+                        </control>
+                        <control type="image">
+                            <left>167</left>
+                            <width>1</width>
+                            <height>59</height>
+                            <texture border="1">separator3.png</texture>
+                        </control>
+                        <control type="button">
+                            <label>$VAR[InfoPanelLabel5Var]</label>
+                            <left>167</left>
+                            <width>167</width>
+                            <height>61</height>
+                            <include>ShowCaseInfoPanelButtonsValues</include>
+                        </control>
+                    </control>
+                </control>
+                <control type="image">
+                    <left>425</left>
+                    <top>108</top>
+                    <width>1</width>
+                    <height>239</height>
+                    <texture border="1">separator3.png</texture>
+                </control>
+                <control type="textbox">
+                    <left>437</left>
+                    <label>$VAR[VideoPlot]</label>
+                    <top>108</top>
+                    <width>533</width>
+                    <height>236</height>
+                    <font>font14</font>
+                    <pagecontrol>62</pagecontrol>
+                    <autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+                    <include>ShowCaseInfoPanelButtonsValues</include>
+                </control>
+                <control type="scrollbar" id="62">
+                    <top>108</top>
+                    <left>972</left>
+                    <width>9</width>
+                    <height>240</height>
+                    <onup>SetProperty(MediaMenu,True,home)</onup>
+                    <onup>SetFocus(9050)</onup>
+                    <onleft>50</onleft>
+                    <onright>50</onright>
+                    <ondown>50</ondown>
+                    <texturesliderbackground>scrollbar/texturesliderbackground3.png</texturesliderbackground>
+                    <texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar3.png</texturesliderbar>
+                    <texturesliderbarfocus border="1">scrollbar/texturesliderbar3.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <orientation>vertical</orientation>
+                </control>
+                <control type="image">
+                    <left>425</left>
+                    <top>309</top>
+                    <width>761</width>
+                    <height>40</height>
+                    <texture border="1">separator2.png</texture>
+                </control>
+                <control type="image">
+                    <left>761</left>
+                    <top>108</top>
+                    <width>427</width>
+                    <height>240</height>
+                    <fadetime>200</fadetime>
+                    <aspectratio align="right">keep</aspectratio>
+                    <texture background="true">$VAR[PosterThumbVar]</texture>
+                    <bordertexture border="1,1,2,1">thumbs/panel_border.png</bordertexture>
+                    <bordersize>1,1,2,1</bordersize>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="scmfixed">
+        <control type="fixedlist" id="53">
+            <include>contents53list</include>
+        </control>
+    </include>
+    <include name="scmwrap">
+        <control type="wraplist" id="53">
+            <include>contents53list</include>
+        </control>
+    </include>
+    <include name="contents53list">
+        <left>-46</left>
+        <top>360</top>
+        <width>1372</width>
+        <height>350</height>
+        <onleft>53</onleft>
+        <onright>53</onright>
+        <onup>9000</onup>
+			<ondown>61</ondown>
+        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(genres) | Container.Content(sets)</visible>
+        <viewtype label="ShowCase">bigwrap</viewtype>
+        <pagecontrol>5360</pagecontrol>
+        <scrolltime tween="quadratic">300</scrolltime>
+        <focusposition>3</focusposition>
+        <orientation>horizontal</orientation>
+        <preloaditems>2</preloaditems>
+        <itemlayout height="350" width="173" />
+        <focusedlayout height="350" width="173" />
+    </include>
+    <include name="MovieShowcaseThumb">
+        <left>-3</left>
+        <top>-11</top>
+        <width>203</width>
+        <height>291</height>
+        <align>center</align>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+        <fadetime>0</fadetime>
+        <bordertexture border="20">thumbs/thumb_shadow_aa.png</bordertexture>
+        <bordersize>20</bordersize>
+    </include>
+    <include name="MovieShowcaseThumbReflection">
+        <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+        <fadetime>0</fadetime>
+        <left>11</left>
+        <top>267</top>
+        <width>176</width>
+        <height>264</height>
+        <colordiffuse>d1FFFFFF</colordiffuse>
+    </include>
+    <include name="WatchedOverlayShowCase">
+        <left>120</left>
+        <top>-11</top>
+        <width>80</width>
+        <height>80</height>
+        <fadetime>0</fadetime>
+        <bordersize>20</bordersize>
+    </include>
+    <include name="MovieShowCaseItem-7">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-7Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-7</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-7Var]</texture>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem-6">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-6Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-6</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-6Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>81</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem-5">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-5Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-5</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-5Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>87</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem-4">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-4Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-4</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-4Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>97</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem-3">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-3Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-3</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-3Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>107</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem-2">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-2Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-2</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-2Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>119</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem-1">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay-1Var]</texture>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-1</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
+            <width>120</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem0">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay0Var]</texture>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon0</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem1">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay1Var]</texture>
+        </control>
+        <control type="group">
+            <left>19</left>
+            <top>15</top>
+            <include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon1</include>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <left>57</left>
+            <width>128</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem2">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay2Var]</texture>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <left>68</left>
+            <width>118</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem3">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay3Var]</texture>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <left>81</left>
+            <width>105</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem4">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay4Var]</texture>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <left>91</left>
+            <width>96</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem5">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay5Var]</texture>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <left>99</left>
+            <width>89</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem6">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay6Var]</texture>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
+            <aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
+            <left>105</left>
+            <width>81</width>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <include name="MovieShowCaseItem7">
+        <control type="image">
+            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>
+            <include>MovieShowcaseThumb</include>
+        </control>
+        <control type="image">
+            <include>WatchedOverlayShowCase</include>
+            <texture>$VAR[IconOverlay7Var]</texture>
+        </control>
+        <control type="image">
+            <texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>
+            <include>MovieShowcaseThumbReflection</include>
+        </control>
+    </include>
+    <variable name="ShowcaseItem-7Var">
+        <value condition="!String.IsEmpty(ListItem(-7).Art(poster))">$INFO[ListItem(-7).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(-7).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(-7).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem-6Var">
+        <value condition="!String.IsEmpty(ListItem(-6).Art(poster))">$INFO[ListItem(-6).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(-6).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(-6).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem-5Var">
+        <value condition="!String.IsEmpty(ListItem(-5).Art(poster))">$INFO[ListItem(-5).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(-5).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(-5).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem-4Var">
+        <value condition="!String.IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(-4).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(-4).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem-3Var">
+        <value condition="!String.IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(-3).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(-3).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem-2Var">
+        <value condition="!String.IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(-2).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(-2).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem-1Var">
+        <value condition="!String.IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(-1).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(-1).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem0Var">
+        <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem.Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem1Var">
+        <value condition="!String.IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(1).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(1).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem2Var">
+        <value condition="!String.IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(2).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(2).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem3Var">
+        <value condition="!String.IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(3).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(3).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem4Var">
+        <value condition="!String.IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(4).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(4).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem5Var">
+        <value condition="!String.IsEmpty(ListItem(5).Art(poster))">$INFO[ListItem(5).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(5).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(5).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem6Var">
+        <value condition="!String.IsEmpty(ListItem(6).Art(poster))">$INFO[ListItem(6).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(6).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(6).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem7Var">
+        <value condition="!String.IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(7).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(7).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem8Var">
+        <value condition="!String.IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(8).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(8).Icon]</value>
+    </variable>
+    <variable name="ShowcaseItem9Var">
+        <value condition="!String.IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
+        <value condition="Container.Content(genres)">$INFO[ListItem(9).Label,special://skin/extras/moviegenres/,.jpg]</value>
+        <value>$INFO[ListItem(9).Icon]</value>
+    </variable>
+    <variable name="IconOverlay-1Var">
+        <value condition="ListItem(-1).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(-1).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay0Var">
+        <value condition="ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem.Overlay]</value>
+    </variable>
+    <variable name="IconOverlay1Var">
+        <value condition="ListItem(1).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(1).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay2Var">
+        <value condition="ListItem(2).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(2).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay3Var">
+        <value condition="ListItem(3).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(3).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay4Var">
+        <value condition="ListItem(4).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(4).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay5Var">
+        <value condition="ListItem(5).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(5).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay6Var">
+        <value condition="ListItem(6).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(6).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay7Var">
+        <value condition="ListItem(7).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(7).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay8Var">
+        <value condition="ListItem(8).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(8).Overlay]</value>
+    </variable>
+    <variable name="IconOverlay9Var">
+        <value condition="ListItem(9).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
+        <value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(9).Overlay]</value>
+    </variable>
+    <include name="UnwatchedIconCircle">
+        <control type="image">
+            <width>24</width>
+            <height>24</height>
+            <aspectratio>keep</aspectratio>
+            <texture>circle.png</texture>
+        </control>
+    </include>
+    <include name="UnwatchedIconVars">
+        <top>1</top>
+        <width>24</width>
+        <height>24</height>
+        <align>center</align>
+        <aligny>top</aligny>
+        <font>font10</font>
+        <textcolor>FF000000</textcolor>
+        <scroll>false</scroll>
+    </include>
+    <include name="UnwatchedIcon">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon1">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(1).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(1).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon0">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon-1">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(-1).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(-1).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon-2">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(-2).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(-2).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon-3">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(-3).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(-3).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon-4">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(-4).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(-4).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon-5">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(-5).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(-5).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon-6">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(-6).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(-6).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+    <include name="UnwatchedIcon-7">
+        <control type="group">
+            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem(-7).Property(UnWatchedEpisodes),0)</visible>
+            <include>UnwatchedIconCircle</include>
+            <control type="label">
+                <include>UnwatchedIconVars</include>
+                <label>$INFO[ListItem(-7).Property(UnWatchedEpisodes)]</label>
+            </control>
+        </control>
+    </include>
+
+</includes>

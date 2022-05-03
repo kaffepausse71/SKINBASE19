@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!-- This is the file responsible for displaying TMDB video data from the Embuary Info addon                                    -->
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<window>
+	<allowoverlay>no</allowoverlay>
+	<onload>SetFocus(900171)</onload>
+	<controls>
+
+		<!-- A hidden list to pull Embuary video details from -->
+		<control type="list" id="10051">
+			<include>HiddenList</include>
+		</control>
+
+		<!-- Build a list of icons for studios associated with the video.  The listID can be referenced to display the icons --> 
+		<include content="StudioIconsWhile" condition="!Skin.HasSetting(ColorMediaFlags)" />
+		<include content="StudioIconscoloured" condition="Skin.HasSetting(ColorMediaFlags)" />
+
+
+		<!-- Left Side - Poster -->
+		<control type="group">
+			<!-- <top>140</top> Unable to define here due to animation on control in group -->
+			<left>0</left>
+			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="-729,0" time="500" tween="quadratic">WindowClose</animation>
+			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
+			<animation effect="slide" end="-729,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+			<control type="image">
+				<animation effect="zoom" end="0,140,547,820" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<top>140</top> <!-- Need to define here due to animation on control-->
+				<width>533</width>
+				<height>800</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<texture background="true" fallback="black.png">$INFO[Container(10051).ListItem.Art(thumb)]</texture>
+			</control>
+		</control>
+		<!-- Right Side - everything else -->
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>	
+			<animation effect="slide" start="VideoInfoSlidePos" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="VideoInfoSlidePos" time="500" tween="quadratic">WindowClose</animation>
+			<animation effect="slide" start="VideoInfoSlidePos" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
+			<animation effect="slide" end="VideoInfoSlidePos" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+			<!-- <top>140</top> Unable to define here due to animation on control in group -->
+			<left>533</left>
+			<!-- Right panel overlay -->
+			<control type="image">
+				<animation effect="slide" start="0,0" end="14,0" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<animation effect="zoom" end="0,140,1387,820" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<top>140</top> <!-- Need to define here due to animation on control-->
+				<width>1387</width>
+				<height>800</height>
+				<texture>colors\TMDB-primary.png</texture>
+			</control>
+			<!-- Info -->
+			<control type="group">
+				<animation effect="slide" start="0,0" end="14,0" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<top>140</top> <!-- Need to define here due to animation defined on controls in parent(s)-->
+				<left>40</left>
+				<!-- Title Bar -->
+				<control type="group">
+					<control type="grouplist">
+						<!-- Name -->
+						<control type="label">
+							<width>1307</width>
+							<height>55</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font30_title_bold</font>
+							<textcolor>grey</textcolor>
+							<scroll>true</scroll>
+							<label>$INFO[Container(10051).ListItem.Label]</label>
+						</control>
+						<!-- Tagline -->
+						<control type="label">
+						<visible>!String.IsEmpty(Container(10051).ListItem.Tagline)</visible>
+							<width>1307</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font14</font>
+							<textcolor>labelheader</textcolor>
+							<scroll>true</scroll>
+							<label>$INFO[Container(10051).ListItem.Tagline]</label>
+						</control>
+					</control>
+					<!-- TMDB Logo -->
+					<control type="image">
+						<left>230r</left>
+						<top>10</top>
+						<width>190</width>
+						<height>81</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">logos\TMDB\TMDB-primary-short.png</texture>
+					</control>
+				</control>
+				<!-- Seperator -->
+				<control type="image">
+					<top>100</top>
+					<left>-36</left>
+					<height>1</height>
+					<texture colordiffuse="TMDBTertiaryColor">separator_horizontal.png</texture>
+				</control>
+				<!-- Top Bar - Year, Cert, Runtime, Ratings -->
+				<control type="grouplist"> 
+					<top>100</top>
+					<width>1347</width>
+					<height>75</height>
+					<align>left</align>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<!-- Year -->
+					<control type="label">
+						<visible>!String.IsEqual(ListItem.DBType,episode)</visible>
+						<width>80</width>
+						<align>left</align>
+						<label>$INFO[Container(10051).ListItem.Year]</label>
+						<font>font15</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<!-- Studio -->
+					<control type="group">
+						<width>150</width>
+						<control type="image" id="800011">
+							<aspectratio align="center">keep</aspectratio>
+							<fadetime>250</fadetime>
+							<colordiffuse>white</colordiffuse>
+							<animation effect="fade" time="200">VisibleChange</animation>
+							<texture>$INFO[Container(6284).ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
+							<align>center</align>
+							<label>$INFO[ListItem.Studio]</label>
+							<font>font10</font>
+							<textcolor>grey</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+						</control>
+					</control>
+					<!-- Certification -->
+					<control type="image">
+						<width>80</width>
+						<colordiffuse>grey</colordiffuse>
+						<include>MediaFlagVars</include>
+						<texture fallback="flags/mpaa/NR.png">$VAR[EmbuaryRatingFlagVar]</texture>
+					</control>
+					<!-- Runtime -->
+					<control type="grouplist">
+						<visible>![String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(Disable.NextAired)]</visible>
+						<width>160</width>
+						<align>center</align>
+						<orientation>vertical</orientation>
+						<control type="label">
+							<height>30</height>
+							<align>center</align>
+							<label>$VAR[EmbuaryDurationVar]</label>
+							<font>font35_bold</font>
+							<textcolor>grey</textcolor>
+						</control>
+						<control type="label">
+							<height>30</height>
+							<align>center</align>
+							<label>[LOWERCASE]$LOCALIZE[2050][/LOWERCASE]</label>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+						</control>
+					</control>
+					<!-- All Ratings -->
+					<control type="grouplist">
+						<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
+						<width>1000</width>
+						<orientation>horizontal</orientation>
+						<itemgap>30</itemgap>
+						<!-- TMDB Rating -->
+						<control type="grouplist">
+							<visible>!String.IsEmpty(Container(10051).ListItem.Rating)</visible>
+							<width>200</width>
+							<itemgap>10</itemgap>
+							<orientation>horizontal</orientation>
+							<!-- Logo -->
+							<control type="image">
+								<width>85</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/tmdb/TMDB-primary-full.png</texture>
+							</control>
+							<!-- Rating and votes -->
+							<control type="grouplist">
+								<width>50</width>
+								<align>center</align>
+								<orientation>vertical</orientation>
+								<control type="label">
+									<font>font35_bold</font>
+									<textcolor>grey</textcolor>
+									<align>left</align>
+									<label>$INFO[Container(10051).ListItem.Rating]</label>
+								</control>
+							</control>
+						</control>
+						<!-- IMDB Rating -->
+						<control type="grouplist">
+							<visible>!String.IsEmpty(Container(10051).ListItem.Property(Rating.IMDB))</visible>
+							<width>200</width>
+							<itemgap>10</itemgap>
+							<orientation>horizontal</orientation>
+							<!-- Logo -->
+							<control type="image">
+								<width>64</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/imdb/imdb-square.png</texture>
+							</control>
+							<!-- Rating and votes -->
+							<control type="grouplist">
+								<width>50</width>
+								<align>center</align>
+								<orientation>vertical</orientation>
+								<control type="label">
+									<font>font35_bold</font>
+									<textcolor>grey</textcolor>
+									<align>left</align>
+									<label>$INFO[Container(10051).ListItem.Property(Rating.IMDB)]</label>
+								</control>
+							</control>
+						</control>
+						<!-- Rotten Tomatos Critic -->
+						<control type="grouplist">
+							<visible>!String.IsEmpty(Container(10051).ListItem.Property(Rating.Rotten))</visible>
+							<width>200</width>
+							<itemgap>10</itemgap>
+							<orientation>horizontal</orientation>
+							<!-- Logo -->
+							<control type="image">
+								<visible>Integer.IsGreaterOrEqual(Container(10051).ListItem.Property(Rating.Rotten),75)</visible>
+								<width>64</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/rottentomatoes/certified.png</texture>
+							</control>
+							<control type="image">
+								<visible>Integer.IsLess(Container(10051).ListItem.Property(Rating.Rotten),75) + Integer.IsGreaterOrEqual(Container(10051).ListItem.Property(Rating.Rotten),60)</visible>
+								<width>64</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/rottentomatoes/fresh.png</texture>
+							</control>
+							<control type="image">
+								<visible>Integer.IsLess(Container(10051).ListItem.Property(Rating.Rotten),60)</visible>
+								<width>64</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/rottentomatoes/rotten.png</texture>
+							</control>
+							<!-- Rating and votes -->
+							<control type="grouplist">
+								<width>50</width>
+								<align>center</align>
+								<orientation>vertical</orientation>
+								<control type="label">
+									<font>font35_bold</font>
+									<textcolor>grey</textcolor>
+									<align>left</align>
+									<label>$INFO[Container(10051).ListItem.Property(Rating.Rotten)]</label>
+								</control>
+							</control>
+						</control>
+						<!-- Rotten Tomatos User -->
+						<control type="grouplist">
+							<visible>!String.IsEmpty(Container(10051).ListItem.Property(Rating.Rotten_User))</visible>
+							<width>200</width>
+							<itemgap>10</itemgap>
+							<orientation>horizontal</orientation>
+							<!-- Logo -->
+							<control type="image">
+								<visible>Integer.IsGreaterOrEqual(Container(10051).ListItem.Property(Rating.Rotten_User),60)</visible>
+								<width>48</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/rottentomatoes/popcornfresh.png</texture>
+							</control>
+							<control type="image">
+								<visible>Integer.IsLess(Container(10051).ListItem.Property(Rating.Rotten_User),60)</visible>
+								<width>85</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/rottentomatoes/popcornrotten.png</texture>
+							</control>
+							<!-- Rating and votes -->
+							<control type="grouplist">
+								<width>50</width>
+								<align>center</align>
+								<orientation>vertical</orientation>
+								<control type="label">
+									<font>font35_bold</font>
+									<textcolor>grey</textcolor>
+									<align>left</align>
+									<label>$INFO[Container(10051).ListItem.Property(Rating.Rotten_User)]</label>
+								</control>
+							</control>
+						</control>
+						<!-- Metacritic Rating -->
+						<control type="grouplist">
+							<visible>!String.IsEmpty(Container(10051).ListItem.Property(Rating.Metacritic))</visible>
+							<width>200</width>
+							<itemgap>10</itemgap>
+							<orientation>horizontal</orientation>
+							<!-- Logo -->
+							<control type="image">
+								<width>64</width>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>grey</colordiffuse>
+								<texture>logos/metacritic/metacritic.png</texture>
+							</control>
+							<!-- Rating and votes -->
+							<control type="grouplist">
+								<width>50</width>
+								<align>center</align>
+								<orientation>vertical</orientation>
+								<control type="label">
+									<font>font35_bold</font>
+									<textcolor>grey</textcolor>
+									<align>left</align>
+									<label>$INFO[Container(10051).ListItem.Property(Rating.Metacritic)]</label>
+								</control>
+							</control>
+						</control>
+					</control>
+				</control>
+				<!-- Seperator -->
+				<control type="image">
+					<top>175</top>
+					<left>-36</left>
+					<height>1</height>
+					<texture colordiffuse="TMDBTertiaryColor">separator_horizontal.png</texture>
+				</control>
+				<!-- Data Labels - Director, Writer, Genre, etc -->
+				<control type="group">
+					<control type="panel" id="300">
+					<enable>no</enable>
+					<top>176</top>
+					<left>-36</left>
+					<onup>noop</onup>
+					<ondown>9000</ondown>
+					<orientation>vertical</orientation>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<itemlayout height="42" width="1040">
+							<control type="label">
+								<width>1060</width>
+								<include>ButtonInfo</include>
+								<label>[COLOR TMDBSecondaryColor]$INFO[ListItem.Label2][/COLOR] [COLOR grey]$INFO[ListItem.Label][/COLOR]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="42" width="1040">
+							<control type="image">
+								<visible>Control.HasFocus(300)</visible>
+								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
+								<include>VisibleFadeAnimation</include>
+							</control>
+							<control type="label">
+								<width>1060</width>
+								<include>ButtonInfo</include>
+								<label>[COLOR TMDBSecondaryColor]$INFO[ListItem.Label2][/COLOR] [COLOR grey]$INFO[ListItem.Label][/COLOR]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<!-- Director -->
+							<item>
+								<visible>!String.IsEmpty(Container(10051).ListItem.Director)</visible>
+								<label>$INFO[Container(10051).ListItem.Director]</label>
+								<label2>$LOCALIZE[20339]:</label2>
+							</item>
+							<!-- Writer -->
+							<item>
+								<visible>!String.IsEmpty(Container(10051).ListItem.Writer)</visible>
+								<label>$INFO[Container(10051).ListItem.Writer]</label>
+								<label2>$LOCALIZE[20417]:</label2>
+							</item>
+							<!-- Genre -->
+							<item>
+								<visible>!String.IsEmpty(Container(10051).ListItem.Genre)</visible>
+								<label>$INFO[Container(10051).ListItem.Genre]</label>
+								<label2>$LOCALIZE[515]:</label2>
+							</item>
+							<!-- Awards -->
+							<item>
+								<visible>!String.IsEmpty(Container(10051).ListItem.Property(Awards))</visible>
+								<label>$INFO[Container(10051).ListItem.Property(Awards)]</label>
+								<label2>$LOCALIZE[31994]:</label2>
+							</item>
+						</content>
+					</control>
+				</control>
+				<!-- Data Labels - Budget, Revenue -->
+				<control type="group">
+					<control type="list">
+					<top>176</top>
+					<left>1000</left>
+					<orientation>vertical</orientation>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<itemlayout height="42" width="420">
+							<control type="label">
+								<include>ButtonInfo</include>
+								<label>[COLOR TMDBSecondaryColor]$INFO[ListItem.Label2][/COLOR] [COLOR grey]$INFO[ListItem.Label][/COLOR]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="42" width="420">
+							<control type="label">
+								<include>ButtonInfo</include>
+								<label>[COLOR TMDBSecondaryColor]$INFO[ListItem.Label2][/COLOR] [COLOR grey]$INFO[ListItem.Label][/COLOR]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<!-- Release -->
+							<item>
+								<visible>!String.IsEmpty(Container(10051).ListItem.Property(Release))</visible>
+								<label>Container(10051).ListItem.Property(Release)</label>
+								<label2>$LOCALIZE[31985]:</label2>
+							</item>
+							<!-- Budget -->
+							<item>
+								<visible>!String.IsEmpty(Container(10051).ListItem.Property(Budget))</visible>
+								<label>$INFO[Container(10051).ListItem.Property(Budget),$]</label>
+								<label2>$LOCALIZE[31992]:</label2>
+							</item>
+							<!-- Revenue -->
+							<item>
+								<visible>!String.IsEmpty(Container(10051).ListItem.Property(Revenue))</visible>
+								<label>$INFO[Container(10051).ListItem.Property(Revenue),$]</label>
+								<label2>$LOCALIZE[31993]:</label2>
+							</item>
+						</content>
+					</control>
+				</control>
+				<!-- Separator -->
+				<control type="image">
+					<top>344</top>
+					<left>-36</left>
+					<height>1</height>
+					<texture colordiffuse="TMDBTertiaryColor">separator_horizontal.png</texture>
+				</control>
+				<!-- Main buttons bar -->
+				<control type="group">
+					<top>345</top>
+					<left>-36</left>
+					<!-- Buttons label -->
+					<control type="group">
+						<enable>no</enable>
+						<left>36</left>
+						<font>font14</font>
+						<!-- Focus is on buttons area -->
+						<control type="Label">
+							<visible>!ControlGroup(9001).HasFocus | ControlGroup(9001).HasFocus(90017)</visible>
+							<width>1000</width>
+							<align>left</align>
+							<scroll>true</scroll>
+							<include>ButtonInfoDialogsCommonValues</include>
+							<label>$VAR[EmbuaryInfoButtonLabelVar]</label>
+						</control>
+						<!-- Focus is on ExtendedInfo area -->
+						<control type="label">
+							<visible>ControlGroup(9001).HasFocus + !Control(90017).HasFocus</visible>
+							<width>1000</width>
+							<align>left</align>
+							<scroll>true</scroll>
+							<include>ButtonInfoDialogsCommonValues</include>
+							<label>$VAR[EmbuaryInfoDetailsLabelVar]</label>
+						</control>
+					</control>
+					<!-- Buttons -->
+					<control type="grouplist" id="9000">
+					<animation effect="slide" start="0,0" end="-14,0" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+						<align>right</align>
+						<orientation>horizontal</orientation>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onup>300</onup>
+						<ondown>9001</ondown>
+						<!-- Trailer, movie -->
+						<control type="button" id="11">
+							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+							<width>65</width>
+							<texturenofocus></texturenofocus>
+							<font>IconMediumMD</font>
+							<include>ButtonInfoDialogsCommonValues</include>
+							<label></label>
+							<enable>!String.IsEmpty(ListItem.Trailer)</enable>
+						</control>
+						<!-- Trailer, Not movie -->
+						<control type="button" id="203">
+							<visible>!String.IsEqual(ListItem.DBType,movie)</visible>
+							<width>65</width>
+							<texturenofocus></texturenofocus>
+							<font>IconMediumMD</font>
+							<include>ButtonInfoDialogsCommonValues</include>
+							<label></label>
+							<onclick>noop</onclick>
+							<enable>no</enable>
+						</control>
+						<!-- Extras -->
+						<control type="button" id="207">
+							<enable>!Skin.HasSetting(KioskMode.Enabled)</enable>
+							<width>65</width>
+							<texturenofocus></texturenofocus>
+							<font>IconMediumMD</font>
+							<include>ButtonInfoDialogsCommonValues</include>
+							<label></label>
+							<onclick>ActivateWindow(1119)</onclick>
+						</control>
+					</control>
+				</control>
+				<!-- Separator -->
+				<control type="image">
+					<top>390</top>
+					<left>-36</left>
+					<height>1</height>
+					<texture colordiffuse="TMDBTertiaryColor">separator_horizontal.png</texture>
+				</control>
+				<!-- ExtendedInfo area for 2.40 setting  -->
+				<include content="VariableHeightExtendedInfo" condition="!Skin.HasSetting(scopeFormat235)">
+					<param name="isembuaryvideo" value="true" /> <!-- determines panels shown -->
+					<param name="totalheight" value="409" />
+					<param name="textheight" value="389" /> <!-- total height - media icon height - 10 -->
+					<param name="posterheight" value="329" /> <!-- poster height - 80 -->
+					<param name="posterwidth" value="219" />
+				</include>
+				<!-- ExtendedInfo area for 2.35 setting  -->
+				<include content="VariableHeightExtendedInfo" condition="Skin.HasSetting(scopeFormat235)">
+					<param name="isembuaryvideo" value="true" /> <!-- determines panels shown -->
+					<param name="totalheight" value="429" />
+					<param name="textheight" value="409" /> <!-- total height - media icon height - 10 -->
+					<param name="posterheight" value="349" /> <!-- poster height - 80 -->
+					<param name="posterwidth" value="233" />
+				</include>
+				<!-- No clue what purpose this serves -->
+				<control type="scrollbar" id="70">
+					<include>HiddenObject</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

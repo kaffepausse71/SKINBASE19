@@ -1,0 +1,17 @@
+<!-- YELLOW COLOR SET BY CDTV -->
+<colors>
+        <!-- CONFLUENCE LITE COLORS -->
+	<color name="white">FFffffff</color>
+	<color name="grey">FFb4b4b4</color>
+	<color name="grey2">88FFFFFF</color>
+    <color name="grey2+">FF5e5e5e</color>
+	<color name="grey3">33FFFFFF</color>
+	<color name="grey4">17FFFFFF</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FFB4B300</color>
+	<color name="selected">FFCDDC39</color>
+	<color name="dialogheader">FFCDDC39</color>
+    <color name="orange">fffff600</color>
+    <color name="invalid">ffff5c33</color>
+	<color name="selected+">fffff600</color>
+</colors>

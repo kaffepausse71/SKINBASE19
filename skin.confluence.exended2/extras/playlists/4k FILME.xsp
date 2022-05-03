@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>4k Filme</name>
+    <match>all</match>
+    <rule field="videoresolution" operator="greaterthan">
+        <value>2000</value>
+    </rule>
+</smartplaylist>

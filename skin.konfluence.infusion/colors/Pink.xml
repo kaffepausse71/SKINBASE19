@@ -1,0 +1,17 @@
+<!-- PURPLE COLOR SET BY CDTV -->
+<colors>
+        <!-- CONFLUENCE LITE COLORS -->
+	<color name="white">FFffffff</color>
+	<color name="grey">FFb4b4b4</color>
+	<color name="grey2">88FFFFFF</color>
+    <color name="grey2+">FF5e5e5e</color>
+	<color name="grey3">33FFFFFF</color>
+	<color name="grey4">17FFFFFF</color>
+	<color name="black">FF000000</color>
+	<color name="blue">ffca1f7b</color>
+	<color name="selected">fff06292</color>
+	<color name="dialogheader">ffb5008b</color>
+    <color name="orange">ffe25098</color>
+    <color name="invalid">fff06292</color>
+	<color name="selected+">fffc0fc0</color>
+</colors>

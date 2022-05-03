@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.confluence19.ultimate.topics" version="6.0.00" name="[COLOR FFC1C127]Confluence[/COLOR] [COLOR red]Ultimate Topics[/COLOR]" provider-name="SKINBASE">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="script.favourites" version="7.00.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Skins und Skin Themen by Guidos Skinbase.</summary>
+		<summary lang="en_GB">Skins and Skin Themen by Guidos Skinbase.</summary>
+		<description lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </description>
+		<description lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</description>
+		<platform>all</platform>
+		<news lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </news>
+		<news lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
+			<screenshot>resources/screenshot007.jpg</screenshot>
+		</assets>
+		<size>18810801</size>
+		<news lang="en_GB">Equipped with the Skin Topics Loader. A skin with endless possibilities and themes. You can find the settings in the Skin Settings!</news>
+		<news lang="de_DE">Ausgestattet mit dem Skin Topics Loader. Ein Skin mit unendlichen Möglichkeiten und Themen. Die Einstellungen findet ihr in den Skin Settings !</news>
+	</extension>
+</addon>

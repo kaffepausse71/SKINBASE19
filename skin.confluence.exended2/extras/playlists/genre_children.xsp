@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>Kids Filme</name>
+    <match>one</match>
+    <rule field="genre" operator="is">
+        <value>Children</value>
+    </rule>
+    <rule field="mpaarating" operator="is">
+        <value>0</value>
+    </rule>
+    <rule field="mpaarating" operator="is">
+        <value>6</value>
+    </rule>
+    <order direction="ascending">title</order>
+</smartplaylist>
