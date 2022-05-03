@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1188">
+	<!--<zorder>0</zorder>-->
+	<defaultcontrol always="true">9001</defaultcontrol>
+	
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	
+	<visible>Skin.HasSetting(ExperimentalShutdownScreen)   +   !String.IsEmpty(Window(home).Property(ShutdownInProgressText))   +   !Window.IsVisible(YesNoDialog)</visible>
+	
+	<onload>AlarmClock(ShutdownInProgressCancelIfNotWorking,ClearProperty(ShutdownInProgressText,home),00:00:30,silent)</onload>
+	<onunload>ClearProperty(ShutdownInProgressText,home)</onunload>
+	
+	<controls>
+		
+		
+		
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>_added_img/100x100_black.png</texture>
+			<!--<texture>_added_img/kodi-logo-full.png</texture>-->
+			<!--
+			<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
+			-->
+		</control>
+		
+		<control type="group">
+			<left>0</left><!--550-->
+			<top>0</top><!-- 320 -->
+			
+			<!--
+			<control type="image">
+				<description>Busy animation logo</description>
+				<left>20</left>
+				<top>20</top>
+				<width>32</width>
+				<height>32</height>
+				<texture>_added_img/kodi-logo-large.png</texture>
+				<aspectratio>keep</aspectratio>
+				<animation effect="fade" start="100" end="0" time="3000" loop="true" condition="true" tween="sine" easing="in">conditional</animation>
+			</control>
+			-->
+			<!--
+			<control type="image">
+				<description>Busy animation logo</description>
+				<left>0</left>
+				<top>270</top>
+				<width>72</width>
+				<height>72</height>
+				<texture align="center">_added_img/kodi-logo-large.png</texture>
+				<animation effect="fade" start="100" end="0" time="3000" loop="true" condition="true" tween="sine" easing="in">conditional</animation>
+				<aspectratio>keep</aspectratio>
+			</control>
+			-->
+			<control type="image">
+				<description>Busy animation logo</description>
+				<left>604</left>
+				<top>324</top>
+				<width>72</width>
+				<height>72</height>
+				<texture align="center">_added_img/kodi-logo-large.png</texture>
+				<!--<animation effect="fade" start="100" end="0" time="3000" loop="true" condition="true" tween="sine" easing="in">conditional</animation>-->
+				<aspectratio>keep</aspectratio>
+			</control>
+
+			
+			<!--
+			<control type="label">
+				<description></description>
+				<left>60</left>
+				<top>20</top>
+				<width>500</width>
+				<height>32</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(home).Property(ShutdownInProgressText)]...</label>
+				<font>Regular20</font>
+			</control>
+			-->
+			<!--
+			<control type="label">
+				<description></description>
+				<left>10</left>
+				<top>360</top>
+				<width>1280</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>$INFO[Window(home).Property(ShutdownInProgressText)]...</label>
+				<font>Regular20</font>
+			</control>
+			-->
+		</control>
+			
+			
+	</controls>
+</window>

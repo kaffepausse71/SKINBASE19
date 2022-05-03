@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	
+	
+	<!-- LibreELEC settings visual fix -->
+	<variable name="GlobalFanartVar">
+		<!--<value>_added_img/1280x720_black.png</value>-->
+		<value>_added_img/100x100_black_90.png</value>
+	</variable>
+	
+	
+	
+	<variable name="ItemRatingExternalOptional">
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(ListItemHelper.IMDBNumber))">    $INFO[Window(Home).Property(ListItemHelper.rating.rottentomatoes.percent),   RT: ,%]$INFO[Window(Home).Property(ListItemHelper.rating.metacritic.percent),   MC: ,%]$INFO[Window(Home).Property(ListItemHelper.rating.imdb.percent),   IMDB: ,%]</value>
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(script.skin.helper.service) + !System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(SkinHelper.ListItem.Imdbnumber))">    $INFO[Window(Home).Property(SkinHelper.ListItem.rottentomatoes.meter),   RT: ,%]$INFO[Window(Home).Property(SkinHelper.ListItem.metacritic.rating),   MC: ,%]$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.percent.IMDB),   IMDB: ,%]</value>
+		<value></value>
+	</variable>
+	
+	<variable name="ItemRatingExternalOptionalRottenTomatoes">
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(ListItemHelper.IMDBNumber)) + !String.IsEmpty(Window(Home).Property(ListItemHelper.rating.rottentomatoes.percent))">$INFO[Window(Home).Property(ListItemHelper.rating.rottentomatoes.percent)]</value>
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(script.skin.helper.service) + !System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(SkinHelper.ListItem.Imdbnumber)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.rottentomatoes.meter))">$INFO[Window(Home).Property(SkinHelper.ListItem.rottentomatoes.meter)]</value>
+		<value></value>
+	</variable>
+	<variable name="ItemRatingExternalOptionalMetacritic">
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(ListItemHelper.IMDBNumber)) + !String.IsEmpty(Window(Home).Property(ListItemHelper.rating.metacritic.percent))">$INFO[Window(Home).Property(ListItemHelper.rating.metacritic.percent)]</value>
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(script.skin.helper.service) + !System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(SkinHelper.ListItem.Imdbnumber)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.metacritic.rating))">$INFO[Window(Home).Property(SkinHelper.ListItem.metacritic.rating)]</value>
+		<value></value>
+	</variable>
+	<variable name="ItemRatingExternalOptionalIMDB">
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(ListItemHelper.IMDBNumber)) + !String.IsEmpty(Window(Home).Property(ListItemHelper.rating.imdb.percent))">$INFO[Window(Home).Property(ListItemHelper.rating.imdb.percent)]</value>
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(script.skin.helper.service) + !System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(SkinHelper.ListItem.Imdbnumber)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.percent.IMDB))">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.percent.IMDB)]</value>
+		<value></value>
+	</variable>
+		<variable name="ItemRatingExternalOptionalRottenTomatoesAudience">
+		<value condition="!String.IsEmpty(ListItem.IMDBNumber) + System.HasAddon(service.listitem.helper) + String.IsEqual(ListItem.IMDBNumber,Window(Home).Property(ListItemHelper.IMDBNumber)) + !String.IsEmpty(Window(Home).Property(ListItemHelper.rating.rottentomatoes.audience)) + !String.IsEqual(Window(Home).Property(ListItemHelper.rating.rottentomatoes.audience),N/A)">$INFO[Window(Home).Property(ListItemHelper.rating.rottentomatoes.audience)]</value>
+		<value></value>
+	</variable>
+	
+	
+	<variable name="ItemDuration">
+		<value>$INFO[ListItem.Duration(mins)] $LOCALIZE[12391]       $INFO[ListItem.Duration(h)]:$INFO[ListItem.Duration(mm)] h</value>
+	</variable>
+	
+	<variable name="ratingstars">
+	
+		<value condition="String.IsEqual(ListItem.rating,0.0) | String.IsEqual(ListItem.rating,0.00) | String.IsEqual(ListItem.rating,0)">0.00</value>
+		
+		<value condition="!String.IsEqual(ListItem.rating,0.0) + !String.IsEqual(ListItem.rating,0.00) + !String.IsEqual(ListItem.rating,0) + String.StartsWith(ListItem.rating,0.)">0.25</value>
+		
+		<value condition="String.Contains(ListItem.rating,1.0)">0.50</value>
+		<value condition="String.Contains(ListItem.rating,1.1)">0.50</value>
+		<value condition="String.Contains(ListItem.rating,1.2)">0.50</value>
+		
+		<value condition="String.Contains(ListItem.rating,1.3)">0.75</value>
+		<value condition="String.Contains(ListItem.rating,1.4)">0.75</value>
+		<value condition="String.Contains(ListItem.rating,1.5)">0.75</value>
+		<value condition="String.Contains(ListItem.rating,1.6)">0.75</value>
+		<value condition="String.Contains(ListItem.rating,1.7)">0.75</value>
+		
+		<value condition="String.Contains(ListItem.rating,1.8)">1.00</value>
+		<value condition="String.Contains(ListItem.rating,1.9)">1.00</value>
+		<value condition="String.Contains(ListItem.rating,2.0)">1.00</value>
+		<value condition="String.Contains(ListItem.rating,2.1)">1.00</value>
+		<value condition="String.Contains(ListItem.rating,2.2)">1.00</value>
+		
+		<value condition="String.Contains(ListItem.rating,2.3)">1.25</value>
+		<value condition="String.Contains(ListItem.rating,2.4)">1.25</value>
+		<value condition="String.Contains(ListItem.rating,2.5)">1.25</value>
+		<value condition="String.Contains(ListItem.rating,2.6)">1.25</value>
+		<value condition="String.Contains(ListItem.rating,2.7)">1.25</value>
+
+		<value condition="String.Contains(ListItem.rating,2.8)">1.50</value>
+		<value condition="String.Contains(ListItem.rating,2.9)">1.50</value>
+		<value condition="String.Contains(ListItem.rating,3.0)">1.50</value>
+		<value condition="String.Contains(ListItem.rating,3.1)">1.50</value>
+		<value condition="String.Contains(ListItem.rating,3.2)">1.50</value>
+		
+		<value condition="String.Contains(ListItem.rating,3.3)">1.75</value>
+		<value condition="String.Contains(ListItem.rating,3.4)">1.75</value>
+		<value condition="String.Contains(ListItem.rating,3.5)">1.75</value>
+		<value condition="String.Contains(ListItem.rating,3.6)">1.75</value>
+		<value condition="String.Contains(ListItem.rating,3.7)">1.75</value>
+
+		<value condition="String.Contains(ListItem.rating,3.8)">2.00</value>
+		<value condition="String.Contains(ListItem.rating,3.9)">2.00</value>
+		<value condition="String.Contains(ListItem.rating,4.0)">2.00</value>
+		<value condition="String.Contains(ListItem.rating,4.1)">2.00</value>
+		<value condition="String.Contains(ListItem.rating,4.2)">2.00</value>
+		
+		<value condition="String.Contains(ListItem.rating,4.3)">2.25</value>
+		<value condition="String.Contains(ListItem.rating,4.4)">2.25</value>
+		<value condition="String.Contains(ListItem.rating,4.5)">2.25</value>
+		<value condition="String.Contains(ListItem.rating,4.6)">2.25</value>
+		<value condition="String.Contains(ListItem.rating,4.7)">2.25</value>
+
+		<value condition="String.Contains(ListItem.rating,4.8)">2.50</value>
+		<value condition="String.Contains(ListItem.rating,4.9)">2.50</value>
+		<value condition="String.Contains(ListItem.rating,5.0)">2.50</value>
+		<value condition="String.Contains(ListItem.rating,5.1)">2.50</value>
+		<value condition="String.Contains(ListItem.rating,5.2)">2.50</value>
+		
+		<value condition="String.Contains(ListItem.rating,5.3)">2.75</value>
+		<value condition="String.Contains(ListItem.rating,5.4)">2.75</value>
+		<value condition="String.Contains(ListItem.rating,5.5)">2.75</value>
+		<value condition="String.Contains(ListItem.rating,5.6)">2.75</value>
+		<value condition="String.Contains(ListItem.rating,5.7)">2.75</value>
+
+		<value condition="String.Contains(ListItem.rating,5.8)">3.00</value>
+		<value condition="String.Contains(ListItem.rating,5.9)">3.00</value>
+		<value condition="String.Contains(ListItem.rating,6.0)">3.00</value>
+		<value condition="String.Contains(ListItem.rating,6.1)">3.00</value>
+		<value condition="String.Contains(ListItem.rating,6.2)">3.00</value>
+		
+		<value condition="String.Contains(ListItem.rating,6.3)">3.25</value>
+		<value condition="String.Contains(ListItem.rating,6.4)">3.25</value>
+		<value condition="String.Contains(ListItem.rating,6.5)">3.25</value>
+		<value condition="String.Contains(ListItem.rating,6.6)">3.25</value>
+		<value condition="String.Contains(ListItem.rating,6.7)">3.25</value>
+
+		<value condition="String.Contains(ListItem.rating,6.8)">3.50</value>
+		<value condition="String.Contains(ListItem.rating,6.9)">3.50</value>
+		<value condition="String.Contains(ListItem.rating,7.0)">3.50</value>
+		<value condition="String.Contains(ListItem.rating,7.1)">3.50</value>
+		<value condition="String.Contains(ListItem.rating,7.2)">3.50</value>
+		
+		<value condition="String.Contains(ListItem.rating,7.3)">3.75</value>
+		<value condition="String.Contains(ListItem.rating,7.4)">3.75</value>
+		<value condition="String.Contains(ListItem.rating,7.5)">3.75</value>
+		<value condition="String.Contains(ListItem.rating,7.6)">3.75</value>
+		<value condition="String.Contains(ListItem.rating,7.7)">3.75</value>
+
+		<value condition="String.Contains(ListItem.rating,7.8)">4.00</value>
+		<value condition="String.Contains(ListItem.rating,7.9)">4.00</value>
+		<value condition="String.Contains(ListItem.rating,8.0)">4.00</value>
+		<value condition="String.Contains(ListItem.rating,8.1)">4.00</value>
+		<value condition="String.Contains(ListItem.rating,8.2)">4.00</value>
+		
+		<value condition="String.Contains(ListItem.rating,8.3)">4.25</value>
+		<value condition="String.Contains(ListItem.rating,8.4)">4.25</value>
+		<value condition="String.Contains(ListItem.rating,8.5)">4.25</value>
+		<value condition="String.Contains(ListItem.rating,8.6)">4.25</value>
+		<value condition="String.Contains(ListItem.rating,8.7)">4.25</value>
+
+		<value condition="String.Contains(ListItem.rating,8.8)">4.50</value>
+		<value condition="String.Contains(ListItem.rating,8.9)">4.50</value>
+		<value condition="String.Contains(ListItem.rating,9.0)">4.50</value>
+		<value condition="String.Contains(ListItem.rating,9.1)">4.50</value>
+		<value condition="String.Contains(ListItem.rating,9.2)">4.50</value>
+		
+		<value condition="String.Contains(ListItem.rating,9.3)">4.75</value>
+		<value condition="String.Contains(ListItem.rating,9.4)">4.75</value>
+		<value condition="String.Contains(ListItem.rating,9.5)">4.75</value>
+		<value condition="String.Contains(ListItem.rating,9.6)">4.75</value>
+		<value condition="String.Contains(ListItem.rating,9.7)">4.75</value>
+
+		<value condition="String.Contains(ListItem.rating,9.8)">5.00</value>
+		<value condition="String.Contains(ListItem.rating,9.9)">5.00</value>
+		
+		<value condition="String.StartsWith(ListItem.rating,10)">5.00</value>
+		
+	</variable>
+	
+	<variable name="MediaFanartVar">
+		
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(ListItem.Art(album.fanart))">$INFO[ListItem.Art(album.fanart)]</value>
+		
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(Container(8000).ListItem.Art(fanart)) + Control.HasFocus(8000)">$INFO[Container(8000).ListItem.Art(fanart)]</value>
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(Container(8001).ListItem.Art(fanart)) + Control.HasFocus(8001)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
+		<value condition="!Window.IsVisible(1171) + !String.IsEmpty(Container(8002).ListItem.Art(fanart)) + Control.HasFocus(8002)">$INFO[Container(8002).ListItem.Art(fanart)]</value>
+		
+		<!-- NOW PLAYING FANART -->
+		<value condition="!String.IsEmpty(Player.Art(album.fanart))">$INFO[Player.Art(album.fanart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<!--
+		<value condition="!String.IsEmpty(ListItem.Art(album.fanart))">$INFO[ListItem.Art(album.fanart)]</value>
+		-->
+		
+	</variable>
+	
+	<!--
+	<variable name="MetaFanart">
+		<value condition="!String.IsEmpty(Player.Art(album.fanart))">$INFO[Player.Art(album.fanart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(album.fanart))">$INFO[ListItem.Art(album.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value></value>
+	</variable>
+	-->
+	
+	<variable name="BreadcrumbsVideoVar">
+		<value condition="String.IsEmpty(Container.PluginName) + [Container.Content(Movies) | String.StartsWith(Container.folderpath,library://video/movies/) | String.StartsWith(Container.folderpath,videodb://movies)]">$LOCALIZE[20342]</value>
+		<value condition="String.IsEmpty(Container.PluginName) + [Container.Content(MusicVideos) | String.StartsWith(Container.folderpath,library://video/musicvideos/) | String.StartsWith(Container.folderpath,videodb://musicvideos)]">$LOCALIZE[20389]</value>
+		<value condition="String.IsEmpty(Container.PluginName) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | String.StartsWith(Container.folderpath,library://video/tvshows/) | String.StartsWith(Container.folderpath,videodb://tvshows)]">$LOCALIZE[20343]</value>
+		<value>$LOCALIZE[3]</value>
+	</variable>
+	
+	
+	
+	<variable name="BackgroundTypeVar">
+		<value condition="String.IsEqual(Skin.String(BackgroundType),0)">Black  (1/6)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),1)">Circles Blue  (2/6)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),2)">Circles Grey  (3/6)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),3)">Polygons Blue  (4/6)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),4) | String.IsEmpty(Skin.String(BackgroundType))">(Default)   Polygons Grey  (5/6)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),5)">Grey  (6/6)</value>
+	</variable>
+	<variable name="BackgroundTypeNoVar">
+		<value condition="String.IsEqual(Skin.String(BackgroundType),0)">0</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),1)">1</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),2)">2</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),3)">3</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),4) | String.IsEmpty(Skin.String(BackgroundType))">4</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundType),5)">5</value>
+	</variable>
+	
+	<variable name="BackgroundCustomModeVar">
+		<value condition="String.IsEqual(Skin.String(UseCustomBackground),0) | String.IsEmpty(Skin.String(UseCustomBackground))">(Default)   Disabled  (1/3)</value>
+		<value condition="String.IsEqual(Skin.String(UseCustomBackground),1)">Single Image  (2/3)</value>
+		<value condition="String.IsEqual(Skin.String(UseCustomBackground),2)">Multiple Images  (3/3)</value>
+	</variable>
+	
+	<variable name="BackgroundDarkenVar">
+		<value condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),0)">Disabled  (1/4)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),1) | String.IsEmpty(Skin.String(BackgroundDarkenStrength))">(Default)   Minimal  (2/4)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),2)">Medium  (3/4)</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),3)">Strong  (4/4)</value>
+	</variable>
+	
+	
+	
+	<variable name="ExperimentalStartScreenEnabledDelayVar">
+		<value condition="String.IsEqual(Skin.String(ExperimentalStartScreenEnabledDelay),0) | String.IsEmpty(Skin.String(ExperimentalStartScreenEnabledDelay))">(Default)   No Delay  (1/4)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalStartScreenEnabledDelay),1)">3 Seconds  (2/4)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalStartScreenEnabledDelay),2)">6 Seconds  (3/4)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalStartScreenEnabledDelay),3)">9 Seconds  (4/4)</value>
+	</variable>
+	
+	
+	
+	<variable name="HomeScreenIdleUIFadeOut_Preset_1">
+		<value>15</value>
+	</variable>
+	<variable name="HomeScreenIdleUIFadeOut_Preset_2">
+		<value>30</value>
+	</variable>
+	<variable name="HomeScreenIdleUIFadeOut_Preset_3">
+		<value>60</value>
+	</variable>
+	<variable name="HomeScreenIdleUIFadeOut_Preset_4">
+		<value>120</value>
+	</variable>
+	<variable name="HomeScreenIdleUIFadeOutVar">
+		<value condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),0) | String.IsEmpty(Skin.String(HomeScreenIdleUIFadeOut))">(Default)   Disabled  (1/5)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),1)">$VAR[HomeScreenIdleUIFadeOut_Preset_1] Seconds  (2/5)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),2)">$VAR[HomeScreenIdleUIFadeOut_Preset_2] Seconds  (3/5)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),3)">$VAR[HomeScreenIdleUIFadeOut_Preset_3] Seconds  (4/5)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),4)">$VAR[HomeScreenIdleUIFadeOut_Preset_4] Seconds  (5/5)</value>
+	</variable>
+	
+	
+	
+	
+	<variable name="CustomBackgroundMultipleTimePerImage_Preset_1">
+		<value>3</value>
+	</variable>
+	<variable name="CustomBackgroundMultipleTimePerImage_Preset_2">
+		<value>5</value>
+	</variable>
+	<variable name="CustomBackgroundMultipleTimePerImage_Preset_3">
+		<value>7</value>
+	</variable>
+	<variable name="CustomBackgroundMultipleTimePerImage_Preset_4">
+		<value>9</value>
+	</variable>
+	<variable name="CustomBackgroundMultipleTimePerImage_Preset_5">
+		<value>12</value>
+	</variable>
+	<variable name="CustomBackgroundMultipleTimePerImage_Preset_6">
+		<value>15</value>
+	</variable>
+	<variable name="CustomBackgroundMultipleTimePerImageVar">
+		<value condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),0)">Only on window load  (1/7)</value>
+		<value condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),1) | String.IsEmpty(Skin.String(CustomBackgroundMultipleTimePerImage))">(Default)   Every $VAR[CustomBackgroundMultipleTimePerImage_Preset_1] Seconds  (2/7)</value>
+		<value condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),2)">Every $VAR[CustomBackgroundMultipleTimePerImage_Preset_2] Seconds  (3/7)</value>
+		<value condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),3)">Every $VAR[CustomBackgroundMultipleTimePerImage_Preset_3] Seconds  (4/7)</value>
+		<value condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),4)">Every $VAR[CustomBackgroundMultipleTimePerImage_Preset_4] Seconds  (5/7)</value>
+		<value condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),5)">Every $VAR[CustomBackgroundMultipleTimePerImage_Preset_5] Seconds  (6/7)</value>
+		<value condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),6)">Every $VAR[CustomBackgroundMultipleTimePerImage_Preset_6] Seconds  (7/7)</value>
+	</variable>
+	
+	
+	
+	
+	
+	
+	<variable name="VideoPlayerAudioLanguage">
+		
+		<!-- Workaround for madVR+LAVFilters language names which are long and ugly -->
+		
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.AudioLanguage,german) | String.Contains(VideoPlayer.AudioLanguage,ger) | String.Contains(VideoPlayer.AudioLanguage,deu)">ger</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.AudioLanguage,english) | String.Contains(VideoPlayer.AudioLanguage,eng)">eng</value>
+		
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.AudioLanguage,spanish) | String.Contains(VideoPlayer.AudioLanguage,spanisch) | String.Contains(VideoPlayer.AudioLanguage,spa)">spa</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.AudioLanguage,italian) | String.Contains(VideoPlayer.AudioLanguage,italienisch) | String.Contains(VideoPlayer.AudioLanguage,ita)">ita</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.AudioLanguage,dutch) | String.Contains(VideoPlayer.AudioLanguage,niederländisch) | String.Contains(VideoPlayer.AudioLanguage,dut)">dut</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.AudioLanguage,french) | String.Contains(VideoPlayer.AudioLanguage,französisch) | String.Contains(VideoPlayer.AudioLanguage,fre)">fre</value>
+		
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.StartsWith(VideoPlayer.AudioLanguage,a:)">und</value>
+		
+		<value>$INFO[VideoPlayer.AudioLanguage]</value>
+	</variable>
+	
+	
+	
+	<variable name="VideoPlayerSubtitlesLanguage">
+		
+		<!-- Workaround for madVR+LAVFilters language names which are long and ugly -->
+		
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,german) | String.Contains(VideoPlayer.SubtitlesLanguage,ger) | String.Contains(VideoPlayer.AudioLanguage,deu)">ger</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,english) | String.Contains(VideoPlayer.SubtitlesLanguage,eng)">eng</value>
+		
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,spanish) | String.Contains(VideoPlayer.SubtitlesLanguage,spanisch) | String.Contains(VideoPlayer.SubtitlesLanguage,spa)">spa</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,italian) | String.Contains(VideoPlayer.SubtitlesLanguage,italienisch) | String.Contains(VideoPlayer.SubtitlesLanguage,ita)">ita</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,dutch) | String.Contains(VideoPlayer.SubtitlesLanguage,niederländisch) | String.Contains(VideoPlayer.SubtitlesLanguage,dut)">dut</value>
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,french) | String.Contains(VideoPlayer.SubtitlesLanguage,französisch) | String.Contains(VideoPlayer.SubtitlesLanguage,fre)">fre</value>
+		
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,no subtitles)">–</value>
+		
+		<value condition="[String.Contains(Player.Process(pixformat),madVR) + 
+							String.Contains(Player.Process(deintmethod),LAV Video Decoder)] + 
+							String.Contains(VideoPlayer.SubtitlesLanguage,auto) | String.Contains(VideoPlayer.SubtitlesLanguage,forced)">auto</value>
+		
+		<value>$INFO[VideoPlayer.SubtitlesLanguage]</value>
+	</variable>
+	
+	
+	
+	<variable name="TrailerSearchLanguageTypeVar">
+		<value condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),0) | String.IsEmpty(Skin.String(TrailerSearchLanguageType))">English  (1/3)</value>
+		<value condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),1)">Deutsch German  (2/3)</value>
+		<value condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),2)">KODI language: $INFO[System.Language]  (3/3)</value>
+	</variable>
+	
+	<variable name="TrailerSearchLanguageString">
+		<value condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),0) | String.IsEmpty(Skin.String(TrailerSearchLanguageType))">English </value>
+		<value condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),1)">Deutsch German </value>
+		<value condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),2) + !String.IsEmpty(System.Language)">$INFO[System.Language] </value>
+		<value></value>
+	</variable>
+	
+	
+	<variable name="TrailerSearchMethodVar">
+		<value condition="String.IsEqual(Skin.String(TrailerSearchMethod),0) | String.IsEmpty(Skin.String(TrailerSearchMethod))">(Default)   Kodi YouTube Add-on  (1/2)</value>
+		<value condition="String.IsEqual(Skin.String(TrailerSearchMethod),1)">Open in Default Web Browser  (2/2)</value>
+	</variable>
+	
+	
+	<variable name="SkinSettingsCompressionLevelLabel">
+		<value condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),0) | String.IsEmpty(Skin.String(ExperimentalVolumeAmplificationLevel))">(Default)   +10dB   (1/6)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),1)">+12dB   (2/6)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2)">+14dB   (3/6)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3)">+16dB   (4/6)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4)">+18dB   (5/6)</value>
+		<value condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">+20dB   (6/6)</value>
+	</variable>
+	
+	
+	<variable name="HomeScreenKodiLogoVar">
+		<value condition="String.IsEqual(Skin.String(HomeScreenKodiLogo),0) | String.IsEmpty(Skin.String(HomeScreenKodiLogo))">(Default)   Kodi logo  (1/3)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenKodiLogo),1)">Hidden  (2/3)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenKodiLogo),2)">madVR logo  (3/3)</value>
+	</variable>
+	
+	<variable name="HomeScreenSearchButtonVar">
+		<value condition="String.IsEqual(Skin.String(HomeScreenSearchButton),0) | String.IsEmpty(Skin.String(HomeScreenSearchButton))">(Default)   Search dialog  (1/3)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenSearchButton),1)">Hidden  (2/3)</value>
+		<value condition="String.IsEqual(Skin.String(HomeScreenSearchButton),2)">Direct video library search  (3/3)</value>
+	</variable>
+	
+	
+	
+	<variable name="isUhdScreenStringSuffix">
+		<value condition="String.IsEqual(System.ScreenWidth,3840) | String.IsEqual(System.ScreenHeight,2160) | String.IsEqual(System.ScreenWidth,4096)">_uhd</value>
+		<value>_uhd</value>
+	</variable>
+	<variable name="isUhdScreenStringFolder">
+		<value condition="String.IsEqual(System.ScreenWidth,3840) | String.IsEqual(System.ScreenHeight,2160) | String.IsEqual(System.ScreenWidth,4096)">uhd/</value>
+		<value>uhd/</value>
+	</variable>
+	
+	
+	
+</includes>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<config version="2.2.0">
+  <RomCollections>
+    <RomCollection id="6" name="NES">
+      <useBuiltinEmulator>False</useBuiltinEmulator>
+      <gameclient />
+      <emulatorCmd>/Path/To/NES/Emulator</emulatorCmd>
+      <emulatorParams>-v -L /Applications/RetroArch.app/Contents/Resources/cores/bnes_libretro.dylib "%rom%"</emulatorParams>
+      <romPath>/Path/To/Roms/GBA/*.zip</romPath>
+      <romPath>/Path/To/Roms/GBA/*.smc</romPath>
+      <saveStatePath />
+      <saveStateParams />
+      <mediaPath type="boxfront">/Path/To/Roms/GBA/Artwork/boxfront/%GAME%.*</mediaPath>
+      <mediaPath type="boxback">/Path/To/Roms/GBA/Artwork/boxback/%GAME%.*</mediaPath>
+      <mediaPath type="cartridge">/Path/To/Roms/GBA/Artwork/cartridge/%GAME%.*</mediaPath>
+      <mediaPath type="screenshot">/Path/To/Roms/GBA/Artwork/screenshot/%GAME%.*</mediaPath>
+      <mediaPath type="fanart">/Path/To/Roms/GBA/Artwork/fanart/%GAME%.*
+      </mediaPath>
+      <preCmd />
+      <postCmd />
+      <useEmuSolo>False</useEmuSolo>
+      <usePopen>False</usePopen>
+      <ignoreOnScan>False</ignoreOnScan>
+      <allowUpdate>True</allowUpdate>
+      <autoplayVideoMain>True</autoplayVideoMain>
+      <autoplayVideoInfo>True</autoplayVideoInfo>
+      <useFoldernameAsGamename>False</useFoldernameAsGamename>
+      <maxFolderDepth>99</maxFolderDepth>
+      <doNotExtractZipFiles>False</doNotExtractZipFiles>
+      <makeLocalCopy>False</makeLocalCopy>
+      <diskPrefix>_Disk.*</diskPrefix>
+      <imagePlacingMain>gameinfobig</imagePlacingMain>
+      <imagePlacingInfo>gameinfosmall</imagePlacingInfo>
+      <scraper name="thegamesdb.net" />
+    </RomCollection>
+    <RomCollection id="7" name="Atari 2600">
+      <useBuiltinEmulator>False</useBuiltinEmulator>
+      <gameclient />
+      <emulatorCmd>/Path/To/Atari2600/Emulator</emulatorCmd>
+      <emulatorParams>"%ROM%"</emulatorParams>
+      <romPath>/Path/To/Roms/Atari2600/*.a26</romPath>
+      <saveStatePath />
+      <saveStateParams />
+      <mediaPath type="boxfront">/Path/To/Roms/Atari2600/Artwork/boxfront/%GAME%.*</mediaPath>
+      <mediaPath type="boxback">/Path/To/Roms/Atari2600/Artwork/boxback/%GAME%.*</mediaPath>
+      <mediaPath type="cartridge">/Path/To/Roms/Atari2600/Artwork/cartridge/%GAME%.*</mediaPath>
+      <mediaPath type="screenshot">/Path/To/Roms/Atari2600/Artwork/screenshot/%GAME%.*</mediaPath>
+      <mediaPath type="fanart">/Path/To/Roms/Atari2600/Artwork/fanart/%GAME%.*</mediaPath>
+      <preCmd />
+      <postCmd />
+      <useEmuSolo>False</useEmuSolo>
+      <usePopen>False</usePopen>
+      <ignoreOnScan>False</ignoreOnScan>
+      <allowUpdate>True</allowUpdate>
+      <autoplayVideoMain>True</autoplayVideoMain>
+      <autoplayVideoInfo>True</autoplayVideoInfo>
+      <useFoldernameAsGamename>False</useFoldernameAsGamename>
+      <maxFolderDepth>99</maxFolderDepth>
+      <doNotExtractZipFiles>False</doNotExtractZipFiles>
+      <makeLocalCopy>False</makeLocalCopy>
+      <diskPrefix>_Disk.*</diskPrefix>
+      <imagePlacingMain>gameinfobig</imagePlacingMain>
+      <imagePlacingInfo>gameinfosmall</imagePlacingInfo>
+      <scraper name="thegamesdb.net" />
+    </RomCollection>
+  </RomCollections>
+  <FileTypes>
+    <FileType id="1" name="boxfront">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="2" name="boxback">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="3" name="cartridge">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="4" name="screenshot">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="5" name="fanart">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="6" name="action">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="7" name="title">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="8" name="3dbox">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="9" name="romcollection">
+      <type>image</type>
+      <parent>romcollection</parent>
+    </FileType>
+    <FileType id="10" name="developer">
+      <type>image</type>
+      <parent>developer</parent>
+    </FileType>
+    <FileType id="11" name="publisher">
+      <type>image</type>
+      <parent>publisher</parent>
+    </FileType>
+    <FileType id="12" name="gameplay">
+      <type>video</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="13" name="cabinet">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+    <FileType id="14" name="marquee">
+      <type>image</type>
+      <parent>game</parent>
+    </FileType>
+  </FileTypes>
+  <ImagePlacing>
+    <fileTypeFor name="gameinfobig">
+      <fileTypeForGameList>boxfront</fileTypeForGameList>
+      <fileTypeForGameList>screenshot</fileTypeForGameList>
+      <fileTypeForGameList>title</fileTypeForGameList>
+      <fileTypeForGameList>action</fileTypeForGameList>
+      <fileTypeForGameListSelected>boxfront</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>screenshot</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>title</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>action</fileTypeForGameListSelected>
+      <fileTypeForMainViewBackground>fanart</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>boxfront</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>screenshot</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>title</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>action</fileTypeForMainViewBackground>
+      <fileTypeForMainViewGameInfoBig>screenshot</fileTypeForMainViewGameInfoBig>
+      <fileTypeForMainViewGameInfoBig>boxfront</fileTypeForMainViewGameInfoBig>
+      <fileTypeForMainViewGameInfoBig>action</fileTypeForMainViewGameInfoBig>
+      <fileTypeForMainViewGameInfoBig>title</fileTypeForMainViewGameInfoBig>
+      <fileTypeForMainView1>publisher</fileTypeForMainView1>
+      <fileTypeForMainView2>romcollection</fileTypeForMainView2>
+      <fileTypeForMainView3>developer</fileTypeForMainView3>
+    </fileTypeFor>
+    <fileTypeFor name="gameinfosmall">
+      <fileTypeForGameList>boxfront</fileTypeForGameList>
+      <fileTypeForGameList>screenshot</fileTypeForGameList>
+      <fileTypeForGameList>title</fileTypeForGameList>
+      <fileTypeForGameList>action</fileTypeForGameList>
+      <fileTypeForGameListSelected>boxfront</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>screenshot</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>title</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>action</fileTypeForGameListSelected>
+      <fileTypeForMainViewBackground>fanart</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>boxfront</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>screenshot</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>title</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>action</fileTypeForMainViewBackground>
+      <fileTypeForMainViewGameInfoUpperLeft>screenshot</fileTypeForMainViewGameInfoUpperLeft>
+      <fileTypeForMainViewGameInfoUpperLeft>action</fileTypeForMainViewGameInfoUpperLeft>
+      <fileTypeForMainViewGameInfoUpperLeft>title</fileTypeForMainViewGameInfoUpperLeft>
+      <fileTypeForMainViewGameInfoUpperRight>boxfront</fileTypeForMainViewGameInfoUpperRight>
+      <fileTypeForMainViewGameInfoLowerLeft>cartridge</fileTypeForMainViewGameInfoLowerLeft>
+      <fileTypeForMainViewGameInfoLowerRight>boxback</fileTypeForMainViewGameInfoLowerRight>
+      <fileTypeForMainViewGameInfoLowerRight>title</fileTypeForMainViewGameInfoLowerRight>
+      <fileTypeForMainView1>publisher</fileTypeForMainView1>
+      <fileTypeForMainView2>romcollection</fileTypeForMainView2>
+      <fileTypeForMainView3>developer</fileTypeForMainView3>
+    </fileTypeFor>
+    <fileTypeFor name="gameinfomamemarquee">
+      <fileTypeForGameList>marquee</fileTypeForGameList>
+      <fileTypeForGameList>boxfront</fileTypeForGameList>
+      <fileTypeForGameList>title</fileTypeForGameList>
+      <fileTypeForGameListSelected>marquee</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>boxfront</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>title</fileTypeForGameListSelected>
+      <fileTypeForMainViewBackground>boxfront</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>title</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>action</fileTypeForMainViewBackground>
+      <fileTypeForMainViewGameInfoLeft>cabinet</fileTypeForMainViewGameInfoLeft>
+      <fileTypeForMainViewGameInfoUpperRight>title</fileTypeForMainViewGameInfoUpperRight>
+      <fileTypeForMainViewGameInfoLowerRight>action</fileTypeForMainViewGameInfoLowerRight>
+      <fileTypeForMainView1>publisher</fileTypeForMainView1>
+      <fileTypeForMainView2>romcollection</fileTypeForMainView2>
+      <fileTypeForMainView3>developer</fileTypeForMainView3>
+    </fileTypeFor>
+    <fileTypeFor name="gameinfomamecabinet">
+      <fileTypeForGameList>cabinet</fileTypeForGameList>
+      <fileTypeForGameList>boxfront</fileTypeForGameList>
+      <fileTypeForGameList>title</fileTypeForGameList>
+      <fileTypeForGameListSelected>cabinet</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>boxfront</fileTypeForGameListSelected>
+      <fileTypeForGameListSelected>title</fileTypeForGameListSelected>
+      <fileTypeForMainViewBackground>boxfront</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>title</fileTypeForMainViewBackground>
+      <fileTypeForMainViewBackground>action</fileTypeForMainViewBackground>
+      <fileTypeForMainViewGameInfoUpperLeft>title</fileTypeForMainViewGameInfoUpperLeft>
+      <fileTypeForMainViewGameInfoUpperRight>action</fileTypeForMainViewGameInfoUpperRight>
+      <fileTypeForMainViewGameInfoLower>marquee</fileTypeForMainViewGameInfoLower>
+      <fileTypeForMainView1>publisher</fileTypeForMainView1>
+      <fileTypeForMainView2>romcollection</fileTypeForMainView2>
+      <fileTypeForMainView3>developer</fileTypeForMainView3>
+    </fileTypeFor>
+  </ImagePlacing>
+</config>

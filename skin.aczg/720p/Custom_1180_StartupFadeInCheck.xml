@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1180">
+	
+	<visible>
+		Skin.HasSetting(ExperimentalStartScreenEnabled) + 
+		String.IsEmpty(Window(home).Property(ExperimentalStartScreenDone)) + 
+		!Window.IsVisible(loginscreen) + 
+		!Window.IsVisible(startup)
+	</visible>
+	
+	<!-- LOAD -->
+	<onload condition="!Window.IsVisible(1181)">AlarmClock(ExperimentalStartScreenAlarm3,ActivateWindow(1181),00:00:00,silent)</onload>
+	
+	<onload>SetProperty(ExperimentalStartScreenDebug1,,home)</onload>
+	<onload>AlarmClock(ExperimentalStartScreenAlarm4,SetProperty(ExperimentalStartScreenDebug1,True,home),00:00:01,silent)</onload>
+	
+	<!-- UNLOAD -->
+	<onunload condition="Window.IsVisible(1181)">Dialog.Close(1181)</onunload>
+	
+	<onunload>CancelAlarm(ExperimentalStartScreenAlarm3,silent)</onunload>
+	<onunload>CancelAlarm(ExperimentalStartScreenAlarm4,silent)</onunload>
+	
+	
+	<onunload>SetProperty(ExperimentalStartScreenDebug1,,home)</onunload>
+	
+	<!--
+	<onload condition="!Window.IsVisible(1181)">ActivateWindow(1181)</onload>
+	<onunload condition="Window.IsVisible(11811)">Dialog.Close(1181)</onunload>
+		
+	<onunload>SetProperty(ExperimentalStartScreenDone,True,home)</onunload>
+	<onunload>SetProperty(ExperimentalStartScreenDoneDelayed,True,home)</onunload>
+	<onunload>CancelAlarm(ExperimentalStartScreenAlarm1,silent)</onunload>
+	<onunload>CancelAlarm(ExperimentalStartScreenAlarm2,silent)</onunload>
+	-->
+	
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	
+	<controls>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>_added_img/100x100_black.png</texture>
+			<animation effect="fade" start="100" end="100" time="0" condition="String.IsEmpty(Window(home).Property(ExperimentalStartScreenDebug1))">conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="!String.IsEmpty(Window(home).Property(ExperimentalStartScreenDebug1))">conditional</animation>
+		</control>
+	</controls>
+	
+</window>

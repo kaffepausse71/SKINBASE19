@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1103">
+	<defaultcontrol always="true">3000</defaultcontrol>
+	
+	<include>dialogeffect</include>
+	
+	<onload>AlarmClock(TextViewerFSFocus,SetFocus(3000),00:00:01,silent)</onload>
+	<onunload>CancelAlarm(TextViewerFSFocus,silent)</onunload>
+	
+	<controls>
+		<control type="group">
+			<include>BehindDialogBlackBackground</include>
+		</control>
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<include content="DialogBackgroundCommonsNoBackgroundFS">
+				<param name="DialogBackgroundWidth" value="920" />
+				<param name="DialogBackgroundHeight" value="639" />
+				<param name="DialogHeaderWidth" value="1280" />
+				<param name="DialogHeaderLabel" value="$INFO[Window(home).Property(TextViewer_Header)]" />
+				<param name="DialogHeaderId" value="2" />
+				<param name="CloseButtonLeft" value="1216" />
+				<param name="CloseButtonNav" value="3000" />
+			</include>
+			<control type="textbox" id="2000">
+				<left>30</left>
+				<top>86</top>
+				<width>1200</width>
+				<height>634</height>
+				<pagecontrol>3000</pagecontrol>
+				<!--<font>Light20+</font>-->
+				<font>Mono14</font>
+				<label>$INFO[Window(home).Property(TextViewer_Text_Pre),,[CR]]$INFO[Window(home).Property(TextViewer_Text)]$INFO[Window(home).Property(ListItemHelper.internalnotes)] </label>
+			</control>
+			<control type="scrollbar" id="3000">
+				<left>1240</left>
+				<top>88</top>
+				<width>25</width>
+				<height>630</height>
+				<texturesliderbackground border="10">scrollbars/ScrollBarUni-bg.png</texturesliderbackground>
+				<texturesliderbar border="10">scrollbars/ScrollBarUni-bar.png</texturesliderbar>
+				<texturesliderbarfocus border="10">scrollbars/ScrollBarUni-bar-focus.png</texturesliderbarfocus>
+				<textureslidernib>scrollbars/ScrollBarUni-nib.png</textureslidernib>
+				<textureslidernibfocus>scrollbars/ScrollBarUni-nib.png</textureslidernibfocus>
+				<onleft>3000</onleft>
+				<onup>noop</onup>
+				<onright>3000</onright>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+				<animation effect="fade" start="100" end="0" time="0" condition="String.IsEqual(Container(2000).NumPages,1)">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>

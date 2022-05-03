@@ -1,0 +1,29 @@
+certifi 2020.4.5.2
+https://pypi.org/project/certifi/
+
+chardet 3.0.4
+https://pypi.org/project/chardet/
+
+idna 2.9
+https://pypi.org/project/idna/
+
+requests 2.23.0
+https://pypi.org/project/requests/
+
+urllib3 1.25.9
+https://pypi.org/project/urllib3/
+
+#------------------------------------------#
+
+cloudscraper 1.2.41  dev
+https://github.com/VeNoMouS/cloudscraper/
+
+pyjsparser 2.7.1
+https://pypi.org/project/pyjsparser/
+
+requests-toolbelt 0.9.1
+https://pypi.org/project/requests-toolbelt
+
+##################################
+# LAST UPDATE 19.06.2020 - 22:30 #
+##################################

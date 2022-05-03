@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<views>10,11,12,13</views>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="group">
+				<include>Window_OpenClose_Animation</include>
+				<control type="group">
+					<include>VisibleFadeEffect</include>
+					<visible>!Control.IsVisible(10)</visible>
+				</control>
+				<control type="group">
+					<include>VisibleFadeEffect</include>
+					<visible>Control.IsVisible(10)</visible>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="50">
+			<include>Window_OpenClose_Animation</include>
+			<include>PVRGuideViewTimeline</include>
+			<include>PVRGuideViewNow</include>
+			<include>PVRGuideViewNext</include>
+			<include>PVRGuideViewChannel</include>
+		</control>
+		
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonNowPlaying</include>
+		</control>
+		
+		<include>MainWindowMouseButtons</include>
+		<include>ScrollOffsetLabel</include>
+		<include>BehindDialogFadeOut</include>
+		
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black-back.png</texture>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="150">Hidden</animation>
+			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
+		</control>
+		
+		<include>PVRHeader</include>
+		
+		<include>PVRSideBlade</include>
+		
+	</controls>
+</window>

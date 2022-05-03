@@ -1,0 +1,100 @@
+<config version="2.2.0">
+    <!-- All paths are fake, we don't currently validate on path -->
+    <RomCollections>
+        <RomCollection id="6" name="NES">
+            <useBuiltinEmulator>False</useBuiltinEmulator>
+            <gameclient />
+            <emulatorCmd>/Path/To/NES/Emulator</emulatorCmd>
+            <emulatorParams>-v -L /Applications/RetroArch.app/Contents/Resources/cores/bnes_libretro.dylib "%rom%"</emulatorParams>
+            <romPath>/Path/To/Roms/GBA/*.zip</romPath>
+            <romPath>/Path/To/Roms/GBA/*.smc</romPath>
+            <saveStatePath />
+            <saveStateParams />
+            <mediaPath type="boxfront">/Path/To/Roms/GBA/Artwork/boxfront/%GAME%.*</mediaPath>
+            <mediaPath type="boxback">/Path/To/Roms/GBA/Artwork/boxback/%GAME%.*</mediaPath>
+            <mediaPath type="cartridge">/Path/To/Roms/GBA/Artwork/cartridge/%GAME%.*</mediaPath>
+            <mediaPath type="screenshot">/Path/To/Roms/GBA/Artwork/screenshot/%GAME%.*</mediaPath>
+            <mediaPath type="fanart">/Path/To/Roms/GBA/Artwork/fanart/%GAME%.*
+            </mediaPath>
+            <preCmd />
+            <postCmd />
+            <useEmuSolo>False</useEmuSolo>
+            <usePopen>False</usePopen>
+            <ignoreOnScan>False</ignoreOnScan>
+            <allowUpdate>True</allowUpdate>
+            <autoplayVideoMain>True</autoplayVideoMain>
+            <autoplayVideoInfo>True</autoplayVideoInfo>
+            <useFoldernameAsGamename>False</useFoldernameAsGamename>
+            <maxFolderDepth>99</maxFolderDepth>
+            <doNotExtractZipFiles>False</doNotExtractZipFiles>
+            <makeLocalCopy>False</makeLocalCopy>
+            <diskPrefix>_Disk.*</diskPrefix>
+            <imagePlacingMain>gameinfobig</imagePlacingMain>
+            <imagePlacingInfo>gameinfosmall</imagePlacingInfo>
+            <scraper name="thegamesdb.net" />
+        </RomCollection>
+        <RomCollection id="7" name="Atari 2600">
+            <useBuiltinEmulator>False</useBuiltinEmulator>
+            <gameclient />
+            <emulatorCmd>/Path/To/Atari2600/Emulator</emulatorCmd>
+            <emulatorParams>"%ROM%"</emulatorParams>
+            <romPath>/Path/To/Roms/Atari2600/*.a26</romPath>
+            <saveStatePath />
+            <saveStateParams />
+            <mediaPath type="boxfront">/Path/To/Roms/Atari2600/Artwork/boxfront/%GAME%.*</mediaPath>
+            <mediaPath type="boxback">/Path/To/Roms/Atari2600/Artwork/boxback/%GAME%.*</mediaPath>
+            <mediaPath type="cartridge">/Path/To/Roms/Atari2600/Artwork/cartridge/%GAME%.*</mediaPath>
+            <mediaPath type="screenshot">/Path/To/Roms/Atari2600/Artwork/screenshot/%GAME%.*</mediaPath>
+            <mediaPath type="fanart">/Path/To/Roms/Atari2600/Artwork/fanart/%GAME%.*</mediaPath>
+            <preCmd />
+            <postCmd />
+            <useEmuSolo>False</useEmuSolo>
+            <usePopen>False</usePopen>
+            <ignoreOnScan>False</ignoreOnScan>
+            <allowUpdate>True</allowUpdate>
+            <autoplayVideoMain>True</autoplayVideoMain>
+            <autoplayVideoInfo>True</autoplayVideoInfo>
+            <useFoldernameAsGamename>False</useFoldernameAsGamename>
+            <maxFolderDepth>99</maxFolderDepth>
+            <doNotExtractZipFiles>False</doNotExtractZipFiles>
+            <makeLocalCopy>False</makeLocalCopy>
+            <diskPrefix>_Disk.*</diskPrefix>
+            <imagePlacingMain>gameinfobig</imagePlacingMain>
+            <imagePlacingInfo>gameinfosmall</imagePlacingInfo>
+            <scraper name="thegamesdb.net" />
+        </RomCollection>
+    </RomCollections>
+
+    <!-- The following are explicitly referenced in the RomCollections above and need to be specified -->
+    <ImagePlacing>
+        <fileTypeFor name="gameinfobig">
+
+        </fileTypeFor>
+        <fileTypeFor name="gameinfosmall">
+
+        </fileTypeFor>
+    </ImagePlacing>
+
+    <FileTypes>
+        <FileType id="1" name="boxfront">
+            <type>image</type>
+            <parent>game</parent>
+        </FileType>
+        <FileType id="2" name="boxback">
+            <type>image</type>
+            <parent>game</parent>
+        </FileType>
+        <FileType id="3" name="cartridge">
+            <type>image</type>
+            <parent>game</parent>
+        </FileType>
+        <FileType id="4" name="screenshot">
+            <type>image</type>
+            <parent>game</parent>
+        </FileType>
+        <FileType id="5" name="fanart">
+            <type>image</type>
+            <parent>game</parent>
+        </FileType>
+    </FileTypes>
+</config>

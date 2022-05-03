@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">51</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+	<views>51,50,550,551</views>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<!-- view id = 51 -->
+			<include>FullWidthList</include>
+			<!-- view id = 50 -->
+			<include>CommonRootView</include>
+			<!-- view id = 550 -->
+			<include>AddonInfoListView1</include>
+			<!-- view id = 551 -->
+			<include>AddonInfoThumbView1</include>
+		</control>
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonPageCount</include>
+			<include>CommonNowPlaying</include>
+		</control>
+		
+		<include>MainWindowMouseButtons</include>
+		<include>ScrollOffsetLabel</include>
+		<include>BehindDialogFadeOut</include>
+		
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_addons" />
+			<param name="Label" value="$LOCALIZE[24001]" />
+		</include>
+		<control type="group">
+			<left>-286</left>
+			<include>SideBladeLeft</include>
+			<control type="grouplist" id="9000">
+				<include>SideBladeLeftFadeInAni</include>
+				<left>16</left>
+				<top>110</top>
+				<width>250</width>
+				<height>600</height>
+				<onleft>9000</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onback>50</onback>
+				<itemgap>0</itemgap>
+				<control type="label" id="200">
+					<width>250</width>
+					<height>35</height>
+					<font>Regular17</font>
+					<label>31006</label>
+					<textcolor>blue</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="button" id="2">
+					<description>View As button</description>
+					<textwidth>235</textwidth>
+					<include>ButtonCommonValues</include>
+					<label></label>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<include>ButtonCommonValues</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<include>ButtonCommonValues</include>
+					<alttexturefocus border="4">button-focus.png</alttexturefocus>
+					<alttexturenofocus></alttexturenofocus>
+					<label>31051</label>
+					<altlabel>31050</altlabel>
+					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="label" id="201">
+					<width>250</width>
+					<height>35</height>
+					<font>Regular17</font>
+					<label>31026</label>
+					<textcolor>blue</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="radiobutton" id="7">
+					<description>Hide foreign</description>
+					<include>ButtonCommonValues</include>
+					<label>25001</label>
+				</control>
+				<control type="radiobutton" id="8">
+					<description>Hide broken</description>
+					<include>ButtonCommonValues</include>
+					<label>24999</label>
+				</control>
+				<control type="button" id="9">
+					<description>Check for updates</description>
+					<include>ButtonCommonValues</include>
+					<label>24034</label>
+				</control>
+
+				
+				<control type="label" id="6446">
+					<width>250</width>
+					<height>10</height>
+					<font>Regular17</font>
+					<label></label>
+					<textcolor>blue</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="button" id="5">
+					<description>Settings shortcut</description>
+					<include>ButtonCommonValues</include>
+					<label>10004</label>
+				</control>
+				<control type="button" id="2562">
+					<description></description>
+					<textwidth>230</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>24998</label>
+					<onclick>ActivateWindow(addonbrowser,addons://user/all/,return)</onclick>
+				</control>
+				<control type="button" id="3364">
+					<description></description>
+					<textwidth>230</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>24996</label>
+					<onclick>ActivateWindow(addonbrowser,addons://dependencies/,return)</onclick>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				<control type="button" id="7454">
+					<description></description>
+					<textwidth>230</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>24994</label>
+					<onclick>ActivateWindow(addonbrowser,addons://running/,return)</onclick>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				
+				<include>CommonNowPlaying_Controls</include>
+			</control>
+			<control type="group">
+				<include>SideBladeLeftFadeInAni</include>
+				<left>28</left>
+				<top>10</top>
+				<control type="label">
+					<description>Last updated label</description>
+					<left>0</left>
+					<top>0</top>
+					<height>60</height>
+					<width>240</width>
+					<label>31301</label>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Regular20</font>
+					<textcolor>selected</textcolor>
+					<animation effect="fade" end="80" time="0" condition="true">conditional</animation>
+				</control>
+				<control type="label">
+					<description>Last updated value</description>
+					<left>0</left>
+					<top>30</top>
+					<height>25</height>
+					<width>240</width>
+					<label>$INFO[Window.Property(Updated)]</label>
+					<font>Regular20</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<animation effect="fade" end="80" time="0" condition="true">conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

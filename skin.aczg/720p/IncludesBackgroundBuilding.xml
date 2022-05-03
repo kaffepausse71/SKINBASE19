@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	
+	<include name="CommonBackground">
+		
+		<!-- fanart check var -->
+		<control type="label" id="234235">
+			<label>$VAR[MediaFanartVar]</label>
+			<visible>false</visible>
+		</control>
+		
+		<!-- default /backgrounds/ folder background -->
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<description>Default Backgrounds</description>
+			<include>BackgroundDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture>special://skin/backgrounds/$VAR[isUhdScreenStringFolder]background_$VAR[BackgroundTypeNoVar].png</texture>
+			<visible>
+			![
+			[String.IsEqual(Skin.String(UseCustomBackground),1) + !String.IsEmpty(Skin.String(CustomBackgroundPath))] | 
+			[String.IsEqual(Skin.String(UseCustomBackground),2) + !String.IsEmpty(Skin.String(CustomBackgroundPathMultiple))]
+			]
+			</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		
+		<!-- CUSTOM BACKGROUND - Single Image -->
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<description>User Set Background Image</description>
+			<include>BackgroundDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.String(CustomBackgroundPath)]</texture>
+			<visible>String.IsEqual(Skin.String(UseCustomBackground),1) + !String.IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+			<include>VisibleFadeEffect</include>
+			<!--
+			test
+			<animation effect="zoom" start="100" end="150" center="640,360" easing="out" tween="sine" time="100000">WindowOpen</animation>
+			-->
+		</control>
+		
+		
+		<!-- CUSTOM BACKGROUND - Multiple Images -->
+		<control type="multiimage">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">$INFO[Skin.String(CustomBackgroundPathMultiple)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			
+			<include condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),0)">CustomBackgroundMultipleTimePerImage_Include_0</include>
+			<include condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),1) | String.IsEmpty(Skin.String(CustomBackgroundMultipleTimePerImage))">CustomBackgroundMultipleTimePerImage_Include_1</include>
+			<include condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),2)">CustomBackgroundMultipleTimePerImage_Include_2</include>
+			<include condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),3)">CustomBackgroundMultipleTimePerImage_Include_3</include>
+			<include condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),4)">CustomBackgroundMultipleTimePerImage_Include_4</include>
+			<include condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),5)">CustomBackgroundMultipleTimePerImage_Include_5</include>
+			<include condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),6)">CustomBackgroundMultipleTimePerImage_Include_6</include>
+			
+			<randomize>true</randomize>
+			<fadetime>600</fadetime>
+			<!--
+			<animation effect="zoom" start="110" end="130" center="auto" time="36000" pulse="true" condition="true" reversible="false">Conditional</animation>
+			<animation effect="slide" start="-15,-15" end="30,30" time="28000" tween="cubic" easing="inout" pulse="true" condition="true" reversible="false">Conditional</animation>
+			-->
+			<!--
+			<include>VisibleFadeEffect</include>
+			-->
+			<visible>String.IsEqual(Skin.String(UseCustomBackground),2) + !String.IsEmpty(Skin.String(CustomBackgroundPathMultiple)) + 
+					!Slideshow.IsActive + 
+					![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + 
+					![Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + !String.IsEmpty(Visualisation.Name)]</visible>
+		</control>
+		
+		
+		<!-- black out everything behind fanart -->
+		
+		<control type="image">
+			<include>BackgroundDimensions</include>
+			<texture>_added_img/1280x720_black.png</texture>
+			<visible>Player.HasAudio + Control.IsVisible(234236)</visible>
+			<!--
+			<include>VisibleFadeEffect</include>
+			-->
+		</control>
+		
+		<!-- fanart -->
+		<!--
+		<control type="label" id="234235">
+			<label>$VAR[MediaFanartVar]</label>
+			<visible>false</visible>
+		</control>
+		-->
+		<control type="image" id="234236">
+			<depth>DepthBackground</depth>
+			<include>BackgroundDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$VAR[MediaFanartVar]</texture>
+			
+			<include>backgroundfade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<!--
+			<include>Window_OpenClose_Animation</include>
+			-->
+			<visible>[!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(Control.GetLabel(234235))] + 
+					![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + 
+					![Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + !String.IsEmpty(Visualisation.Name)]</visible>
+		</control>
+		
+		<!-- black out everything behind playing video or playing audio-vis -->
+		<control type="image">
+			<include>BackgroundDimensions</include>
+			<texture>_added_img/1280x720_black.png</texture>
+			<visible>[ 
+					[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | 
+					[Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + !String.IsEmpty(Visualisation.Name)] 
+					] + 
+					String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+		</control>
+		
+		<control type="visualisation">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + !Slideshow.IsActive + !String.IsEmpty(Visualisation.Name)</visible>
+			<visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+		</control>
+		<control type="videowindow">
+			<depth>DepthBackground</depth>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + !Slideshow.IsActive</visible>
+		</control>
+		
+		
+		
+	</include>
+	
+	<include name="ContentPanelBackgrounds">
+	
+		<control type="group">
+			<!--
+			<include>Window_OpenClose_Animation</include>
+			-->
+			
+			<control type="group">
+				<!--
+				<include>VisibleFadeEffect</include>
+				-->
+				
+				
+				<!-- semi-transparent IF VIDEO OR VIS SHOWING -->
+				<control type="image" id="9999991">
+					<left>0</left>
+					<top>0</top>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">_added_img/1280x720_black.png</texture>
+					
+					<!--
+					<visible>!Control.IsVisible(9999992)</visible>
+					-->
+					<visible>
+					[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | 
+					
+					[
+					!Player.HasVideo + Player.HasAudio + 
+					[!Skin.HasSetting(ShowBackgroundVis) + !String.IsEmpty(Visualisation.Name)]
+					]
+					</visible>
+					
+					
+					<animation effect="fade" end="88" time="0" condition="true">Conditional</animation><!--88-->
+				</control>
+				
+				
+				
+				<!-- semi-transparent IF NO MOVING BACKGROUND -->
+				<control type="image" id="9999992">
+					<left>0</left>
+					<top>0</top>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">_added_img/1280x720_black.png</texture>
+					<!--
+					<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + 
+							![
+								!Player.HasVideo + Player.HasAudio + 
+								![
+								[Skin.HasSetting(ShowBackgroundVis) | [!Skin.HasSetting(ShowBackgroundVis) + String.IsEmpty(Visualisation.Name)]] | 
+								!String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))
+								]
+							]</visible>
+					-->
+					<visible>!Control.IsVisible(9999991)</visible>
+					
+					<animation effect="fade" end="76" time="0" condition="true">Conditional</animation><!-- 76 -->
+				</control>
+				
+				
+				
+				
+				<!-- semi-transparent IF NO ARTWORK + VIDEO -->
+				<!--
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">_added_img/1280x720_black.png</texture>
+					
+					<visible>!Control.IsVisible(9999992) + [Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)]</visible>
+					
+					<animation effect="fade" end="88" time="0" condition="true">Conditional</animation>
+				</control>
+				-->
+				
+				
+				
+				
+				
+			</control>
+			
+		</control>
+		
+	</include>
+	
+</includes>

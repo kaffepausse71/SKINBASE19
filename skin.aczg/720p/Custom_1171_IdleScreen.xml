@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1171">
+		
+	<defaultcontrol always="true">11711</defaultcontrol>
+	
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	
+	<controls>
+	
+		<control type="button" id="11711">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+			<hitrect x="0" y="0" w="1280" h="720" />
+			<onclick>noop</onclick>
+		</control>
+		
+		<!--
+		<control type="label">
+			<left>0</left>
+			<top>0</top>
+			<width>250</width>
+			<height>35</height>
+			<font>Regular17</font>
+			<label>IT: $INFO[System.IdleTime]</label>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		
+		
+		<control type="button" id="11711">
+			<description>Fake button for mouse control</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texturenofocus></texturenofocus>
+			<texturefocus>_added_img/DefaultSuperFolderVideos.png</texturefocus>
+			<onleft>SetFocus(11712)</onleft>
+			<onup>SetFocus(11712)</onup>
+			<onright>SetFocus(11712)</onright>
+			<ondown>SetFocus(11712)</ondown>
+			<onclick>SetFocus(11712)</onclick>
+		</control>
+		
+		<control type="button" id="11712">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texturefocus>kodi-logo.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<onfocus>SetFocus(11711)</onfocus>
+			<onfocus>Dialog.Close(1171,true)</onfocus>
+			
+			<onclick>SetFocus(11711)</onclick>
+			<onclick>Dialog.Close(1171,true)</onclick>
+			
+			<hitrect x="0" y="0" w="1280" h="720" />
+		</control>
+		-->
+		
+	</controls>
+</window>

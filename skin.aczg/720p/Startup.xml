@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	
+	<!-- KODI 18 defaultcontrol bug fix -->
+	<onload>SetProperty(HomeDefaultControlTempFix,,home)</onload>
+	<onload>CancelAlarm(HomeDefaultControlTempFixAlarm,silent)</onload>
+	
+	<onload>SetProperty(ExperimentalStartScreenDone,,home)</onload>
+	<onload>SetProperty(ExperimentalStartScreenDoneDelayed,,home)</onload>
+	<onload>CancelAlarm(ExperimentalStartScreenAlarm1,silent)</onload>
+	<onload>CancelAlarm(ExperimentalStartScreenAlarm2,silent)</onload>
+	<onload>CancelAlarm(ExperimentalStartScreenAlarm3,silent)</onload>
+	<onload>CancelAlarm(ExperimentalStartScreenAlarm4,silent)</onload>
+	
+	<onload>CancelAlarm(ShutdownInProgressCancelIfNotWorking,silent)</onload>
+	<onload>ClearProperty(ShutdownInProgressText,home)</onload>
+	
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	
+	<controls></controls>
+</window>

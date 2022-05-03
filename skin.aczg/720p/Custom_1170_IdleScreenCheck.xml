@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1170">
+	
+	<visible>
+		[
+		!Skin.HasSetting(ExperimentalStartScreenEnabled) | [Skin.HasSetting(ExperimentalStartScreenEnabled) + !String.IsEmpty(Window(home).Property(ExperimentalStartScreenDoneDelayed))]
+		]
+		+
+		[
+		Window.IsActive(Home) + [!Player.HasMedia | [!Player.HasVideo + Player.HasAudio]] + 
+		!Window.IsVisible(movieinformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(contextmenu) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(favourites) + !Window.IsVisible(1107) + !Window.IsVisible(1102)
+		]
+		+
+		[
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),1) + System.IdleTime(15)] | 
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),2) + System.IdleTime(30)] | 
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),3) + System.IdleTime(60)] | 
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),4) + System.IdleTime(120)]
+		]
+	</visible>
+	<!--
+	<visible>
+		[
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),1) + System.IdleTime(15)] | 
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),2) + System.IdleTime(30)] | 
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),3) + System.IdleTime(60)] | 
+		[String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),4) + System.IdleTime(120)]
+		]
+		+
+		[
+		
+		[Window.IsVisible(1171) | Window.IsVisible(1170)] | 
+		
+		[Window.IsActive(Home) + [!Player.HasMedia | [!Player.HasVideo + Player.HasAudio]] + 
+		!Window.IsVisible(movieinformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(contextmenu) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(favourites) + !Window.IsVisible(1107) + !Window.IsVisible(1102)]
+		
+		]
+	</visible>
+	-->
+	<onload>ActivateWindow(1171)</onload>
+	<onunload>Dialog.Close(1171,true)</onunload>
+	<!--
+	<onunload>Notification(ASDASDD,$INFO[System.IdleTime],3000)</onunload>
+	-->
+	<!--
+	<defaultcontrol always="true">9001</defaultcontrol>
+	-->
+	
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	
+	<controls>
+	</controls>
+</window>

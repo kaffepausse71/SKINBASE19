@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">3000</defaultcontrol>
+	
+	<include>dialogeffect</include>
+	
+	<controls>
+		<control type="group">
+			<include>BehindDialogFadeOut</include>
+		</control>
+		<control type="group">
+			<left>185</left>
+			<top>40</top>
+			<include content="DialogBackgroundCommons">
+				<param name="DialogBackgroundWidth" value="920" />
+				<param name="DialogBackgroundHeight" value="639" />
+				<param name="DialogHeaderWidth" value="908" />
+				<param name="DialogHeaderLabel" value="-" />
+				<param name="DialogHeaderId" value="1" />
+				<param name="CloseButtonLeft" value="845" />
+				<param name="CloseButtonNav" value="3000" />
+			</include>
+			<control type="textbox" id="5">
+				<left>30</left>
+				<top>76</top>
+				<width>836</width>
+				<height>524</height>
+				<pagecontrol>3000</pagecontrol>
+				<font>Regular20+</font>
+				<label></label>
+			</control>
+			<control type="scrollbar" id="3000">
+				<left>880</left>
+				<top>76</top>
+				<width>25</width>
+				<height>530</height>
+				<texturesliderbackground border="10">scrollbars/ScrollBarUni-bg.png</texturesliderbackground>
+				<texturesliderbar border="10">scrollbars/ScrollBarUni-bar.png</texturesliderbar>
+				<texturesliderbarfocus border="10">scrollbars/ScrollBarUni-bar-focus.png</texturesliderbarfocus>
+				<textureslidernib>scrollbars/ScrollBarUni-nib.png</textureslidernib>
+				<textureslidernibfocus>scrollbars/ScrollBarUni-nib.png</textureslidernibfocus>
+				<onleft>3000</onleft>
+				<onup>5234</onup>
+				<onright>3000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+		</control>
+	</controls>
+</window>

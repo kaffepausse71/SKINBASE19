@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>04.  UHD movies</name>
+    <match>one</match>
+    <rule field="filename" operator="contains">
+        <value>(UHD)</value>
+    </rule>
+    <rule field="filename" operator="contains">
+        <value>(4K)</value>
+    </rule>
+    <rule field="filename" operator="contains">
+        <value>2160p</value>
+    </rule>
+    <order direction="descending">year</order>
+</smartplaylist>

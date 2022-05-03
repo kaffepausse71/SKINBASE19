@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- ==============================================================================
+	DRC OnLoad VARS
+	=================================================================================== -->
+	<include name="VolumeAmplification_Volume_Preset_Vars_OnLoad">
+		<!-- 100    0.0 dB -->
+		<!--  90   -6.0 dB -->
+		<!--  88   -7.2 dB -->
+		<!--  86   -8.4 dB -->
+		<!--  84   -9.6 dB -->
+		<!--  82  -10.8 dB -->
+		<!--  80  -12.0 dB -->
+		<!--  78  -13.2 dB -->
+		<!--  76  -14.4 dB -->
+		<!--  74  -15.6 dB -->
+		<!--  72  -16.8 dB -->
+		<!--  70  -18.0 dB -->
+		<onload>SetProperty(DRC_Volume_Preset_0,84,home)</onload>
+		<onload>SetProperty(DRC_Volume_Preset_1,84,home)</onload>
+		<onload>SetProperty(DRC_Volume_Preset_2,84,home)</onload>
+		<onload>SetProperty(DRC_Volume_Preset_3,84,home)</onload>
+		<onload>SetProperty(DRC_Volume_Preset_4,82,home)</onload>
+		<onload>SetProperty(DRC_Volume_Preset_5,80,home)</onload>
+	</include>
+	
+	<include name="VolumeAmplification_Set_to_Presets_OnLoad">
+		<!-- Set "Volume Amplification" to x dB (max is 60 dB) -->
+		<!-- volampup -->
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		<onload>volampup</onload>
+		
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),1) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),1) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">volampup</onload>
+		
+	</include>
+	<include name="VolumeAmplification_Set_to_Presets_OnClick">
+		<!-- Set "Volume Amplification" to x dB (max is 60 dB) -->
+		<!-- volampup -->
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">volampup</onclick>
+		
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),1) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),1) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4) | String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">volampup</onclick>
+		
+	</include>
+	
+	<include name="VolumeAmplification_Reset_to_Zero_OnLoad">
+		<!-- Set "Volume Amplification" to 0 dB (max is 60 dB) -->
+		<!-- volampdown 6 x 10 -->
+		<onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload>
+		<onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload>
+		<onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload>
+		<onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload>
+		<onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload>
+		<onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload><onload>volampdown</onload>
+	</include>
+	<include name="VolumeAmplification_Reset_to_Zero_OnClick">
+		<!-- Set "Volume Amplification" to 0 dB (max is 60 dB) -->
+		<!-- volampdown 6 x 10 -->
+		<onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick>
+		<onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick>
+		<onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick>
+		<onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick>
+		<onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick>
+		<onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick><onclick condition="!Player.Passthrough">volampdown</onclick>
+	</include>
+	
+	<!-- ==============================================================================
+	DRC OnLoad OFF
+	=================================================================================== -->
+	<include name="VolumeAmplification_Preset_DRC_OnLoad_OFF">
+		
+		<include>VolumeAmplification_Reset_to_Zero_OnLoad</include>
+		
+		<!-- Set "Volume" to 0 dB -->
+		<onload>SetVolume(100,false)</onload>
+		
+		<onload>SetProperty(DRC,False,home)</onload>
+		<onload>SetProperty(DRCid,"$INFO[Player.Filenameandpath]",home)</onload>
+		<onload>SetProperty(DRCidFileName,"$INFO[Player.Filename]",home)</onload>
+		 
+		<!--<onload>Notification(Dynamic Range Compression,OFF,2500,_added_img/DefaultIconInfoDRC.png)</onload>-->
+		
+	</include>
+	
+	<!-- ==============================================================================
+	DRC OnLoad ON
+	=================================================================================== -->
+	<include name="VolumeAmplification_Preset_DRC_OnLoad_ON">
+		
+		<include>VolumeAmplification_Reset_to_Zero_OnLoad</include>
+		
+		<!-- Set "Volume" to -X dB -->
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),0) | String.IsEmpty(Skin.String(ExperimentalVolumeAmplificationLevel))">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_0)],false)</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),1)">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_1)],false)</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2)">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_2)],false)</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3)">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_3)],false)</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4)">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_4)],false)</onload>
+		<onload condition="String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_5)],false)</onload>
+		
+		<include>VolumeAmplification_Set_to_Presets_OnLoad</include>
+		
+		<onload>SetProperty(DRC,True,home)</onload>
+		<onload>SetProperty(DRCid,"$INFO[Player.Filenameandpath]",home)</onload>
+		<onload>SetProperty(DRCidFileName,"$INFO[Player.Filename]",home)</onload>
+		
+		<!--<onload>Notification(Dynamic Range Compression,ON,2500,_added_img/DefaultIconInfoDRC.png)</onload>-->
+		
+	</include>
+	
+	
+	
+	
+	
+	
+	<!-- ==============================================================================
+	DRC OnClick TOGGLE
+	=================================================================================== -->
+	<include name="VolumeAmplification_Preset_DRC_Toggle">
+		
+		<include>VolumeAmplification_Reset_to_Zero_OnClick</include>
+		
+		<!-- ======================================================================== -->
+		
+		<!-- Set "Volume" to 0 dB -->
+		<onclick condition="!Player.Passthrough + String.IsEqual(Window(home).Property(DRC),True)">SetVolume(100,false)</onclick>
+		
+		<onclick condition="!Player.Passthrough + String.IsEqual(Window(home).Property(DRC),True)">SetProperty(DRC,False,home)</onclick>
+		<onclick condition="!Player.Passthrough + String.IsEqual(Window(home).Property(DRC),True)">SetProperty(DRCid,"$INFO[Player.Filenameandpath]",home)</onclick>
+		<onclick condition="!Player.Passthrough + String.IsEqual(Window(home).Property(DRC),True)">SetProperty(DRCidFileName,"$INFO[Player.Filename]",home)</onclick>
+		
+		<onclick condition="!Player.Passthrough + String.IsEqual(Window(home).Property(DRC),True)">Notification(Dynamic Range Compression,OFF,1000,_added_img/DefaultIconInfoDRC.png)</onclick>
+		
+		<!-- ======================================================================== -->
+		
+		<!-- Set "Volume" to -X dB -->
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),0) | String.IsEmpty(Skin.String(ExperimentalVolumeAmplificationLevel))]">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_0)],false)</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),1)]">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_1)],false)</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),2)]">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_2)],false)</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),3)]">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_3)],false)</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),4)]">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_4)],false)</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))] + [String.IsEqual(Skin.String(ExperimentalVolumeAmplificationLevel),5)]">SetVolume($INFO[Window(home).Property(DRC_Volume_Preset_5)],false)</onclick>
+		
+		<include>VolumeAmplification_Set_to_Presets_OnClick</include>
+		
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">SetProperty(DRC,True,home)</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">SetProperty(DRCid,"$INFO[Player.Filenameandpath]",home)</onclick>
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">SetProperty(DRCidFileName,"$INFO[Player.Filename]",home)</onclick>
+		
+		<onclick condition="!Player.Passthrough + [String.IsEqual(Window(home).Property(DRC),False) | String.IsEmpty(Window(home).Property(DRC))]">Notification(Dynamic Range Compression,ON,1000,_added_img/DefaultIconInfoDRC.png)</onclick>
+		
+		<onclick condition="Player.Passthrough">Notification(Can't use VolumeAmplification-DRC,DISABLE audio passthrough first,5000,DefaultIconError.png)</onclick>
+		
+	</include>
+	
+	
+	
+	
+	
+	
+	<include name="BehindDialogDarkBackground">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>_added_img/100x100_black.png</texture>
+			<animation effect="fade" end="85" time="0" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
+	<include name="BehindDialogDarkBackgroundLighter">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>_added_img/100x100_black.png</texture>
+			<animation effect="fade" end="75" time="0" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
+	<include name="BehindDialogDarkBackgroundDarker">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>_added_img/100x100_black.png</texture>
+			<animation effect="fade" end="96" time="0" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
+	<include name="BehindDialogDarkBackgroundDarkest">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>_added_img/100x100_black.png</texture>
+			<animation effect="fade" end="98" time="0" condition="true">Conditional</animation>
+		</control>
+	</include>
+	
+	<include name="BehindDialogBlackBackground">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>_added_img/100x100_black.png</texture>
+		</control>
+	</include>
+	
+	
+	
+	
+	
+	
+	<include name="HomeItemsWidgetLayoutType1">
+		<itemlayout width="180" height="236">
+			<control type="image">
+				<left>24</left>
+				<top>10</top>
+				<width>132</width>
+				<height>194</height>
+				<!-- 122x178 = poster wall ratio --><!-- 124 x 178 -->
+				<texture background="true" colordiffuse="ffd2d2d2">$INFO[ListItem.Art(poster)]</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<control type="image">
+				<left>8</left>
+				<top>10</top>
+				<width>164</width>
+				<height>194</height>
+				<texture background="true" colordiffuse="ffd2d2d2">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			
+			<control type="image">
+				<left>134</left>
+				<top>180</top>
+				<width>21</width>
+				<height>21</height>
+				<aspectratio>keep</aspectratio>
+				<!--<texture background="true">$INFO[ListItem.Overlay]</texture>-->
+				<texture background="true">OverlayWatched.png</texture>
+				<animation effect="fade" end="85" time="0" condition="true">Conditional</animation>
+				<visible>!String.IsEmpty(ListItem.PlayCount)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>194</top>
+				<width>180</width>
+				<height>10</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">_added_img/OverlayDiscImage.png</texture>
+				<visible>String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)</visible>
+			</control>
+			<!-- 4K BANNER -->
+			<control type="image">
+				<left>24</left>
+				<top>196</top>
+				<width>126</width>
+				<height>8</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture background="true">_added_img/OverlayUHD.png</texture>
+				<visible>[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)] + !String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<!-- HFR BANNER -->
+			<control type="image">
+				<left>48</left>
+				<top>196</top>
+				<width>126</width>
+				<height>8</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture background="true">_added_img/OverlayHFR.png</texture>
+				<visible>[[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)] + !String.IsEmpty(ListItem.Art(poster))] 
+						+ String.Contains(ListItem.FileName,"(HFR)")</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout width="180" height="236">
+			<control type="image">
+				<description>background</description>
+				<left>6</left>
+				<top>5</top>
+				<width>168</width>
+				<height>226</height>
+				<texture background="true" border="4">_added_img/RecentAddedBack_hover.png</texture>
+				<visible>Control.HasFocus($PARAM[list_id])</visible>
+			</control>
+			
+			<control type="image">
+				<left>24</left>
+				<top>10</top>
+				<width>132</width>
+				<height>194</height>
+				<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>Control.HasFocus($PARAM[list_id]) + !String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<control type="image">
+				<left>8</left>
+				<top>10</top>
+				<width>164</width>
+				<height>194</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Control.HasFocus($PARAM[list_id]) + String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			
+			<control type="image">
+				<left>24</left>
+				<top>10</top>
+				<width>132</width>
+				<height>194</height>
+				<texture background="true" colordiffuse="ffd2d2d2">$INFO[ListItem.Art(poster)]</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>!Control.HasFocus($PARAM[list_id]) + !String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<control type="image">
+				<left>8</left>
+				<top>10</top>
+				<width>164</width>
+				<height>194</height>
+				<texture background="true" colordiffuse="ffd2d2d2">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!Control.HasFocus($PARAM[list_id]) + String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<control type="label">
+				<left>15</left>
+				<top>206</top>
+				<width>150</width>
+				<height>20</height>
+				<font>Regular15</font>
+				<textcolor>white</textcolor>
+				<selectedcolor>selected</selectedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>Control.HasFocus($PARAM[list_id]) | [Window.IsVisible(contextmenu) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(favourites) + !Window.IsVisible(1107) + !Window.IsVisible(1102)]</visible>
+			</control>
+			
+			<control type="image">
+				<left>134</left>
+				<top>180</top>
+				<width>21</width>
+				<height>21</height>
+				<aspectratio>keep</aspectratio>
+				<!--<texture background="true">$INFO[ListItem.Overlay]</texture>-->
+				<texture background="true">OverlayWatched.png</texture>
+				<animation effect="fade" end="85" time="0" condition="true">Conditional</animation>
+				<visible>!String.IsEmpty(ListItem.PlayCount)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>194</top>
+				<width>180</width>
+				<height>10</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">_added_img/OverlayDiscImage.png</texture>
+				<visible>String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)</visible>
+			</control>
+			<!-- 4K BANNER -->
+			<control type="image">
+				<left>24</left>
+				<top>196</top>
+				<width>126</width>
+				<height>8</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture background="true">_added_img/OverlayUHD.png</texture>
+				<visible>[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)] + !String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<!-- HFR BANNER -->
+			<control type="image">
+				<left>48</left>
+				<top>196</top>
+				<width>126</width>
+				<height>8</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture background="true">_added_img/OverlayHFR.png</texture>
+				<visible>[[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)] + !String.IsEmpty(ListItem.Art(poster))] 
+						+ String.Contains(ListItem.FileName,"(HFR)")</visible>
+			</control>
+		</focusedlayout>
+	</include>
+	
+	
+	
+	
+	
+	<variable name="VideoOsdInfoButtonListType">
+		<value condition="VideoPlayer.Content(Movies)">movie</value>
+		<value condition="VideoPlayer.Content(Episodes)">episode</value>
+		<value></value>
+	</variable>
+	<variable name="VideoOsdInfoButtonContentVar">
+		<value condition="VideoPlayer.Content(Movies) + !String.IsEmpty(VideoPlayer.DBID)">plugin://service.library.data.provider.lite?type=movie&amp;dbid=$INFO[VideoPlayer.DBID]</value>
+		<value condition="VideoPlayer.Content(Episodes) + !String.IsEmpty(VideoPlayer.DBID)">plugin://service.library.data.provider.lite?type=episode&amp;dbid=$INFO[VideoPlayer.DBID]</value>
+		<value></value>
+	</variable>
+	<include name="VideoOsdInfoButtonList">
+		<control type="list" id="43260">
+			<left>0</left>
+			<top>0</top>
+			<width>1</width>
+			<height>1</height>
+			<itemlayout/>
+			<focusedlayout/>
+			<!--<content>plugin://service.library.data.provider?type=$VAR[VideoOsdInfoButtonListType]&amp;dbid=$INFO[VideoPlayer.DBID]&amp;dbtype=$VAR[VideoOsdInfoButtonListType]</content>-->
+			<content>$VAR[VideoOsdInfoButtonContentVar]</content>
+		</control>
+	</include>
+	
+	
+	
+	
+	
+	<include name="ExtendedInfoAutoComplete">
+		<control type="group" id="5000">
+			<!--<animation effect="slide" start="0,-240" end="0,0" time="300" tween="quadratic" easing="out">VisibleChange</animation>-->
+			<visible>!String.IsEmpty(Control.GetLabel(312).index(1)) + !Control.IsVisible(313)</visible>
+			<top>100</top>
+			<left>0</left>
+			<!--
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>860</width>
+				<height>120</height>
+				<texture border="20">OverlayDialogBackground.png</texture>
+			</control>
+			-->
+			<control type="panel" id="9010">
+				<left>0</left>
+				<top>24</top>
+				<width>860</width>
+				<height>120</height>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<onup>300</onup>
+				<ondown>309</ondown>
+				<onback>noop</onback>
+				<orientation>vertical</orientation>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="40" width="286">
+					<control type="image">
+						<top>5</top>
+						<width>276</width>
+						<height>30</height>
+						<texture border="4" colordiffuse="28ffffff">KeyboardKey.png</texture>
+					</control>
+					<control type="label">
+						<left>5</left>
+						<top>5</top>
+						<width>266</width>
+						<height>30</height>
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<textoffsetx>0</textoffsetx>
+						<font>Regular19</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="286">
+					<control type="image">
+						<top>5</top>
+						<width>276</width>
+						<height>30</height>
+						<texture border="4">KeyboardKey.png</texture>
+					</control>
+					<control type="label">
+						<left>5</left>
+						<top>5</top>
+						<width>266</width>
+						<height>30</height>
+						<align>center</align>
+						<textoffsetx>0</textoffsetx>
+						<font>Regular19</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
+			</control>
+		</control>
+	</include>
+	
+	
+	<include name="RecentlyPlayedPvrNormal">
+		<content sortby="lastplayed" sortorder="descending" target="pvr" limit="4">pvr://channels/tv/*?view=lastplayed</content>
+	</include>
+	<include name="RecentlyPlayedPvrShort">
+		<content sortby="lastplayed" sortorder="descending" target="pvr" limit="3">pvr://channels/tv/*?view=lastplayed</content>
+	</include>
+	
+	
+	<include name="setDefaultControl">
+		<defaultcontrol always="false">$PARAM[uid]</defaultcontrol>
+	</include>
+	<include name="setDefaultControlAlways">
+		<defaultcontrol always="true">$PARAM[uid]</defaultcontrol>
+	</include>
+	
+	
+	<include name="idleFadeOut_Include">
+		<animation effect="fade" start="100" end="$PARAM[alphaEnd]" time="2000" condition="Window.IsVisible(1171)">Conditional</animation>
+	</include>
+	<include name="idleFadeOutFull">
+		<include condition="!String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),0) + !String.IsEmpty(Skin.String(HomeScreenIdleUIFadeOut))" content="idleFadeOut_Include">
+			<param name="alphaEnd" value="0" />
+		</include>
+	</include>
+	<include name="idleFadeOutMedium">
+		<include condition="!String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),0) + !String.IsEmpty(Skin.String(HomeScreenIdleUIFadeOut))" content="idleFadeOut_Include">
+			<param name="alphaEnd" value="40" />
+		</include>
+	</include>
+	<include name="idleFadeOutMinimal">
+		<include condition="!String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),0) + !String.IsEmpty(Skin.String(HomeScreenIdleUIFadeOut))" content="idleFadeOut_Include">
+			<param name="alphaEnd" value="75" />
+		</include>
+	</include>
+	
+	<include name="CustomBackgroundMultipleTimePerImage_Include_0">
+		<timeperimage>999999</timeperimage>
+	</include>
+	<include name="CustomBackgroundMultipleTimePerImage_Include_1">
+		<timeperimage>3000</timeperimage>
+	</include>
+	<include name="CustomBackgroundMultipleTimePerImage_Include_2">
+		<timeperimage>5000</timeperimage>
+	</include>
+	<include name="CustomBackgroundMultipleTimePerImage_Include_3">
+		<timeperimage>7000</timeperimage>
+	</include>
+	<include name="CustomBackgroundMultipleTimePerImage_Include_4">
+		<timeperimage>9000</timeperimage>
+	</include>
+	<include name="CustomBackgroundMultipleTimePerImage_Include_5">
+		<timeperimage>12000</timeperimage>
+	</include>
+	<include name="CustomBackgroundMultipleTimePerImage_Include_6">
+		<timeperimage>15000</timeperimage>
+	</include>
+	
+	
+</includes>

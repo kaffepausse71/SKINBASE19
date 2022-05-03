@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	
+	<include name="scrollBarStyle">
+		<texturesliderbackground border="10">scrollbars/ScrollBarUni-bg.png</texturesliderbackground>
+		<texturesliderbar border="10">scrollbars/ScrollBarUni-bar.png</texturesliderbar>
+		<texturesliderbarfocus border="10">scrollbars/ScrollBarUni-bar-focus.png</texturesliderbarfocus>
+		<textureslidernib>scrollbars/ScrollBarUni-nib.png</textureslidernib>
+		<textureslidernibfocus>scrollbars/ScrollBarUni-nib.png</textureslidernibfocus>
+		<animation effect="fade" end="75" time="0" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="WallView2x7_itemLayout">
+					
+					
+					
+					<!-- poster image option a: scaled (if poster IS available) -->
+					<control type="image">
+						<left>8</left>
+						<top>7</top>
+						<width>164</width>
+						<height>240</height>
+						<texture background="true" colordiffuse="ffd2d2d2">$VAR[PosterThumb]</texture><!--ffe3e3e3-->
+						<aspectratio>scale</aspectratio>
+						<visible>String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<!-- poster image option b: keep (if poster is NOT available) -->
+					<control type="image">
+						<left>8</left>
+						<top>7</top>
+						<width>164</width>
+						<height>240</height>
+						<texture background="true" colordiffuse="ffd2d2d2">$VAR[PosterThumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!String.IsEmpty(Container.PluginName) | String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					
+					
+					
+					<!-- ISO / DVD IMAGE OVERLAY -->
+					<control type="image">
+						<left>77</left>
+						<top>237</top>
+						<width>18</width>
+						<height>10</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">_added_img/OverlayDiscImage.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)</visible>
+					</control>
+					
+					
+					
+					<!-- 4K BANNER -->
+					<control type="image">
+						<left>8</left>
+						<top>239</top>
+						<width>164</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayUHD.png</texture>
+						<visible>[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]</visible>
+					</control>
+					<!-- HFR BANNER -->
+					<control type="image">
+						<left>32</left>
+						<top>239</top>
+						<width>164</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayHFR.png</texture>
+						<visible>[[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]]
+								+ String.Contains(ListItem.FileName,"(HFR)")</visible>
+					</control>
+					
+					
+					<!-- label text -->
+					<control type="label">
+						<left>7</left>
+						<top>247</top>
+						<width>166</width>
+						<height>25</height>
+						<font>Regular14</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<!--<visible>!Skin.HasSetting(HideWallViewLabelsForLibrary) | ListItem.IsPlaying | [Skin.HasSetting(HideWallViewLabelsForLibrary) + [!String.IsEmpty(Container.PluginName) | [String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder] | [!Container.Content(Movies) + !Container.Content(TvShows)]]]</visible>-->
+						<visible>ListItem.IsPlaying | [!String.IsEmpty(Container.PluginName) | [String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder] | [!Container.Content(Movies) + !Container.Content(TvShows)]]</visible>
+					</control>
+					<!-- overlay (watched etc.) -->
+					<control type="image">
+						<left>151</left>
+						<top>226</top>
+						<width>21</width>
+						<height>21</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
+					</control>
+	</include>
+	
+	<include name="WallView2x7_focusedLayout">
+					
+					
+					
+					<!-- new: border texture only -->
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>178</width>
+						<height>274</height>
+						<bordertexture border="7">_added_img/posterwall_100x100_blue_border_7px.png</bordertexture>
+						<bordersize>7</bordersize>
+						<texture background="true">_added_img/posterwall_100x100_clear.png</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					
+					
+					<!-- poster image option a: scaled (if poster IS available) -->
+					<control type="image">
+						<left>8</left>
+						<top>7</top>
+						<width>164</width>
+						<height>240</height>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<aspectratio>scale</aspectratio>
+						<visible>String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<!-- poster image option b: keep (if poster is NOT available) -->
+					<control type="image">
+						<left>8</left>
+						<top>7</top>
+						<width>164</width>
+						<height>240</height>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!String.IsEmpty(Container.PluginName) | String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					
+					
+					
+					<!-- ISO / DVD IMAGE OVERLAY -->
+					<control type="image">
+						<left>77</left>
+						<top>237</top>
+						<width>18</width>
+						<height>10</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">_added_img/OverlayDiscImage.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)</visible>
+					</control>
+					
+					
+					
+					<!-- 4K BANNER -->
+					<control type="image">
+						<left>8</left>
+						<top>239</top>
+						<width>164</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayUHD.png</texture>
+						<visible>[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]</visible>
+					</control>
+					<!-- HFR BANNER -->
+					<control type="image">
+						<left>32</left>
+						<top>239</top>
+						<width>164</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayHFR.png</texture>
+						<visible>[[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]]
+								+ String.Contains(ListItem.FileName,"(HFR)")</visible>
+					</control>
+					
+					
+					<!-- label highlighted background -->
+					<control type="image">
+						<left>1</left>
+						<top>247</top>
+						<width>178</width>
+						<height>27</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">_added_img/posterwall_100x100_blue.png</texture>
+					</control>
+					<!-- label text -->
+					<control type="label">
+						<left>7</left>
+						<top>247</top>
+						<width>166</width>
+						<height>25</height>
+						<font>Regular14</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<!-- overlay (watched etc.) -->
+					<control type="image">
+						<left>151</left>
+						<top>226</top>
+						<width>21</width>
+						<height>21</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
+					</control>
+	</include>
+	
+	<include name="WallView3x9_itemLayout">
+					
+					
+					
+					<!-- poster image option a: scaled (if poster IS available) -->
+					<control type="image">
+						<left>6</left>
+						<top>6</top>
+						<width>126</width>
+						<height>184</height>
+						<texture background="true" colordiffuse="ffd2d2d2">$VAR[PosterThumb]</texture>
+						<aspectratio>scale</aspectratio>
+						<visible>String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<!-- poster image option b: keep (if poster is NOT available) -->
+					<control type="image">
+						<left>6</left>
+						<top>6</top>
+						<width>126</width>
+						<height>184</height>
+						<texture background="true" colordiffuse="ffd2d2d2">$VAR[PosterThumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!String.IsEmpty(Container.PluginName) | String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					
+					
+					
+					<!-- ISO / DVD IMAGE OVERLAY -->
+					<control type="image">
+						<left>60</left><!-- 112 -->
+						<top>180</top>
+						<width>18</width>
+						<height>10</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">_added_img/OverlayDiscImage.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)</visible>
+					</control>
+					
+					
+					
+					<!-- 4K BANNER -->
+					<control type="image">
+						<left>6</left>
+						<top>182</top>
+						<width>126</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayUHD.png</texture>
+						<visible>[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]</visible>
+					</control>
+					<!-- HFR BANNER -->
+					<control type="image">
+						<left>30</left>
+						<top>182</top>
+						<width>126</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayHFR.png</texture>
+						<visible>[[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]]
+								+ String.Contains(ListItem.FileName,"(HFR)")</visible>
+					</control>
+					
+					
+					<!-- label text -->
+					<control type="label">
+						<left>6</left>
+						<top>187</top>
+						<width>126</width>
+						<height>24</height>
+						<font>Regular11</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<!--<visible>!Skin.HasSetting(HideWallViewLabelsForLibrary) | ListItem.IsPlaying | [Skin.HasSetting(HideWallViewLabelsForLibrary) + [!String.IsEmpty(Container.PluginName) | [String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder] | [!Container.Content(Movies) + !Container.Content(TvShows)]]]</visible>-->
+						<visible>ListItem.IsPlaying | [!String.IsEmpty(Container.PluginName) | [String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder] | [!Container.Content(Movies) + !Container.Content(TvShows)]]</visible>
+					</control>
+					<!-- overlay (watched etc.) -->
+					<control type="image">
+						<left>110</left>
+						<top>165</top>
+						<width>21</width>
+						<height>21</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
+					</control>
+	</include>
+	
+	<include name="WallView3x9_focusedLayout">
+					
+					
+					
+					<!-- new: border texture only -->
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>138</width>
+						<height>208</height>
+						<bordertexture border="6">_added_img/posterwall_100x100_blue_border_6px.png</bordertexture>
+						<bordersize>6</bordersize>
+						<texture background="true">_added_img/posterwall_100x100_clear.png</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					
+					
+					<!-- poster image option a: scaled (if poster IS available) -->
+					<control type="image">
+						<left>6</left>
+						<top>6</top>
+						<width>126</width>
+						<height>184</height>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<aspectratio>scale</aspectratio>
+						<visible>String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<!-- poster image option b: keep (if poster is NOT available) -->
+					<control type="image">
+						<left>6</left>
+						<top>6</top>
+						<width>126</width>
+						<height>184</height>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!String.IsEmpty(Container.PluginName) | String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					
+					
+					
+					<!-- ISO / DVD IMAGE OVERLAY -->
+					<control type="image">
+						<left>60</left><!-- 112 -->
+						<top>180</top>
+						<width>18</width>
+						<height>10</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">_added_img/OverlayDiscImage.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)</visible>
+					</control>
+					
+					
+					
+					<!-- 4K BANNER -->
+					<control type="image">
+						<left>6</left>
+						<top>182</top>
+						<width>126</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayUHD.png</texture>
+						<visible>[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]</visible>
+					</control>
+					<!-- HFR BANNER -->
+					<control type="image">
+						<left>30</left>
+						<top>182</top>
+						<width>126</width>
+						<height>8</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">_added_img/OverlayHFR.png</texture>
+						<visible>[[String.IsEqual(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileName,"(UHD)") | String.Contains(ListItem.FileName,2160p)]]
+								+ String.Contains(ListItem.FileName,"(HFR)")</visible>
+					</control>
+					
+					
+					<!-- label highlighted background -->
+					<control type="image">
+						<left>0</left>
+						<top>190</top>
+						<width>138</width>
+						<height>18</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">_added_img/posterwall_100x100_blue.png</texture>
+					</control>
+					<!-- label text -->
+					<control type="label">
+						<left>6</left>
+						<top>187</top>
+						<width>126</width>
+						<height>24</height>
+						<font>Regular11</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<!-- overlay (watched etc.) -->
+					<control type="image">
+						<left>110</left>
+						<top>165</top>
+						<width>21</width>
+						<height>21</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
+					</control>
+	</include>
+	
+	
+	
+	
+	
+	<!-- WALL VIEW 2x7 -->
+	
+	<include name="ThumbnailView">
+		<control type="group">
+			<visible>Control.IsVisible(500)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="panel" id="500">
+				
+				<visible>!Container.Content(Years) + !Container.Content(Tags) + !Container.Content(Genres) + !Container.Content(Countries) + !Container.Content(Studios) + !Container.Content(Directors)</visible>
+				
+				<left>10</left><!-- BEFORE SCROLLBAR WAS ADDED - left=16 -->
+				<top>0</top>
+				<width>1260</width>
+				<height>720</height>
+				<onleft>2</onleft>
+				<onright>500</onright><!-- 60 -->
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="Wall View 2x7">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<!--<scrolltime tween="sine" easing="inout">450</scrolltime>-->
+				<scrolltime tween="quadratic" easing="out">475</scrolltime>
+				<preloaditems>2</preloaditems>
+				<itemlayout width="179" height="275">
+					<control type="group">
+						<top>44</top>
+						<include>WallView2x7_itemLayout</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="179" height="275">
+					<control type="group">
+						<top>44</top>
+						<include>WallView2x7_focusedLayout</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="scrollbar" id="60">
+				<left>1262</left>
+				<top>-2</top>
+				<width>20</width>
+				<height>724</height>
+				<include>scrollBarStyle</include>
+				<onleft>500</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(500)</visible>
+			</control>
+
+		</control>
+	</include>
+	
+	
+	
+	
+	
+	
+	<!-- WALL VIEW 3x9 -->
+	
+	<include name="WallView2">
+		<control type="group">
+			<visible>Control.IsVisible(909)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="panel" id="909">
+				
+				<visible>!Container.Content(Years) + !Container.Content(Tags) + !Container.Content(Genres) + !Container.Content(Countries) + !Container.Content(Studios) + !Container.Content(Directors)</visible>
+				
+				<left>11</left><!-- BEFORE SCROLLBAR WAS ADDED - left=16 -->
+				<top>0</top>
+				<width>1260</width>
+				<height>720</height>
+				<onleft>2</onleft>
+				<onright>909</onright><!-- 60 -->
+				<onup>909</onup>
+				<ondown>909</ondown>
+				<viewtype label="Wall View 3x9">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<!--<scrolltime tween="sine" easing="inout">450</scrolltime>-->
+				<scrolltime tween="quadratic" easing="out">450</scrolltime>
+				<preloaditems>2</preloaditems>
+				<itemlayout width="139" height="209">
+					<control type="group">
+						<top>44</top>
+						<include>WallView3x9_itemLayout</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="139" height="209">
+					<control type="group">
+						<top>44</top>
+						<include>WallView3x9_focusedLayout</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="scrollbar" id="60">
+				<left>1262</left>
+				<top>-2</top>
+				<width>20</width>
+				<height>724</height>
+				<include>scrollBarStyle</include>
+				<onleft>909</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(909)</visible>
+			</control>
+
+		</control>
+	</include>
+	
+	
+	
+	
+	<!-- WALL VIEW 2x7 -->
+	
+	<include name="ThumbnailViewSwitched">
+		<control type="group">
+			<visible>Control.IsVisible(909)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="panel" id="909">
+				
+				<visible>!Container.Content(Years) + !Container.Content(Tags) + !Container.Content(Genres) + !Container.Content(Countries) + !Container.Content(Studios) + !Container.Content(Directors)</visible>
+				
+				<left>10</left><!-- BEFORE SCROLLBAR WAS ADDED - left=16 -->
+				<top>0</top>
+				<width>1260</width>
+				<height>720</height>
+				<onleft>2</onleft>
+				<onright>909</onright><!-- 60 -->
+				<onup>909</onup>
+				<ondown>909</ondown>
+				<viewtype label="Wall View 2x7">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<!--<scrolltime tween="sine" easing="inout">450</scrolltime>-->
+				<scrolltime tween="quadratic" easing="out">475</scrolltime>
+				<preloaditems>2</preloaditems>
+				<itemlayout width="179" height="275">
+					<control type="group">
+						<top>44</top>
+						<include>WallView2x7_itemLayout</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="179" height="275">
+					<control type="group">
+						<top>44</top>
+						<include>WallView2x7_focusedLayout</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="scrollbar" id="60">
+				<left>1262</left>
+				<top>-2</top>
+				<width>20</width>
+				<height>724</height>
+				<include>scrollBarStyle</include>
+				<onleft>909</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(909)</visible>
+			</control>
+
+		</control>
+	</include>
+	
+	
+	
+	
+	
+	
+	<!-- WALL VIEW 3x9 -->
+	
+	<include name="WallView2Switched">
+		<control type="group">
+			<visible>Control.IsVisible(500)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="panel" id="500">
+				
+				<visible>!Container.Content(Years) + !Container.Content(Tags) + !Container.Content(Genres) + !Container.Content(Countries) + !Container.Content(Studios) + !Container.Content(Directors)</visible>
+				
+				<left>11</left><!-- BEFORE SCROLLBAR WAS ADDED - left=16 -->
+				<top>0</top>
+				<width>1260</width>
+				<height>720</height>
+				<onleft>2</onleft>
+				<onright>500</onright><!-- 60 -->
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="Wall View 3x9">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<!--<scrolltime tween="sine" easing="inout">450</scrolltime>-->
+				<scrolltime tween="quadratic" easing="out">450</scrolltime>
+				<preloaditems>2</preloaditems>
+				<itemlayout width="139" height="209">
+					<control type="group">
+						<top>44</top>
+						<include>WallView3x9_itemLayout</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="139" height="209">
+					<control type="group">
+						<top>44</top>
+						<include>WallView3x9_focusedLayout</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="scrollbar" id="60">
+				<left>1262</left>
+				<top>-2</top>
+				<width>20</width>
+				<height>724</height>
+				<include>scrollBarStyle</include>
+				<onleft>500</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(500)</visible>
+			</control>
+
+		</control>
+	</include>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</includes>

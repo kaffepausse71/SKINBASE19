@@ -1,0 +1,779 @@
+# Kodi Media Center language file
+# Addon Name: Artwork Beef
+# Addon id: service.artwork.beef
+"Language: de_DE\n"
+
+msgid ""
+msgstr ""
+
+msgctxt "#32000"
+msgid "Unknown source"
+msgstr "Unbekannte Quelle"
+
+# Prefixed to 32019 if no artwork found or updated
+msgctxt "#32001"
+msgid "Something missing?"
+msgstr "Etwas fehlt?"
+
+msgctxt "#32002"
+# 0 = art type (poster/fanart/banner/etc)
+msgid "Season {0}"
+msgstr "Staffel {0}"
+
+msgctxt "#32003"
+msgid "NFO file"
+msgstr "NFO-Datei"
+
+msgctxt "#32004"
+msgid "video file"
+msgstr "Videodatei"
+
+msgctxt "#32005"
+msgid "Video file thumbnail"
+msgstr "Miniaturansicht der Videodatei"
+
+msgctxt "#32006"
+msgid "{0:d} available"
+msgstr "{0: d} verfügbar"
+
+msgctxt "#32007"
+msgid "artwork report"
+msgstr "Grafikbericht"
+
+# Messages
+
+msgctxt "#32019"
+msgid "Contribute or donate to the source: fanart.tv, thetvdb.com, themoviedb.org, theaudiodb.com"
+msgstr "Tragen Sie zur Quelle bei oder spenden Sie an sie: fanart.tv, thetvdb.com, themoviedb.org, theaudiodb.com"
+
+msgctxt "#32020"
+msgid "Adding extended artwork"
+msgstr "Hinzufügen erweiterter Grafiken"
+
+msgctxt "#32021"
+msgid "No artwork available"
+msgstr "Keine Grafik verfügbar"
+
+msgctxt "#32022"
+msgid "{0:d} artwork updated"
+msgstr "{0: d} Grafik aktualisiert"
+
+msgctxt "#32023"
+msgid "No artwork updated"
+msgstr "Kein Grafik aktualisiert"
+
+msgctxt "#32024"
+msgid "Error with provider '{0}'"
+msgstr "Fehler mit Anbieter '{0}'"
+
+msgctxt "#32025"
+msgid "Media type '{0}' not supported"
+msgstr "Der Medientyp '{0}' wird nicht unterstützt"
+
+msgctxt "#32026"
+# 0 = version of Kodi - "Kodi 16"
+msgid "{0} or newer required"
+msgstr "{0} oder neuer erforderlich"
+
+msgctxt "#32027"
+msgid "Removed {0:d} images"
+msgstr "{0: d} Bilder entfernt"
+
+# 0: media type - movie/series/seasons/episodes
+msgctxt "#32028"
+msgid "Listing all {0}"
+msgstr "Auflistung aller {0}"
+
+msgctxt "#32029"
+msgid "All items identified. Hurray!"
+msgstr "Alle Artikel identifiziert. Hurra!"
+
+msgctxt "#32030"
+msgid "No web service IDs available, can't look up online"
+msgstr "Keine Webdienst-IDs verfügbar, kann nicht online nachschlagen"
+
+msgctxt "#32031"
+msgid "Encountered multiple errors, skipping provider for remaining items"
+msgstr "Es sind mehrere Fehler aufgetreten, wobei der Anbieter für verbleibende Elemente übersprungen wurde"
+
+msgctxt "#32032"
+msgid "Could not find movie set on TMDb"
+msgstr "Auf TMDb konnte kein Film gefunden werden"
+
+msgctxt "#32033"
+msgid "Could not find music video on TheAudioDB"
+msgstr "Musikvideo auf TheAudioDB konnte nicht gefunden werden"
+
+msgctxt "#32034"
+msgid "Could not contact provider"
+msgstr "Anbieter konnte nicht kontaktiert werden"
+
+msgctxt "#32035"
+msgid "web service error: {0}"
+msgstr "Webdienstfehler: {0}"
+
+msgctxt "#32036"
+msgid "Kodi 18 or newer required"
+msgstr "Kodi 18 oder neuer erforderlich"
+
+msgctxt "#32037"
+# 0 = full filename
+msgid "Could not save image to file: {0}"
+msgstr "Bild konnte nicht in Datei gespeichert werden: {0}"
+
+msgctxt "#32038"
+msgid "{0:d} artwork cached"
+msgstr "{0: d} Grafik zwischengespeichert"
+
+msgctxt "#32039"
+msgid "Artwork caching requires Kodi setting 'Allow remote control via HTTP' enabled"
+msgstr "Für das Zwischenspeichern von Grafiken muss die Kodi-Einstellung "Fernsteuerung über HTTP zulassen" aktiviert sein"
+
+msgctxt "#32040"
+msgid "File path charset unsupported: {0}"
+msgstr "Dateipfad-Zeichensatz nicht unterstützt: {0}"
+
+# Headings
+
+msgctxt "#32050"
+# 0: media title
+msgid "Choose art type for {0}"
+msgstr "Wählen Sie den Kunsttyp für {0}"
+
+msgctxt "#32051"
+# 0: art type (poster/fanart/etc), 1: media title
+msgid "Choose {0} for {1}"
+msgstr "Wählen Sie {0} für {1}"
+
+msgctxt "#32056"
+msgid "Unmatched items"
+msgstr "Nicht übereinstimmende Artikel"
+
+msgctxt "#32057"
+msgid "Enter TheMovieDB collection name"
+msgstr "Geben Sie den Namen der TheMovieDB-Sammlung ein"
+
+msgctxt "#32052"
+msgid "Actions"
+msgstr "Aktionen"
+
+msgctxt "#32053"
+msgid "Automatically add these artwork types from web services and file system"
+msgstr "Fügen Sie diese Bildtypen automatisch aus Webdiensten und dem Dateisystem hinzu"
+
+msgctxt "#32054"
+msgid "Sorting and auto filters"
+msgstr "Sortieren und automatische Filter"
+
+# 32055 retired 2017-12-15
+
+msgctxt "#32058"
+msgid "Enter the artist and track name"
+msgstr "Geben Sie den Künstler und den Titelnamen ein"
+
+# 32059 retired 2018-07-11
+
+msgctxt "#32060"
+msgid "Artist artwork will [I]only[/I] be processed in the 'Artist information folder'[CR]configured in Kodi settings under Media > Music"
+msgstr "Künstlergrafiken werden nur [I] [/ I] im 'Künstlerinformationsordner' [CR] verarbeitet, der in den Kodi-Einstellungen unter Medien> Musik konfiguriert ist"
+
+msgctxt "#32061"
+msgid "Downloading artwork to local files"
+msgstr "Herunterladen von Grafiken in lokale Dateien"
+
+msgctxt "#32062"
+msgid "Should local artwork files also be deleted?"
+msgstr "Sollten auch lokale Grafikdateien gelöscht werden?"
+
+# Actions
+
+msgctxt "#32400"
+msgid "Select series for episode 'fanart'..."
+msgstr "Serie für Episode 'Fanart' auswählen ..."
+
+msgctxt "#32401"
+msgid "Add missing artwork now?"
+msgstr "Fehlende Grafik jetzt hinzufügen?"
+
+msgctxt "#32402"
+msgid "Add missing episode artwork for newly selected series after add-on settings are closed?"
+msgstr "Fehlende Episodengrafiken für neu ausgewählte Serien hinzufügen, nachdem die Add-On-Einstellungen geschlossen wurden?"
+
+msgctxt "#32403"
+msgid "stop current process"
+msgstr "Stoppt den aktuellen Prozess"
+
+# 32404, 32405, 32406, 32407 retired 2017-12-15
+
+msgctxt "#32408"
+msgid "identify unmatched movie sets with TMDb ..."
+msgstr "Identifizieren Sie nicht übereinstimmende Filmsets mit TMDb."
+
+msgctxt "#32409"
+msgid "Search for item"
+msgstr "Artikel suchen"
+
+msgctxt "#32410"
+msgid "Add missing artwork"
+msgstr "Fügen Sie fehlende Grafiken hinzu"
+
+msgctxt "#32411"
+msgid "Select artwork..."
+msgstr "Grafik auswählen ..."
+
+msgctxt "#32412"
+msgid "Disable Artwork Beef context items [I](per skin)[/I]"
+msgstr "Deaktivieren Sie Artwork Beef-Kontextelemente [I] (pro Skin) [/ I]"
+
+msgctxt "#32413"
+msgid "Enable Artwork Beef context items [I](per skin)[/I]"
+msgstr "Aktivieren Sie Artwork Beef-Kontextelemente [I] (pro Skin) [/ I]"
+
+msgctxt "#32414"
+msgid "Remove artwork for media type ..."
+msgstr "Remove artwork for media type ..."
+
+msgctxt "#32415"
+msgid "identify unmatched music videos with TheAudioDB ..."
+msgstr "Identifizieren Sie unvergleichliche Musikvideos mit TheAudioDB ..."
+
+msgctxt "#32416"
+msgid "add missing artwork for ..."
+msgstr "fehlende Grafik hinzufügen für ..."
+
+msgctxt "#32417"
+msgid "new videos"
+msgstr "Neue Videos"
+
+msgctxt "#32418"
+msgid "old videos"
+msgstr "Alte Videos"
+
+msgctxt "#32419"
+msgid "all videos (new, old, and all in between)"
+msgstr "alle Videos (neu, alt und alles dazwischen)"
+
+msgctxt "#32420"
+msgid "new music"
+msgstr "Neue Musik"
+
+msgctxt "#32421"
+msgid "old music"
+msgstr "Alte Musik"
+
+msgctxt "#32422"
+msgid "all music (new, old, and all in between)"
+msgstr "alle Musik (neu, alt und alles dazwischen)"
+
+msgctxt "#32423"
+msgid "Download existing remote images in the video library"
+msgstr "Laden Sie vorhandene Remote-Images in die Videobibliothek herunter"
+
+msgctxt "#32424"
+msgid "Preload local video library artwork to texture cache"
+msgstr "Laden Sie die Grafik der lokalen Videobibliothek in den Textur-Cache vor"
+
+msgctxt "#32425"
+msgid "Preload local music library artwork to texture cache"
+msgstr "Laden Sie die Grafik der lokalen Musikbibliothek in den Textur-Cache vor"
+
+msgctxt "#32426"
+msgid "Fill with all configured above [I](save other changes first)[/I]"
+msgstr "Füllen Sie alle oben konfigurierten [I] aus (speichern Sie zuerst andere Änderungen) [/ I]"
+
+msgctxt "#32427"
+msgid "Remove all artwork"
+msgstr "Entfernen Sie alle Grafiken"
+
+msgctxt "#32428"
+msgid "Disable Artwork Beef debug context items [I](per skin)[/I]"
+msgstr "Deaktivieren Sie die Debug-Kontextelemente für Artwork Beef [I] (pro Skin) [/ I]."
+
+msgctxt "#32429"
+msgid "Enable Artwork Beef debug context items [I](per skin)[/I]"
+msgstr "Aktivieren Sie Artwork Beef-Debug-Kontextelemente [I] (pro Skin) [/ I]"
+
+msgctxt "#32430"
+msgid "Log debug info"
+msgstr "Debug-Informationen protokollieren"
+
+msgctxt "#32431"
+msgid "scan for new local files for video library"
+msgstr "Suchen Sie nach neuen lokalen Dateien für die Videobibliothek"
+
+# for the advancedsettings.xml modifications, may end up moving to a smaller standalone utility
+
+msgctxt "#32650"
+msgid "Save configured arttypes to advancesettings.xml whitelist"
+msgstr "Speichern Sie konfigurierte Kunsttypen in der Whitelist "advesettings.xml""
+
+msgctxt "#32651"
+msgid "Restore original advancesettings.xml backed up by Artwork Beef"
+msgstr "Stellen Sie die ursprüngliche Datei progressetsettings.xml wieder her, die von Artwork Beef gesichert wurde"
+
+msgctxt "#32652"
+msgid "This advanced setting allows Kodi to add extended artwork itself, without any help from Artwork Beef."
+msgstr "Mit dieser erweiterten Einstellung kann Kodi ohne Hilfe von Artwork Beef selbst erweiterte Grafiken hinzufügen."
+
+msgctxt "#32653"
+msgid "Include multiple artwork, such as 'fanart1' and 'fanart2'? This will not add artwork from the 'extrafanart' directory, they must be saved next to the media item."
+msgstr "Mehrere Grafiken wie 'fanart1' und 'fanart2' einschließen? Dadurch werden keine Grafiken aus dem Verzeichnis 'extrafanart' hinzugefügt, sie müssen neben dem Medienelement gespeichert werden."
+
+msgctxt "#32654"
+msgid "advancedsettings.xml is malformed and cannot be parsed"
+msgstr "advancedsettings.xml ist fehlerhaft und kann nicht analysiert werden"
+
+msgctxt "#32655"
+msgid "original advancedsettings.xml backed up to advancedsettings.xml.beef.bak"
+msgstr "original advancedsettings.xml gesichert auf advancedsettings.xml.beef.bak"
+
+msgctxt "#32656"
+msgid "original advancedsettings.xml could not be backed up"
+msgstr "Die ursprüngliche Datei advancedsettings.xml konnte nicht gesichert werden"
+
+msgctxt "#32657"
+msgid "advancedsettings.xml.beef.bak restored to advancedsettings.xml"
+msgstr "advancedsettings.xml.beef.bak wurde in advancedsettings.xml wiederhergestellt"
+
+msgctxt "#32658"
+msgid "advancedsettings.xml.beef.bak could not be restored"
+msgstr "advancedsettings.xml.beef.bak konnte nicht wiederhergestellt werden"
+
+msgctxt "#32659"
+msgid "restart Kodi for these changes to take effect"
+msgstr "Starten Sie Kodi neu, damit diese Änderungen wirksam werden"
+
+# Settings
+
+msgctxt "#32900"
+msgid "Add artwork for new videos after library updates"
+msgstr "Fügen Sie nach Bibliotheksaktualisierungen Grafiken für neue Videos hinzu"
+
+msgctxt "#32912"
+msgid "Update artwork for old items daily"
+msgstr "Aktualisieren Sie das Bildmaterial für alte Gegenstände täglich"
+
+msgctxt "#32904"
+msgid "Do not automatically add artwork from web services, only identify local files"
+msgstr "Fügen Sie keine Grafiken aus Webdiensten hinzu, sondern identifizieren Sie nur lokale Dateien"
+
+msgctxt "#32901"
+msgid "Prefer 'fanart' with no title"
+msgstr "Bevorzugen Sie 'Fanart' ohne Titel"
+
+msgctxt "#32917"
+msgid "Prefer 'poster' with no title"
+msgstr "Bevorzugen Sie "Poster" ohne Titel"
+
+msgctxt "#32902"
+msgid "Preferred artwork size"
+msgstr "Bevorzugte Grafikgröße"
+
+msgctxt "#32907"
+msgid "Minimum image rating"
+msgstr "Minimale Bildbewertung"
+
+msgctxt "#32913"
+msgid "Priority language selection"
+msgstr "Auswahl der Prioritätssprache"
+
+msgctxt "#32903"
+msgid "Use high quality preview images"
+msgstr "Verwenden Sie hochwertige Vorschaubilder"
+
+msgctxt "#32905"
+msgid "fanart.tv personal API key (optional)"
+msgstr "persönlicher API-Schlüssel von fanart.tv (optional)"
+
+msgctxt "#32906"
+msgid "Identify alternate Artwork Downloader and MSAA artwork file names"
+msgstr "Identifizieren Sie alternative Namen für Artwork Downloader- und MSAA-Artwork-Dateien"
+
+# 32908 retired 2017-12-15
+
+msgctxt "#32909"
+msgid "process movie set artwork in a central info directory"
+msgstr "Verarbeiten Sie Filmmaterial in einem zentralen Infoverzeichnis"
+
+msgctxt "#32910"
+msgid "central info directory"
+msgstr "zentrales Infoverzeichnis"
+
+msgctxt "#32911"
+msgid "grab movie set artwork from movie parent directory"
+msgstr "Holen Sie sich das Filmmaterial aus dem übergeordneten Verzeichnis des Films"
+
+msgctxt "#32914"
+msgid "Replace episode 'thumb' with Kodi generated thumb"
+msgstr "Ersetzen Sie die Episode "Bilder" durch den von Kodi generierten Bilder"
+
+msgctxt "#32915"
+msgid "Replace movie 'thumb' with Kodi generated thumb"
+msgstr "Ersetzen Sie die Film-Cover durch die von Kodi generierten Cover"
+
+msgctxt "#32916"
+msgid "Include detailed per item changes in the reports"
+msgstr "Nehmen Sie detaillierte Änderungen pro Artikel in die Berichte auf"
+
+msgctxt "#32918"
+msgid "TV show scraper (if ID source is unknown)"
+msgstr "TV-Show-Scraper (wenn ID-Quelle unbekannt ist)"
+
+msgctxt "#32919"
+msgid "Show latest artwork report"
+msgstr "Aktuellen Grafikbericht anzeigen"
+
+msgctxt "#32920"
+msgid "Replace music video 'thumb' with Kodi generated thumb"
+msgstr "Ersetzen Sie den Bilder des Musikvideos durch den von Kodi generierten Bilder"
+
+msgctxt "#32921"
+msgid "Prefer artwork from The Movie Database when available"
+msgstr "Bevorzugen Sie Grafiken aus der Filmdatenbank, sofern verfügbar"
+
+msgctxt "#32922"
+msgid "Add artwork for new music after library updates"
+msgstr "Fügen Sie nach Aktualisierungen der Bibliothek Grafiken für neue Musik hinzu"
+
+# 32923 retired 2018-02-23
+
+msgctxt "#32924"
+msgid "Progress display for automatic processing"
+msgstr "Fortschrittsanzeige für die automatische Verarbeitung"
+
+msgctxt "#32925"
+msgid "full progress bar"
+msgstr "volle Fortschrittsanzeige"
+
+msgctxt "#32926"
+msgid "just warnings and errors"
+msgstr "nur Warnungen und Fehler"
+
+msgctxt "#32927"
+msgid "only add-on crashes"
+msgstr "nur Add-On stürzt ab"
+
+msgctxt "#32928"
+msgid "Show final artwork update count notification"
+msgstr "Benachrichtigung über die Anzahl der endgültigen Bildaktualisierungen anzeigen"
+
+msgctxt "#32929"
+msgid "Save additional movie and TV show fanart to 'extrafanart' directory instead"
+msgstr "Speichern Sie stattdessen zusätzliche Film- und TV-Show-Fanarts im Verzeichnis 'extrafanart'"
+
+msgctxt "#32930"
+msgid "Save additional music videos fanart to 'extrafanart' directory instead"
+msgstr "Speichern Sie stattdessen zusätzliche Musikvideos Fanart im Verzeichnis 'extrafanart'"
+
+msgctxt "#32931"
+msgid "Recycle deleted and replaced artwork files to temp/cache directory"
+msgstr "Recyceln Sie gelöschte und ersetzte Grafikdateien in das temporäre / Cache-Verzeichnis"
+
+# 32932, 32933, 32934, 32935, 32936, 32937, 32938, 32939 retired 2018-05-12
+
+msgctxt "#32940"
+msgid "Delete deselected artwork files"
+msgstr "Löschen Sie nicht ausgewählte Grafikdateien"
+
+msgctxt "#32941"
+msgid "Save movie artwork with movie base file name"
+msgstr "Speichern Sie Filmgrafiken mit dem Namen der Filmbasisdatei"
+
+msgctxt "#32942"
+msgid "Save music video artwork with music video base file name"
+msgstr "Speichern Sie Musikvideokunstwerke mit dem Namen der Musikvideobasisdatei"
+
+# 32943, 32944, 32945, 32946, 32947, 32948, 32949, 32950 retired 2018-09-12
+
+msgctxt "#32951"
+msgid "Save album and song art with song files if possible"
+msgstr "Speichern Sie Album- und Songcover nach Möglichkeit mit Songdateien"
+
+msgctxt "#32952"
+msgid "Automatically preload local video library artwork to Kodi texture cache"
+msgstr "Laden Sie die Grafik der lokalen Videobibliothek automatisch in den Kodi-Textur-Cache vor"
+
+msgctxt "#32953"
+msgid "Automatically preload local music library artwork to Kodi texture cache"
+msgstr "Laden Sie die Grafik der lokalen Musikbibliothek automatisch in den Kodi-Textur-Cache vor"
+
+msgctxt "#32954"
+msgid "Additional art types for TV shows (comma separated)"
+msgstr "Zusätzliche Kunstarten für Fernsehsendungen (durch Kommas getrennt)"
+
+msgctxt "#32955"
+msgid "Additional art types for TV seasons (comma separated)"
+msgstr "Zusätzliche Kunstarten für TV-Staffeln (durch Kommas getrennt)"
+
+msgctxt "#32956"
+msgid "Additional art types for TV episodes (comma separated)"
+msgstr "Zusätzliche Kunstarten für TV-Folgen (durch Kommas getrennt)"
+
+msgctxt "#32957"
+msgid "Additional art types for movies (comma separated)"
+msgstr "Zusätzliche Kunstarten für Filme (durch Kommas getrennt)"
+
+msgctxt "#32958"
+msgid "Additional art types for movie sets (comma separated)"
+msgstr "Zusätzliche Kunstarten für Filmsets (durch Kommas getrennt)"
+
+msgctxt "#32959"
+msgid "Additional art types for music videos (comma separated)"
+msgstr "Zusätzliche Kunstarten für Musikvideos (durch Kommas getrennt)"
+
+msgctxt "#32960"
+msgid "Additional art types for artists (comma separated)"
+msgstr "Zusätzliche Kunstarten für Künstler (durch Kommas getrennt)"
+
+msgctxt "#32961"
+msgid "Additional art types for albums (comma separated)"
+msgstr "Zusätzliche Kunsttypen für Alben (durch Kommas getrennt)"
+
+msgctxt "#32962"
+msgid "Additional art types for songs (comma separated)"
+msgstr "Zusätzliche Kunstarten für Songs (durch Kommas getrennt)"
+
+msgctxt "#32963"
+msgid "Prefer artwork from specific web service"
+msgstr "Bevorzugen Sie Grafiken von einem bestimmten Webdienst"
+
+msgctxt "#32964"
+msgid "Manually select multiple images for all media types"
+msgstr "Wählen Sie manuell mehrere Bilder für alle Medientypen aus"
+
+msgctxt "#32965"
+msgid "In case of emergency"
+msgstr "Im Notfall"
+
+msgctxt "#32966"
+msgid "fanart.tv project API key"
+msgstr ""
+
+msgctxt "#32967"
+msgid "TheTVDB.com project API key"
+msgstr ""
+
+msgctxt "#32968"
+msgid "The Movie Database project API key"
+msgstr ""
+
+msgctxt "#32969"
+msgid "TheAudioDB.com project API key"
+msgstr ""
+
+# subsetting of 32902
+msgctxt "#32970"
+msgid "Largest available"
+msgstr "Größte verfügbar"
+
+# subsetting of 32902
+msgctxt "#32971"
+msgid "1920x1080"
+msgstr ""
+
+# subsetting of 32902
+msgctxt "#32972"
+msgid "1280x720"
+msgstr ""
+
+msgctxt "#32973"
+msgid "Image languages for automatic filter"
+msgstr "Bildsprachen für den automatischen Filter"
+
+# follows 32913
+msgctxt "#32974"
+msgid "then include Kodi 'User interface language'"
+msgstr "Fügen Sie dann Kodi 'Sprache der Benutzeroberfläche' hinzu."
+
+msgctxt "#32975"
+msgid "then include English language images"
+msgstr "Fügen Sie dann Bilder in englischer Sprache hinzu"
+
+msgctxt "#32976"
+msgid "save new artwork to subdirectories per movie set"
+msgstr "Speichern Sie neue Grafiken in Unterverzeichnissen pro Filmset"
+
+msgctxt "#32977"
+msgid "Artwork download configuration"
+msgstr "Grafik-Download-Konfiguration"
+
+msgctxt "#32978"
+msgid "Kodi cache only"
+msgstr "Nur Kodi-Cache"
+
+msgctxt "#32979"
+msgid "all configured above"
+msgstr "alle oben konfiguriert"
+
+msgctxt "#32980"
+msgid "specific types below"
+msgstr "spezifische Typen unten"
+
+msgctxt "#32981"
+msgid "Clean existing artwork URLs (HTTP to HTTPS, web service URL changes)"
+msgstr "Bereinigen Sie vorhandene Grafik-URLs (HTTP zu HTTPS, Änderungen der Webdienst-URL)"
+
+msgctxt "#32982"
+msgid "Add 'keyart' from TheMovieDB"
+msgstr "Fügen Sie 'keyart' aus TheMovieDB hinzu"
+
+msgctxt "#32986"
+msgid "no web service"
+msgstr "kein Webdienst"
+
+msgctxt "#32987"
+msgid "Enable Fanart.tv"
+msgstr ""
+
+msgctxt "#32988"
+msgid "Enable The Movie DB"
+msgstr ""
+
+msgctxt "#32989"
+msgid "Enable TheTVDB"
+msgstr ""
+
+msgctxt "#32990"
+msgid "Enable The Audio DB"
+msgstr ""
+
+msgctxt "#32991"
+msgid "Web services"
+msgstr ""
+
+# Used in path exclusion
+
+msgctxt "#32820"
+msgid "Path exclusion"
+msgstr "Pfadausschluss"
+
+msgctxt "#32821"
+msgid "Use path exclusion"
+msgstr "Verwenden Sie den Pfadausschluss"
+
+msgctxt "#32822"
+msgid "Exclude the following type"
+msgstr "Schließen Sie den folgenden Typ aus"
+
+msgctxt "#32823"
+msgid "Folder"
+msgstr "Ordner"
+
+msgctxt "#32824"
+msgid "Path prefix"
+msgstr ""
+
+msgctxt "#32825"
+msgid "Regex"
+msgstr ""
+
+msgctxt "#32826"
+msgid "Exclude paths within folder"
+msgstr "Pfade innerhalb des Ordners ausschließen"
+
+msgctxt "#32827"
+msgid "Exclude paths starting with"
+msgstr "Schließen Sie Pfade aus, die mit beginnen"
+
+msgctxt "#32828"
+msgid "Exclude paths matching regex"
+msgstr "Pfade ausschließen, die mit Regex übereinstimmen"
+
+msgctxt "#32829"
+msgid "Exclude another"
+msgstr "Einen anderen ausschließen"
+
+# Used in the artwork report
+
+msgctxt "#32800"
+msgid "Processing list automatically"
+msgstr ""
+
+msgctxt "#32801"
+# 0 = label of media item
+msgid "Manually processing {0}"
+msgstr ""
+
+msgctxt "#32802"
+# 0 = label of media item
+msgid "Processing {0}"
+msgstr ""
+
+msgctxt "#32803"
+msgid "Processing finished"
+msgstr ""
+
+msgctxt "#32804"
+msgid "Processing aborted"
+msgstr ""
+
+msgctxt "#32805"
+msgid "No items in list"
+msgstr ""
+
+msgctxt "#32806"
+msgid "{0:d} items in list"
+msgstr ""
+
+msgctxt "#32807"
+msgid "{0:d} items processed"
+msgstr ""
+
+msgctxt "#32808"
+msgid "No artwork updated"
+msgstr ""
+
+msgctxt "#32809"
+msgid "{0:d} artwork updated"
+msgstr ""
+
+msgctxt "#32810"
+msgid "Not missing artwork, not looking for any"
+msgstr ""
+
+msgctxt "#32811"
+# 0 = comma separated list of missing artwork types
+msgid "Missing artwork: {0}"
+msgstr ""
+
+msgctxt "#32812"
+# 0 = comma separated list of updated artwork types
+msgid "Updated artwork: {0}"
+msgstr ""
+
+msgctxt "#32813"
+# 0 = text of error message
+msgid "Encountered an error - {0}"
+msgstr ""
+
+msgctxt "#32814"
+msgid "Errors were encountered"
+msgstr ""
+
+msgctxt "#32815"
+# 0 = versions of Artwork Beef and Kodi
+msgid "Versions: {0}"
+msgstr ""
+
+msgctxt "#32816"
+msgid "{0:d} artwork downloaded"
+msgstr ""
+
+
+# Not translated, just need to reference by `msgctxt` as options to 32963
+
+msgctxt "#32796"
+msgid "Fanart.TV"
+msgstr ""
+
+msgctxt "#32797"
+msgid "The Movie Database"
+msgstr ""
+
+msgctxt "#32798"
+msgid "TheTVDB.com"
+msgstr ""
+
+msgctxt "#32799"
+msgid "TheAudioDB.com"
+msgstr ""

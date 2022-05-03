@@ -1,0 +1,245 @@
+{
+  "error": "OK",
+  "limit": 10,
+  "offset": 0,
+  "number_of_page_results": 10,
+  "number_of_total_results": 29,
+  "status_code": 1,
+  "results": [
+    {
+      "id": 2866,
+      "name": "Super Mario World 2: Yoshi's Island",
+      "original_release_date": "1995-08-04 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-4\/",
+          "id": 4,
+          "name": "Game Boy Advance",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/game-boy-advance\/3045-4\/",
+          "abbreviation": "GBA"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-9\/",
+          "id": 9,
+          "name": "Super Nintendo Entertainment System",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/super-nintendo-entertainment-system\/3045-9\/",
+          "abbreviation": "SNES"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 11016,
+      "name": "Yoshi's Island: Super Mario Advance 3",
+      "original_release_date": "2002-09-20 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-4\/",
+          "id": 4,
+          "name": "Game Boy Advance",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/game-boy-advance\/3045-4\/",
+          "abbreviation": "GBA"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-138\/",
+          "id": 138,
+          "name": "Nintendo 3DS eShop",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/nintendo-3ds-eshop\/3045-138\/",
+          "abbreviation": "3DSE"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-139\/",
+          "id": 139,
+          "name": "Wii U",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-u\/3045-139\/",
+          "abbreviation": "WiiU"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 544,
+      "name": "Super Mario All-Stars & Super Mario World",
+      "original_release_date": "1994-12-31 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-9\/",
+          "id": 9,
+          "name": "Super Nintendo Entertainment System",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/super-nintendo-entertainment-system\/3045-9\/",
+          "abbreviation": "SNES"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 7406,
+      "name": "Super Mario Bros. 2",
+      "original_release_date": "1988-10-01 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-21\/",
+          "id": 21,
+          "name": "Nintendo Entertainment System",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/nintendo-entertainment-system\/3045-21\/",
+          "abbreviation": "NES"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-87\/",
+          "id": 87,
+          "name": "Wii Shop",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-shop\/3045-87\/",
+          "abbreviation": "WSHP"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-138\/",
+          "id": 138,
+          "name": "Nintendo 3DS eShop",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/nintendo-3ds-eshop\/3045-138\/",
+          "abbreviation": "3DSE"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-139\/",
+          "id": 139,
+          "name": "Wii U",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-u\/3045-139\/",
+          "abbreviation": "WiiU"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 26839,
+      "name": "Super Mario Galaxy 2",
+      "original_release_date": "2010-05-23 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-36\/",
+          "id": 36,
+          "name": "Wii",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii\/3045-36\/",
+          "abbreviation": "Wii"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-139\/",
+          "id": 139,
+          "name": "Wii U",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-u\/3045-139\/",
+          "abbreviation": "WiiU"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 7551,
+      "name": "Super Mario World: Super Mario Advance 2",
+      "original_release_date": "2001-12-14 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-4\/",
+          "id": 4,
+          "name": "Game Boy Advance",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/game-boy-advance\/3045-4\/",
+          "abbreviation": "GBA"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-139\/",
+          "id": 139,
+          "name": "Wii U",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-u\/3045-139\/",
+          "abbreviation": "WiiU"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 14425,
+      "name": "Super Mario Land 2: 6 Golden Coins",
+      "original_release_date": "1992-11-02 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-3\/",
+          "id": 3,
+          "name": "Game Boy",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/game-boy\/3045-3\/",
+          "abbreviation": "GB"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-138\/",
+          "id": 138,
+          "name": "Nintendo 3DS eShop",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/nintendo-3ds-eshop\/3045-138\/",
+          "abbreviation": "3DSE"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 29969,
+      "name": "BS Super Mario USA Power Challenge",
+      "original_release_date": "1996-03-31 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-98\/",
+          "id": 98,
+          "name": "Satellaview",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/satellaview\/3045-98\/",
+          "abbreviation": "BS-X"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 1334,
+      "name": "Super Mario World",
+      "original_release_date": "1990-11-21 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-9\/",
+          "id": 9,
+          "name": "Super Nintendo Entertainment System",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/super-nintendo-entertainment-system\/3045-9\/",
+          "abbreviation": "SNES"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-87\/",
+          "id": 87,
+          "name": "Wii Shop",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-shop\/3045-87\/",
+          "abbreviation": "WSHP"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-139\/",
+          "id": 139,
+          "name": "Wii U",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-u\/3045-139\/",
+          "abbreviation": "WiiU"
+        },
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-156\/",
+          "id": 156,
+          "name": "New Nintendo 3DS",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/new-nintendo-3ds\/3045-156\/",
+          "abbreviation": "N3DS"
+        }
+      ],
+      "resource_type": "game"
+    },
+    {
+      "id": 42931,
+      "name": "Super Mario 3D World",
+      "original_release_date": "2013-11-21 00:00:00",
+      "platforms": [
+        {
+          "api_detail_url": "https:\/\/www.giantbomb.com\/api\/platform\/3045-139\/",
+          "id": 139,
+          "name": "Wii U",
+          "site_detail_url": "https:\/\/www.giantbomb.com\/wii-u\/3045-139\/",
+          "abbreviation": "WiiU"
+        }
+      ],
+      "resource_type": "game"
+    }
+  ],
+  "version": "1.0"
+}

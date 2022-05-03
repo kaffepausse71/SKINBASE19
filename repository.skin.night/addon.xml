@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.skin.night"
+		name="Night repository"
+		version="1.0.0"
+		provider-name="bkury">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository">
+		<info>https://repo.openht.org/addons.xml</info>
+		<checksum>https://repo.openht.org/addons.xml.md5</checksum>
+		<datadir>https://repo.openht.org/data</datadir>
+		<artdir>https://repo.openht.org/data</artdir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_US">Night repository</summary>
+		<platform>all</platform>
+	</extension>
+</addon>

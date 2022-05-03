@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>3</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		
+		
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
+			</animation>
+			
+			
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>340</width>
+				<height>720</height>
+				<texture border="4">black-back.png</texture>
+				<animation effect="fade" end="65" time="0" condition="true">conditional</animation>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>340</width>
+				<height>720</height>
+				<texture border="4">_added_img/black-back2-noborder.png</texture>
+				<animation effect="fade" end="40" time="0" condition="true">conditional</animation>
+			</control>
+			
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<left>0</left>
+				<top>90</top>
+				<width>340</width>
+				<height>512</height>
+				<itemgap>0</itemgap>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>20</ondown>
+			</control>
+			<control type="button" id="20">
+				<description>Setting level button</description>
+				<left>0</left>
+				<top>604</top>
+				<height>64</height>
+				<width>340</width>
+				<label>10037</label>
+				<textoffsetx>20</textoffsetx>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>Regular22</font>
+				<textcolor>afebb217</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<focusedcolor>selected</focusedcolor>
+				<texturefocus border="4">MenuItemFO.png</texturefocus>
+				<!--<texturenofocus border="4">MenuItemNF.png</texturenofocus>-->
+				<texturenofocus border="4"></texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown></ondown>
+				<onclick>SettingsLevelChange</onclick>
+			</control>
+			<control type="image">
+				<left>20</left>
+				<top>624</top>
+				<width>22</width>
+				<height>22</height>
+				<texture>_added_img/settings_level.png</texture>
+				<animation effect="fade" start="100" end="40" time="0" condition="!Control.HasFocus(20)">Conditional</animation>
+			</control>
+			<control type="image">
+				<left>340</left>
+				<top>0</top>
+				<width>940</width>
+				<height>720</height>
+				<texture border="4">black-back.png</texture>
+				<animation effect="fade" end="85" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<left>340</left>
+				<top>0</top>
+				<width>940</width>
+				<height>720</height>
+				<texture border="4">_added_img/black-back2-noborder.png</texture>
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<!--
+			<control type="image">
+				<left>270</left>
+				<top>10</top>
+				<width>810</width>
+				<height>52</height>
+				<texture>dialogheader.png</texture>
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>300</left>
+				<top>20</top>
+				<width>726</width>
+				<height>30</height>
+				<font>Regular25</font>
+				<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			-->
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<left>400</left>
+				<top>90</top>
+				<width>750</width>
+				<height>488</height>
+				<itemgap>0</itemgap>
+				<pagecontrol>60</pagecontrol>
+				<onleft>3</onleft>
+				<onright>60</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1200</left>
+				<top>82</top>
+				<width>24</width>
+				<height>506</height>
+				<texturesliderbackground border="10">scrollbars/ScrollBarUni-bg.png</texturesliderbackground>
+				<texturesliderbar border="10">scrollbars/ScrollBarUni-bar.png</texturesliderbar>
+				<texturesliderbarfocus border="10">scrollbars/ScrollBarUni-bar-focus.png</texturesliderbarfocus>
+				<textureslidernib>scrollbars/ScrollBarUni-nib.png</textureslidernib>
+				<textureslidernibfocus>scrollbars/ScrollBarUni-nib.png</textureslidernibfocus>
+				<onleft>5</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<left>400</left>
+				<top>578</top>
+				<width>750</width>
+				<height>2</height>
+				<texture>separator2.png</texture>
+				<colordiffuse>40FFFFFF</colordiffuse>
+			</control>
+			<control type="textbox" id="6">
+				<description>description area</description>
+				<left>400</left>
+				<top>588</top><!-- 532 -->
+				<width>736</width>
+				<height>83</height>
+				<font>Regular17</font>
+				<align>left</align>
+				<textcolor>selected+</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+		</control>
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<height>64</height>
+			<width>340</width>
+			<textoffsetx>20</textoffsetx>
+			<!--
+			<textoffsety>15</textoffsety>
+			-->
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Medium24</font>
+			<textcolor>grey2+</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="4">_added_img/main_menu_button-focus.png</texturefocus>
+			<texturenofocus border="4">MenuItemNF666.png</texturenofocus>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<left>0</left>
+			<top>0</top>
+			<height>48</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<invalidcolor>invalid</invalidcolor>
+			<texturefocus border="4">MenuItemFO.png</texturefocus>
+			<texturenofocus border="2">MenuItemNF666.png</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<left>0</left>
+			<top>0</top>
+			<height>48</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="4">MenuItemFO.png</texturefocus>
+			<texturenofocus border="2">MenuItemNF666.png</texturenofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<left>0</left>
+			<top>0</top>
+			<height>48</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="4">MenuItemFO.png</texturefocus>
+			<texturenofocus border="2">MenuItemNF666.png</texturenofocus>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="sliderex" id="13">
+			<description>Default Slider</description>
+			<left>0</left>
+			<top>0</top>
+			<height>48</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="4">MenuItemFO.png</texturefocus>
+			<texturenofocus border="2">MenuItemNF666.png</texturenofocus>
+			<aligny>center</aligny>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<height>10</height>
+			<texture border="0,0,0,4">separator3.png</texture>
+		</control>
+		<control type="label" id="14">
+			<description>Default Label</description>
+			<left>0</left>
+			<top>0</top>
+			<height>30</height>
+			<label></label>
+			<align>center</align>
+			<aligny>bottom</aligny>
+			<font>Medium21</font>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label" id="2">
+			<description>Fake Label so we can pass it value down to the one below</description>
+			<left>0</left>
+			<top>0</top>
+			<width>0</width>
+			<height>0</height>
+			<font></font>
+			<visible>false</visible>
+		</control>
+		
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonNowPlaying</include>
+		</control>
+		
+		<include>MainWindowMouseButtons</include>
+		
+		<include>BehindDialogFadeOut</include>
+		
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_system" />
+			<param name="Label" value="$LOCALIZE[5]" />
+			<param name="ShowLabel2" value="true" />
+		</include>
+		
+	</controls>
+</window>

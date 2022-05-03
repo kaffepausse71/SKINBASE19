@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="resource.images.moviedirectorthumbs" name="Movie Director Thumbs" version="0.0.1" provider-name="chrissix">
+	<extension point="kodi.resource.images" compile="false" type="moviedirectorthumb" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Movie Director Thumbs</summary>
+		<description lang="en">Movie Director Thumbs</description>
+		<platform>all</platform>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	</assets>		
+	</extension>
+</addon>
