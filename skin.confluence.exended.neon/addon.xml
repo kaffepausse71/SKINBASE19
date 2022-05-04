@@ -2,6 +2,7 @@
 <addon id="skin.confluence.exended.neon" version="6.0.20" name="[COLOR FFC1C127]Confluence Exended Neon[/COLOR]" provider-name="SKINBASE,Jezz_X, Team Kodi, YLLOW_DRAGON, plood">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="script.image.resource.select" version="1.1.0"/>
 		<import addon="script.skinshortcuts" version="1.0.10"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1.0">
